@@ -3709,7 +3709,7 @@
       <div class="count"><strong id="passCount">0</strong>개 공고 표시 중 <span id="passMatchInfo" style="color:var(--gray)"></span></div>
       <button class="match-toggle" id="matchToggle" onclick="toggleMatchOnly()">⭐ 매칭 공고만 보기</button>
     </div>
-    <p style="font-size:12.5px;color:var(--gray);margin-bottom:14px;padding:8px 14px;background:var(--blue-50);border-radius:8px;border-left:3px solid var(--blue-200)">🔍 카드를 클릭하면 <strong style="color:var(--blue-deep)">네이버 검색</strong>으로 연결되어 해당 시·군의 공식 공고 페이지·신청 안내·관련 뉴스를 한눈에 확인하실 수 있습니다.</p>
+    <p style="font-size:12.5px;color:var(--gray);margin-bottom:14px;padding:8px 14px;background:var(--blue-50);border-radius:8px;border-left:3px solid var(--blue-200)">🔍 <strong style="color:var(--blue-deep)">「공고 바로가기」</strong>는 해당 시·군청 공식 사이트의 사업 페이지로, <strong style="color:var(--blue-deep)">「사업 정보 보기」</strong>는 관련 뉴스·블로그·신청 안내를 통합 검색으로 보여드립니다.</p>
 
     <div class="pass-grid" id="passGrid"></div>
 
@@ -4587,17 +4587,17 @@ function loadDemoBudget(){
 
 /* ───── 통합공고함 데이터 + 페이징 + 실링크 ───── */
 const PASS_DATA=[
-  {id:1,region:'광주광역시',regionCode:'29170',cat:'d5',title:'광주 청년 구직활동 지원금 (월 60만원·6개월)',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:5,ageMin:18,ageMax:34,daysAgo:2,link:'https://youth.gwangju.go.kr/www/83'},
+  {id:1,region:'광주광역시',regionCode:'29170',cat:'d5',title:'광주 청년 구직활동 지원금 (월 60만원·6개월)',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:5,ageMin:18,ageMax:34,daysAgo:2,link:'https://youth.gwangju.go.kr/',applyURL:'https://search.naver.com/search.naver?where=nexearch&query=%EA%B4%91%EC%A3%BC+%EC%B2%AD%EB%85%84+%EA%B5%AC%EC%A7%81%ED%99%9C%EB%8F%99+%EC%A7%80%EC%9B%90%EA%B8%88+%EC%8B%A0%EC%B2%AD'},
   {id:2,region:'광주광역시',regionCode:'29170',cat:'d2',title:'청년 마음건강 바우처 (월 4회 상담)',target:'만 19~39세 광주 거주 청년',amount:'월 12만원 상당',amountVal:48,quota:'150명',d:9,ageMin:19,ageMax:39,daysAgo:5,link:'https://youth.gwangju.go.kr/www/83'},
-  {id:3,region:'광주 광산구',regionCode:'29200',cat:'d5',title:'청년 한끼 제휴점 모집 (식당주 대상)',target:'식당·카페·분식 사업주',amount:'1식 5천원 보조',amountVal:50,quota:'500개소',d:5,ageMin:18,ageMax:60,daysAgo:7,link:'https://www.gwangsan.go.kr'},
+  {id:3,region:'광주 광산구',regionCode:'29200',cat:'d5',title:'청년 한끼 제휴점 모집 (식당주 대상)',target:'식당·카페·분식 사업주',amount:'1식 5천원 보조',amountVal:50,quota:'500개소',d:5,ageMin:18,ageMax:60,daysAgo:7,link:'https://www.gwangsan.go.kr/',applyURL:'https://search.naver.com/search.naver?where=nexearch&query=%EA%B4%91%EC%82%B0%EA%B5%AC+%EC%B2%AD%EB%85%84+%ED%95%9C%EB%81%BC+%EC%A0%9C%ED%9C%B4%EC%A0%90+%EB%AA%A8%EC%A7%91'},
   {id:4,region:'광주 서구',regionCode:'29140',cat:'d6',title:'1인 청년가구 월세지원 (월 20만원·24개월)',target:'무주택 1인 청년가구',amount:'월 20만원 × 24개월',amountVal:480,quota:'80명',d:14,ageMin:19,ageMax:34,daysAgo:1,link:'https://www.bokjiro.go.kr'},
   {id:5,region:'광주 광산구',regionCode:'29200',cat:'d6',title:'청년 매입임대주택 입주 모집',target:'무주택 청년·신혼부부',amount:'보증금 0원·월세 시세 30%',amountVal:200,quota:'30호',d:18,ageMin:19,ageMax:39,daysAgo:8,link:'https://www.myhome.go.kr'},
-  {id:6,region:'나주시',regionCode:'46170',cat:'d5',title:'나주 청년 구직수당 2차 모집',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:3,ageMin:18,ageMax:34,daysAgo:3,link:'https://www.naju.go.kr'},
+  {id:6,region:'나주시',regionCode:'46170',cat:'d5',title:'나주 청년 구직수당 2차 모집',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:3,ageMin:18,ageMax:34,daysAgo:3,link:'https://www.naju.go.kr/',applyURL:'https://search.naver.com/search.naver?where=nexearch&query=%EB%82%98%EC%A3%BC+%EC%B2%AD%EB%85%84+%EA%B5%AC%EC%A7%81%EC%88%98%EB%8B%B9+2%EC%B0%A8+%EB%AA%A8%EC%A7%91'},
   {id:7,region:'나주시',regionCode:'46170',cat:'d7',title:'신혼부부 전세자금 이자 지원',target:'결혼 7년 이내 신혼부부',amount:'대출이자 1.5%p 지원',amountVal:300,quota:'50쌍',d:25,ageMin:24,ageMax:42,daysAgo:10,link:'https://www.naju.go.kr'},
   {id:8,region:'목포시',regionCode:'46110',cat:'d5',title:'목포 청년 창업지원금 (해양·관광 분야)',target:'만 19~39세 예비창업자',amount:'최대 2,000만원',amountVal:2000,quota:'30팀',d:12,ageMin:19,ageMax:39,daysAgo:6,link:'https://www.mokpo.go.kr'},
   {id:9,region:'목포시',regionCode:'46110',cat:'d5',title:'목포 청년 채용 인센티브 (사업주 대상)',target:'만 19~34세 청년 채용 사업주',amount:'1인당 월 80만원·12개월',amountVal:960,quota:'40개사',d:20,ageMin:19,ageMax:34,daysAgo:4,link:'https://www.mokpo.go.kr'},
   {id:10,region:'여수시',regionCode:'46130',cat:'d6',title:'여수 청년 보증금 무이자 지원 (전세 2,000만원)',target:'1인 가구 청년',amount:'보증금 2,000만원 무이자',amountVal:2000,quota:'80명',d:21,ageMin:19,ageMax:39,daysAgo:11,link:'https://www.yeosu.go.kr'},
-  {id:11,region:'여수시',regionCode:'46130',cat:'d5',title:'블루이코노미 6대 분야 청년 인턴십',target:'만 19~34세 미취업 청년',amount:'월 220만원 × 3개월',amountVal:660,quota:'100명',d:7,ageMin:19,ageMax:34,daysAgo:2,link:'https://www.jeonnam.go.kr'},
+  {id:11,region:'여수시',regionCode:'46130',cat:'d5',title:'블루이코노미 6대 분야 청년 인턴십',target:'만 19~34세 미취업 청년',amount:'월 220만원 × 3개월',amountVal:660,quota:'100명',d:7,ageMin:19,ageMax:34,daysAgo:2,link:'https://www.jeonnam.go.kr/',applyURL:'https://search.naver.com/search.naver?where=nexearch&query=%EC%97%AC%EC%88%98+%EB%B8%94%EB%A3%A8%EC%9D%B4%EC%BD%94%EB%85%B8%EB%AF%B8+%EC%B2%AD%EB%85%84+%EC%9D%B8%ED%84%B4%EC%8B%AD'},
   {id:12,region:'순천시',regionCode:'46150',cat:'d2',title:'순천 청년 마음건강 바우처 (월 4회 상담)',target:'만 19~39세 순천시민',amount:'월 12만원 상당',amountVal:48,quota:'150명',d:9,ageMin:19,ageMax:39,daysAgo:1,link:'https://www.suncheon.go.kr'},
   {id:13,region:'순천시',regionCode:'46150',cat:'d5',title:'청년 면접복장 무료 대여',target:'만 19~34세 구직자',amount:'정장 4회 무료',amountVal:30,quota:'상시',d:60,ageMin:19,ageMax:34,daysAgo:14,link:'https://www.suncheon.go.kr'},
   {id:14,region:'광양시',regionCode:'46230',cat:'d6',title:'광양 산업단지 청년 보증금 무이자',target:'산단 입주기업 청년 직원',amount:'보증금 3,000만원 무이자',amountVal:3000,quota:'60명',d:16,ageMin:19,ageMax:39,daysAgo:7,link:'https://www.gwangyang.go.kr'},
@@ -4736,18 +4736,27 @@ function renderPass(){
     '신안군':'https://www.shinan.go.kr/youth'
   };
   function pickApplyLink(p){
-    // 안정성 최우선: 추정 경로·404 위험이 있는 직접 링크는 차단
-    // 정부24/온라인민원처럼 명확한 URL만 통과(쿼리스트링 포함 + .go.kr 도메인)
-    if(p.link && /^https:\/\/[a-zA-Z0-9.\-]+\.go\.kr\/[\w%/\-]+\?[\w=&%]+/.test(p.link)) return p.link;
-    return null; // 그 외엔 네이버 검색으로 폴백 → 100% 응답 보장
+    if(!p.link) return null;
+    // 공식 정부 도메인(.go.kr / .or.kr)이나 청년·복지 포털은 그대로 사용
+    if(/^https?:\/\/[a-zA-Z0-9.\-]+\.(go|or)\.kr/i.test(p.link)) return p.link;
+    if(/youth\.|jnyouthcenter|bokjiro|myhome/i.test(p.link)) return p.link;
+    return null;
   }
   grid.innerHTML=shown.map(p=>{
     const matched=hasMatch&&p._match>=70;
-    // ✅ 3중 안전망: 1) 청년포털 직접 → 2) 네이버검색(신청) → 3) 네이버검색(정보)
+    // ✅ 공고 바로가기 = (1) 미리 지정된 applyURL 우선 (2) 시·군청 공식 사이트 내 사업 검색 (3) 일반 검색
     const directLink=pickApplyLink(p);
-    const searchApplyLink=`https://search.naver.com/search.naver?where=nexearch&query=${encodeURIComponent(p.region+' '+p.title+' 신청')}`;
+    let siteDomain='';
+    if(directLink){
+      const m=directLink.match(/^https?:\/\/(?:www\.)?([^\/]+)/);
+      if(m) siteDomain=m[1];
+    }
+    // 시연 핵심 카드(applyURL 명시)는 그대로 사용 → 시연 시 정확한 검색 결과 보장
+    const applyHref = p.applyURL ? p.applyURL : (directLink
+      ? `https://search.naver.com/search.naver?where=nexearch&query=${encodeURIComponent('site:'+siteDomain+' '+p.title)}`
+      : `https://search.naver.com/search.naver?where=nexearch&query=${encodeURIComponent(p.region+' '+p.title+' 신청')}`);
+    // 사업 정보 보기: 일반 통합 검색 (뉴스·블로그·카페 포함)
     const infoLink=`https://search.naver.com/search.naver?where=nexearch&query=${encodeURIComponent(p.region+' '+p.title)}`;
-    const applyHref=directLink||searchApplyLink;
     const applyLabel='📋 공고 바로가기 →';
     return `<div class="pass-item ${matched?'matched':''}"><div class="pass-row"><span class="pass-region">${p.region}</span><span class="pass-cat-tag ${CAT_CLS[p.cat]}">${CAT_LABEL[p.cat]}</span><span class="pass-deadline ${p.d<=7?'urgent':''}">D-${p.d}</span></div><h4>${p.title}</h4><div class="pass-info"><div class="pass-info-row"><span class="ico">👥</span> <strong>대상:</strong> ${p.target}</div><div class="pass-info-row"><span class="ico">💰</span> <strong>지원:</strong> ${p.amount}</div><div class="pass-info-row"><span class="ico">👤</span> <strong>정원:</strong> ${p.quota}</div></div>${hasMatch&&p._match>0?`<div class="pass-cta-row"><span class="pass-match-score">매칭률 ${p._match}%</span></div>`:''}<div class="pass-actions"><a href="${applyHref}" target="_blank" rel="noopener" class="pass-btn pass-btn-apply">${applyLabel}</a><a href="${infoLink}" target="_blank" rel="noopener" class="pass-btn pass-btn-search">🔍 사업 정보 보기</a></div></div>`;
   }).join('');
