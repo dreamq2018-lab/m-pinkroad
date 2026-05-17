@@ -89,14 +89,6 @@
   
   /* ════════════ FX (꽃잎/배경 효과) ════════════ */
   /* ════════════ 🌸 꽃잎 애니메이션 — 풍성한 다층 / 입체감 ════════════ */
-  /* ════════════ 유틸리티 — escapeHtml/safeUrl (호이스팅 안전 — 최상단) ════════════ */
-function escapeHtml(str){return String(str==null?'':str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
-function safeUrl(url){
-  try{ var u=new URL(url, location.origin); return (u.protocol==='http:'||u.protocol==='https:'||u.protocol==='mailto:'||u.protocol==='tel:')?u.href:'#'; }
-  catch(e){ return '#'; }
-}
-
-
 /* 꽃잎 — 실제 꽃잎 모양: 비대칭 타원 + 두 톤 그라데이션 */
   .petals{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
   .petal{
