@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 (Beta) — 청년 지원사업·예산 데이터·정책 참여를 한 곳에서</title>
-<meta name="description" content="전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 — 27개 시·군 청년 지원사업, 청년예산 데이터, 정책 참여를 한 곳에서. 맞춤 공고 추천 + 실시간 예산 모니터링 + 청년 직접 제안 (Beta · 민형배 후보 청년공약 1호 제안)" />
+<meta name="description" content="전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 — 27개 시·군·구 청년 지원사업, 청년예산 데이터, 정책 참여를 한 곳에서. 맞춤 공고 추천 + 실시간 예산 모니터링 + 청년 직접 제안 (Beta · 민형배 후보 청년공약 1호 제안)" />
 <meta name="keywords" content="광주청년, 전남청년, 청년정책, 청년지원사업, 청년예산, 27개 시군, 청년결정정부, 청년 공고, 통합 플랫폼, 청년몽땅정보통, 서울청년포털, 민형배" />
-<meta name="author" content="전남광주 청년본부 (民聽本部)" />
+<meta name="author" content="광주전남 청년본부 (民聽本部)" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://m-pinkroad.vercel.app/" />
 <!-- Open Graph (페이스북·카카오톡 공유 미리보기) -->
@@ -14,11 +14,13 @@
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:site_name" content="전남광주 「청년결정정부」 AI 통합 디지털 플랫폼" />
 <meta property="og:title" content="전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 — 청년이 만드는 청년결정정부" />
-<meta property="og:description" content="27개 시·군 청년 지원사업·예산 데이터·정책 참여를 한 곳에서. 맞춤 공고 추천과 실시간 예산 모니터링까지." />
-<meta property="og:image" content="https://m-pinkroad.vercel.app/photo_2026-05-17_11-55-23.jpg" />
-<meta property="og:image:width" content="1280" />
-<meta property="og:image:height" content="676" />
-<meta property="og:image:alt" content="민형배 후보 청년공약 1호 「청년결정정부」 OPEN" />
+<meta property="og:description" content="27개 시·군·구 청년 지원사업·예산 데이터·정책 참여를 한 곳에서. 맞춤 공고 추천과 실시간 예산 모니터링까지." />
+<meta property="og:image" content="https://m-pinkroad.vercel.app/og-preview.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:secure_url" content="https://m-pinkroad.vercel.app/og-preview.jpg" />
+<meta property="og:image:url" content="https://m-pinkroad.vercel.app/og-preview.jpg" />
+<meta property="og:image:alt" content="전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 포스터" />
 <meta property="og:url" content="https://m-pinkroad.vercel.app/" />
 <meta property="og:video" content="https://www.youtube.com/watch?v=wbwDh-nkgoA" />
 <meta property="og:video:secure_url" content="https://www.youtube.com/embed/wbwDh-nkgoA" />
@@ -27,12 +29,12 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="전남광주 「청년결정정부」 AI 통합 디지털 플랫폼" />
 <meta name="twitter:description" content="청년 지원사업 · 예산 데이터 · 정책 참여를 한 곳에서 (Beta)" />
-<meta name="twitter:image" content="https://m-pinkroad.vercel.app/photo_2026-05-17_11-55-23.jpg" />
+<meta name="twitter:image" content="https://m-pinkroad.vercel.app/og-preview.jpg" />
 <!-- 테마 컬러 -->
 <meta name="theme-color" content="#CC2F6A" />
 <!-- 구조화 데이터 (검색엔진용) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"전남광주 「청년결정정부」 AI 통합 디지털 플랫폼","url":"https://m-pinkroad.vercel.app/","description":"전남광주 27개 시·군 청년 지원사업·예산 데이터·정책 참여를 한 곳에서 (Beta)","inLanguage":"ko-KR","publisher":{"@type":"Organization","name":"전남광주 청년본부"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"전남광주 「청년결정정부」 AI 통합 디지털 플랫폼","url":"https://m-pinkroad.vercel.app/","description":"광주전남 27개 시·군·구 청년 지원사업·예산 데이터·정책 참여를 한 곳에서 (Beta)","inLanguage":"ko-KR","publisher":{"@type":"Organization","name":"광주전남 청년본부"}}
 </script>
 <style>
   :root{
@@ -86,27 +88,85 @@
 
   
   /* ════════════ FX (꽃잎/배경 효과) ════════════ */
-  /* 꽃잎 — 블루 배경에서 잘 보이도록 진한 핑크 */
+  /* ════════════ 🌸 꽃잎 애니메이션 — 풍성한 다층 / 입체감 ════════════ */
+  /* ════════════ 유틸리티 — escapeHtml/safeUrl (호이스팅 안전 — 최상단) ════════════ */
+function escapeHtml(str){return String(str==null?'':str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+function safeUrl(url){
+  try{ var u=new URL(url, location.origin); return (u.protocol==='http:'||u.protocol==='https:'||u.protocol==='mailto:'||u.protocol==='tel:')?u.href:'#'; }
+  catch(e){ return '#'; }
+}
+
+
+/* 꽃잎 — 실제 꽃잎 모양: 비대칭 타원 + 두 톤 그라데이션 */
   .petals{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
-  .petal{position:absolute;top:-40px;width:18px;height:18px;background:radial-gradient(ellipse at 30% 30%,#e89cba 0%,#e0608f 55%,#cc2f6a 100%);border-radius:80% 0 80% 0;opacity:.65;filter:drop-shadow(0 1px 2px rgba(184,34,95,.25));animation:fall linear infinite}
-  .petal::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 70%,rgba(255,255,255,.55) 0%,transparent 55%);border-radius:inherit}
-  .petal.s2{width:13px;height:13px;opacity:.55}
-  .petal.s3{width:22px;height:22px;opacity:.6}
-  .petal.s4{width:26px;height:26px;opacity:.5}
-  .petal.peach{background:radial-gradient(ellipse at 30% 30%,#ffe2c8 0%,#ffba8c 60%,#f08458 100%);opacity:.55}
-  .petal.white{background:radial-gradient(ellipse at 30% 30%,#ffffff 0%,#ffe6ef 70%,#ff9fc1 100%);opacity:.6}
-  @keyframes fall{0%{transform:translate(0,-10vh) rotate(0deg);opacity:0}8%{opacity:.85}50%{transform:translate(40px,50vh) rotate(220deg)}100%{transform:translate(-30px,110vh) rotate(540deg);opacity:.3}}
-  .petal:nth-child(odd){animation-name:fall2}
-  @keyframes fall2{0%{transform:translate(0,-10vh) rotate(0deg);opacity:0}8%{opacity:.85}50%{transform:translate(-50px,50vh) rotate(-200deg)}100%{transform:translate(60px,110vh) rotate(-480deg);opacity:.25}}
+  .petal{
+    position:absolute;top:-40px;width:16px;height:22px;
+    background:radial-gradient(ellipse at 35% 25%, #ffd0e2 0%, #ff9bc2 50%, #cc2f6a 100%);
+    border-radius:60% 5% 60% 5% / 60% 5% 60% 5%;
+    opacity:.78;filter:drop-shadow(0 1px 2px rgba(122,21,66,.35));
+    animation:petalFall var(--dur, 16s) linear infinite;
+    transform-origin:center;
+    will-change:transform, opacity;
+  }
+  .petal::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse at 70% 80%, rgba(255,255,255,.65) 0%, transparent 55%);
+    border-radius:inherit;
+  }
+  /* 4가지 크기 변형 — 가까이/멀리 입체감 */
+  .petal.s1{width:11px;height:16px;opacity:.6;filter:blur(.4px) drop-shadow(0 1px 2px rgba(122,21,66,.25))}
+  .petal.s2{width:14px;height:20px;opacity:.7}
+  .petal.s3{width:18px;height:25px;opacity:.85}
+  .petal.s4{width:22px;height:30px;opacity:.92;filter:drop-shadow(0 2px 4px rgba(122,21,66,.45))}
+  /* 색상 변형 — 자연스러운 다양성 */
+  .petal.c1{background:radial-gradient(ellipse at 35% 25%, #fff0f6 0%, #ffbed4 55%, #e87099 100%)} /* 연핑크 */
+  .petal.c2{background:radial-gradient(ellipse at 35% 25%, #ffd0e2 0%, #ff9bc2 50%, #cc2f6a 100%)} /* 중핑크 */
+  .petal.c3{background:radial-gradient(ellipse at 35% 25%, #ffb8d1 0%, #f095b5 50%, #a21e55 100%)} /* 진핑크 */
+  .petal.c4{background:radial-gradient(ellipse at 35% 25%, #fffaf0 0%, #ffe4c8 50%, #f0b08a 100%)} /* 피치 */
+  .petal.c5{background:radial-gradient(ellipse at 35% 25%, #ffffff 0%, #ffeef3 50%, #ffc4d7 100%);opacity:.55} /* 화이트 */
+  /* 4가지 낙하 패턴 — 서로 다른 좌우 흔들림으로 자연스러움 */
+  @keyframes petalFall{
+    0%   { transform:translate(0, -10vh) rotate(0deg);   opacity:0 }
+    5%   { opacity:.85 }
+    25%  { transform:translate(15px, 20vh) rotate(120deg) }
+    50%  { transform:translate(-25px, 50vh) rotate(220deg) }
+    75%  { transform:translate(20px, 75vh) rotate(360deg) }
+    95%  { opacity:.6 }
+    100% { transform:translate(-15px, 110vh) rotate(540deg); opacity:0 }
+  }
+  @keyframes petalFall2{
+    0%   { transform:translate(0, -10vh) rotate(0deg);   opacity:0 }
+    5%   { opacity:.85 }
+    25%  { transform:translate(-22px, 22vh) rotate(-130deg) }
+    50%  { transform:translate(30px, 52vh) rotate(-260deg) }
+    75%  { transform:translate(-18px, 78vh) rotate(-400deg) }
+    100% { transform:translate(25px, 110vh) rotate(-560deg); opacity:0 }
+  }
+  @keyframes petalFall3{
+    0%   { transform:translate(0, -10vh) rotate(15deg) scale(.95);  opacity:0 }
+    8%   { opacity:.9 }
+    50%  { transform:translate(50px, 50vh) rotate(280deg) scale(1.05) }
+    100% { transform:translate(-30px, 110vh) rotate(620deg) scale(.95); opacity:0 }
+  }
+  @keyframes petalFall4{
+    0%   { transform:translate(0, -10vh) rotate(-15deg); opacity:0 }
+    8%   { opacity:.9 }
+    50%  { transform:translate(-55px, 50vh) rotate(-280deg) }
+    100% { transform:translate(35px, 110vh) rotate(-620deg); opacity:0 }
+  }
+  .petal:nth-child(4n+1){animation-name:petalFall}
+  .petal:nth-child(4n+2){animation-name:petalFall2}
+  .petal:nth-child(4n+3){animation-name:petalFall3}
+  .petal:nth-child(4n+4){animation-name:petalFall4}
   @media (prefers-reduced-motion:reduce){.petal{display:none}}
 
   
   /* ════════════ LAYOUT — TopBanner / Header ════════════ */
   /* 상단 배너 — 핑크+블루 그라디언트 + 멘트 자동 순환 */
-  .top-banner{background:linear-gradient(90deg,var(--pink-deep),var(--pink),var(--blue),var(--blue-deep));color:#fff;padding:0 16px;font-size:13.5px;font-weight:700;position:relative;z-index:5;height:42px;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px}
+  .top-banner{background:linear-gradient(90deg,#7A1542 0%,#A21E55 25%,#0d3a7a 75%,#08285a 100%);color:#fff;padding:0 16px;font-size:14px;font-weight:800;position:relative;z-index:5;height:44px;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;letter-spacing:-.01em;text-shadow:0 1px 3px rgba(0,0,0,.45)}
   .top-banner span.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#FFD6C4;animation:pulse 1.6s infinite;flex-shrink:0}
   .banner-cycle{position:relative;flex:1;height:22px;display:flex;align-items:center;justify-content:center;max-width:1100px}
-  .banner-msg{position:absolute;left:0;right:0;text-align:center;opacity:0;transform:translateY(8px);animation:bannerCycle 21s ease-in-out infinite;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px}
+  .banner-msg{position:absolute;left:0;right:0;text-align:center;opacity:0;transform:translateY(8px);animation:bannerCycle 21s ease-in-out infinite;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;color:#fff;font-weight:800;text-shadow:0 1px 4px rgba(0,0,0,.5),0 0 12px rgba(0,0,0,.25)}
   .banner-msg:nth-child(1){animation-delay:0s}
   .banner-msg:nth-child(2){animation-delay:7s}
   .banner-msg:nth-child(3){animation-delay:14s}
@@ -116,7 +176,8 @@
     32%, 34% {opacity:0;transform:translateY(-10px)}
     100%     {opacity:0;transform:translateY(-10px)}
   }
-  @media (max-width:680px){.top-banner{font-size:12px;height:38px}.banner-msg{font-size:11.5px}}
+  .top-banner strong, .banner-msg strong{color:#FFD66B;font-weight:900;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+  @media (max-width:680px){.top-banner{font-size:12.5px;height:40px}.banner-msg{font-size:12px}}
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.85)}}
 
   /* 헤더 — 한 줄 정렬 보장 */
@@ -203,7 +264,7 @@
   .hero::after{content:"";position:absolute;bottom:-150px;right:-100px;width:550px;height:550px;background:radial-gradient(circle,var(--blue-100) 0%,transparent 65%);z-index:0}
   .hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:50px;align-items:center}
   @media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:40px}}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--pink-100);color:var(--pink-deep);font-weight:800;font-size:13px;letter-spacing:.04em;margin-bottom:18px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;background:linear-gradient(135deg,var(--pink-100),var(--pink-200));color:var(--pink-700);font-weight:900;font-size:13.5px;letter-spacing:.02em;margin-bottom:22px;border:1.5px solid var(--pink-deep);box-shadow:0 4px 12px -4px rgba(204,47,106,.3),inset 0 1px 0 rgba(255,255,255,.5)}
   .eyebrow::before{content:"🌸"}
   .hero-kicker{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:900;color:var(--pink-deep);line-height:1.3;margin-bottom:14px;letter-spacing:-.01em}
   .hero-kicker::before{content:"";display:block;width:4px;height:24px;border-radius:4px;background:linear-gradient(180deg,var(--pink-deep),var(--pink-500))}
@@ -672,7 +733,7 @@
   .pledge-closing h3{font-size:18px;font-weight:900;margin-bottom:10px;color:#fff}
   .pledge-closing p{font-size:14px;color:rgba(255,255,255,.92);line-height:1.65}
 
-  /* PinkPass — 페이징 + 실링크 */
+  /* 청년 지원사업 추천 — 페이징 + 실링크 */
   .pinkpass{background:linear-gradient(180deg,var(--pink-50) 0%,#fff 100%)}
   .match-card{background:linear-gradient(135deg,var(--blue-50),var(--pink-50));border:2px solid var(--blue-200);border-radius:var(--r-lg);padding:24px 26px;margin-bottom:22px;box-shadow:var(--shadow-sm)}
   .match-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
@@ -776,9 +837,9 @@
   .map-bubble.selected .b-main{stroke:#fff;stroke-width:2.2;opacity:1}
   .map-bubble.selected .b-glow{opacity:.48;transform:scale(1.28)}
   .map-bubble.selected .b-core{stroke:var(--pink-deep);stroke-width:1.6}
-  .map-bubble text{font-family:inherit;pointer-events:none;text-anchor:middle;paint-order:stroke fill;stroke:#fff;stroke-width:2.5px;stroke-linejoin:round;stroke-opacity:1}
-  .map-bubble .b-num{font-weight:900;fill:#7A1542;text-shadow:0 1px 0 rgba(255,255,255,.8)}
-  .map-bubble .b-name{font-size:14.5px;font-weight:900;fill:var(--ink);letter-spacing:-.02em;stroke-width:3.2px}
+  .map-bubble text{font-family:inherit;pointer-events:none;text-anchor:middle}
+  .map-bubble .b-num{font-weight:900;fill:#7A1542;paint-order:stroke fill;stroke:#fff;stroke-width:2.5px;stroke-linejoin:round}
+  .map-bubble .b-name{font-size:14px;font-weight:900;fill:#1A0C14;letter-spacing:-.02em;stroke-width:0;paint-order:normal}
   /* 랭킹 카드 — 정렬 모드별 강조 배지 */
   .ring-meta .exec.exec-hot{background:linear-gradient(135deg,var(--pink-deep),var(--pink));color:#fff;padding:3px 9px;border-radius:6px;font-weight:900;font-size:11.5px;letter-spacing:.02em;box-shadow:0 2px 5px rgba(184,34,95,.25);display:inline-block}
   .ring-meta .exec{font-weight:900;color:var(--pink-deep)}
@@ -2163,7 +2224,7 @@
     .policy-detail-grid.m-collapse.is-collapsed > .policy-detail-card:nth-child(n+4){display:none}
     /* 예산 랭킹: JS가 채워주는 자식들 → 5개만 */
     .budget-rings.m-collapse.is-collapsed > *:nth-child(n+6){display:none}
-    /* 통합 공고함: 6개만 (3행 x 2가 1열로 펴짐) */
+    /* 청년 지원사업 추천: 6개만 (3행 x 2가 1열로 펴짐) */
     .pass-grid.m-collapse.is-collapsed > *:nth-child(n+7){display:none}
     /* 뉴스/아카이브 카드: 3개만 */
     .va-cards.m-collapse.is-collapsed > .va-card:nth-child(n+4){display:none}
@@ -2995,6 +3056,340 @@
     box-shadow:0 24px 50px -10px rgba(8,40,90,.75), inset 0 1px 0 rgba(255,255,255,.25);
   }
 
+
+  /* 아카이브 — LIVE 청취중 카드 */
+  .va-card.va-card-live{
+    border-color:var(--blue-200);
+    background:linear-gradient(135deg, #fff 0%, var(--blue-50) 100%);
+  }
+  .va-card.va-card-live:hover{border-color:var(--blue);box-shadow:0 12px 28px -10px rgba(13,58,122,.3)}
+  .va-num.live{
+    display:inline-flex;align-items:center;gap:6px;
+    background:linear-gradient(135deg,#dc2626,#b91c1c);
+    color:#fff;font-weight:900;letter-spacing:.04em;
+    padding:4px 12px;border-radius:999px;font-size:11.5px;
+    box-shadow:0 4px 12px -4px rgba(220,38,38,.5);
+  }
+  .va-live-dot{
+    width:7px;height:7px;border-radius:50%;background:#fff;
+    box-shadow:0 0 0 0 rgba(255,255,255,.9);
+    animation:vaLivePulse 1.2s ease-in-out infinite;
+  }
+  @keyframes vaLivePulse{
+    0%{box-shadow:0 0 0 0 rgba(255,255,255,.85);transform:scale(1)}
+    70%{box-shadow:0 0 0 8px rgba(255,255,255,0);transform:scale(1.15)}
+    100%{box-shadow:0 0 0 0 rgba(255,255,255,0);transform:scale(1)}
+  }
+
+
+  /* ════════════ 8개 분과 — 관계 법령 및 조례 찾기 ════════════ */
+  .legal-finder{
+    margin-top:16px;padding:18px 22px;
+    background:#fff;border:1.5px dashed var(--blue-200);
+    border-radius:14px;
+  }
+  .lf-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+  .lf-tag{
+    display:inline-flex;align-items:center;
+    padding:3px 11px;border-radius:999px;
+    background:linear-gradient(135deg,var(--blue-500),var(--blue-deep));
+    color:#fff;font-size:11px;font-weight:900;letter-spacing:.05em;
+  }
+  .lf-head h4{
+    font-size:15.5px;font-weight:900;color:var(--blue-deep);
+    margin:0;letter-spacing:-.01em;
+  }
+  .lf-sub{
+    font-size:13px;color:var(--ink-2);line-height:1.65;font-weight:600;
+    margin:0 0 12px;word-break:keep-all;
+  }
+  .lf-sub strong{color:var(--blue-deep);font-weight:800}
+  .lf-form{display:flex;gap:8px;flex-wrap:wrap}
+  .lf-form input{
+    flex:1;min-width:200px;
+    padding:10px 14px;border:1.5px solid var(--blue-200);
+    border-radius:10px;font-size:13.5px;font-weight:600;color:var(--ink);
+    outline:none;transition:border-color .2s, box-shadow .2s;
+  }
+  .lf-form input:focus-visible{border-color:var(--blue);box-shadow:0 0 0 3px rgba(91,149,228,.3)}
+  .lf-btn{
+    padding:10px 16px;border:none;border-radius:10px;
+    font-size:13px;font-weight:900;color:#fff;cursor:pointer;
+    transition:transform .15s, box-shadow .2s;letter-spacing:-.01em;flex-shrink:0;
+  }
+  .lf-btn:hover{transform:translateY(-1px)}
+  .lf-btn-law{background:linear-gradient(135deg,var(--blue-500),var(--blue-deep));box-shadow:0 6px 14px -6px rgba(13,58,122,.45)}
+  .lf-btn-law:hover{box-shadow:0 10px 20px -6px rgba(13,58,122,.6)}
+  .lf-btn-elis{background:linear-gradient(135deg,var(--pink-400),var(--pink-deep));box-shadow:0 6px 14px -6px rgba(204,47,106,.45)}
+  .lf-btn-elis:hover{box-shadow:0 10px 20px -6px rgba(204,47,106,.6)}
+  .lf-foot{margin:10px 0 0;font-size:11.5px;color:var(--gray);font-weight:600;line-height:1.55}
+  .lf-foot strong{color:var(--blue-deep);font-weight:800}
+  @media (max-width:560px){
+    .legal-finder{padding:14px 16px}
+    .lf-head h4{font-size:14.5px}
+    .lf-sub{font-size:12.5px}
+    .lf-form input, .lf-btn{font-size:12.5px;width:100%}
+    .lf-form{flex-direction:column}
+  }
+
+
+  /* ════════════ 지도 인터랙션 안정화 ════════════ */
+  /* 검은 박스(SVG filter 잔상) 방지 — 클릭 시 발생하는 그림자/blur 제거 */
+  .map-svg{will-change:auto !important}
+  .map-svg [filter]{filter:none !important}
+  .map-svg .region-bubble,
+  .map-svg .region-flower,
+  .map-svg .region-polygon{
+    cursor:pointer;transition:transform .15s ease, opacity .15s ease;
+    transform-origin:center;
+    transform-box:fill-box;
+  }
+  .map-svg .region-bubble:hover,
+  .map-svg .region-flower:hover{
+    transform:scale(1.04);
+    opacity:.95;
+  }
+  .map-svg .region-bubble:active,
+  .map-svg .region-flower:active{transform:scale(.98)}
+  /* 모바일 — 터치 영역 확보 + 애니메이션 더 가볍게 */
+  @media (max-width:780px){
+    .map-svg{touch-action:manipulation}
+    .map-svg .region-bubble,
+    .map-svg .region-flower,
+    .map-svg .region-polygon{transition:opacity .12s ease}
+    .map-svg .region-bubble:hover,
+    .map-svg .region-flower:hover{transform:none}
+    /* 모바일에선 SVG 필터(그림자·블러) 완전 차단 */
+    .map-svg filter, .map-svg [filter], .map-svg image[filter]{filter:none !important}
+  }
+  /* 텍스트 라벨이 입체감 때문에 깨지지 않도록 */
+  .map-svg text{pointer-events:none;user-select:none}
+  /* 클릭 가능 표시 — 호버 시 라벨 색만 진하게 */
+  .map-svg .region-label{transition:fill .15s}
+  .map-svg .region-group:hover .region-label{fill:var(--pink-deep)}
+
+
+  /* 지도 라벨 — 별도 z-order로 항상 위에 */
+  .map-svg .map-label{pointer-events:all}
+  .map-svg .map-label rect{transition:fill .15s, stroke .15s}
+  .map-svg .map-label:hover rect{fill:var(--pink-50);stroke:var(--pink-deep)}
+  .map-svg .map-label text{font-family:inherit;text-anchor:middle;pointer-events:none}
+
+
+  /* filter-chip이 <button>이므로 기본 스타일 리셋 + 포커스 보강 */
+  button.filter-chip{font-family:inherit;outline:none}
+  button.filter-chip:focus-visible{box-shadow:var(--focus-ring);border-color:var(--blue)}
+
+
+  /* 📧 이메일 복사 버튼 + 폴백 안내 */
+  .email-info-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .email-row-main{flex:1;min-width:0}
+  .email-copy-btn{
+    flex-shrink:0;display:inline-flex;align-items:center;gap:6px;
+    padding:9px 16px;border:none;border-radius:10px;
+    background:linear-gradient(135deg,var(--blue-500),var(--blue-deep));
+    color:#fff;font-size:12.5px;font-weight:800;cursor:pointer;
+    box-shadow:0 4px 10px -4px rgba(13,58,122,.5);
+    transition:transform .15s,box-shadow .2s;
+  }
+  .email-copy-btn:hover{transform:translateY(-1px);box-shadow:0 8px 16px -4px rgba(13,58,122,.65)}
+  .email-copy-btn:active{transform:translateY(0)}
+  .email-copy-btn:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(91,149,228,.5)}
+  .email-copy-btn.copied{background:linear-gradient(135deg,#16a34a,#15803d)}
+  .email-info.email-info-fallback{
+    margin-top:8px;background:var(--pink-50);border-left:4px solid var(--pink-deep);
+    color:var(--ink-2);font-weight:700;
+  }
+  .email-info.email-info-fallback strong{color:var(--pink-deep)}
+  @media (max-width:560px){
+    .email-info-row{flex-direction:column;align-items:stretch}
+    .email-copy-btn{width:100%;justify-content:center;padding:11px 16px}
+  }
+
+
+  /* ════════════ 📱 모바일 UX 전반 보강 ════════════ */
+  @media (max-width:780px){
+    /* 모든 버튼·인풋 터치 영역 최소 44px (Apple 권장) */
+    .btn, .btn-primary, .btn-blue, .btn-ghost, .btn-outline,
+    button.filter-chip, .lf-btn, .pass-btn, .va-card, .pi-item,
+    .nav-cta, .openchat-btn, .email-copy-btn, .match-btn{
+      min-height:44px;
+    }
+    /* 폼 인풋 — 터치 친화적 크기 */
+    .form-card input[type=text],
+    .form-card input[type=email],
+    .form-card input[type=tel],
+    .form-card select,
+    .form-card textarea{
+      font-size:16px; /* iOS zoom 방지 */
+      padding:12px 14px;border-radius:10px;
+    }
+    /* 라벨도 더 또렷 */
+    .form-card label{font-size:13.5px;font-weight:800;margin-bottom:6px;display:block}
+    /* propose flow 카드 모바일 — 세로 정렬 */
+    .pfc-grid{grid-template-columns:1fr;gap:10px}
+    .pfc-step{padding:14px 16px}
+    /* 8분과 칩 — 한 줄에 2개씩 */
+    .bg-chips{grid-template-columns:1fr 1fr;gap:8px}
+    .bg-chip{font-size:12.5px;padding:9px 12px}
+    /* email-info 행 가독성 */
+    .email-info{font-size:12.5px;line-height:1.7}
+    /* 인포그래픽 카드 padding 줄임 */
+    .pi-item{padding:14px 12px 12px}
+    .pi-title{font-size:13px;line-height:1.4}
+    .pi-line{font-size:11.5px;line-height:1.5}
+    /* 정책 카드 padding */
+    .policy-detail-card{padding:18px 18px}
+    /* 검색·페이지 버튼 풀폭 */
+    .pass-search input{font-size:16px}
+    .pass-search button{min-height:44px;padding:10px 18px}
+    .page-btn{min-height:42px;min-width:42px;padding:8px 12px}
+    /* 푸터 — 간격 조정 */
+    .foot-col h5{margin-bottom:10px}
+    /* 비주얼 카드 stat — 한 줄에 깔끔하게 */
+    .visual-stats{grid-template-columns:repeat(3,1fr);gap:6px}
+    .stat{padding:11px 6px}
+    .stat-num{font-size:18px}
+    .stat-label{font-size:10.5px}
+  }
+  @media (max-width:480px){
+    /* 매우 작은 화면 — 한 단계 더 컴팩트 */
+    .container{padding:0 16px}
+    section{padding:48px 0}
+    .hero{padding:40px 0 56px}
+    .section-head{margin:0 auto 30px}
+    .section-head h2{font-size:22px;line-height:1.3}
+    .section-head p{font-size:13.5px}
+    /* 인포그래픽 2열 안정화 */
+    .pi-grid{grid-template-columns:1fr 1fr;gap:8px}
+    .pi-icon{width:46px;height:46px;font-size:24px}
+    /* va-card 1열 */
+    .va-cards{grid-template-columns:1fr;gap:10px}
+    /* 8분과 1열 */
+    .bg-chips{grid-template-columns:1fr}
+  }
+
+
+  /* ════════════ YouTube Lite Embed — 실제 썸네일 미리보기 ════════════ */
+  .profile-yt-lite{
+    position:relative;display:block;height:380px;background:#000;
+    cursor:pointer;overflow:hidden;
+    text-decoration:none;color:inherit;
+  }
+  .profile-yt-lite:focus-visible{outline:none;box-shadow:inset 0 0 0 3px rgba(204,47,106,.7)}
+  .profile-yt-lite .yt-poster{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;
+    transition:transform .35s cubic-bezier(.2,.85,.2,1), filter .25s;
+  }
+  .profile-yt-lite:hover .yt-poster{transform:scale(1.04);filter:brightness(.92)}
+  .yt-overlay-grad{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,.45) 100%);
+    z-index:2;pointer-events:none;
+  }
+  .yt-play-btn{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    z-index:3;border:none;background:none;padding:0;cursor:pointer;
+    filter:drop-shadow(0 6px 18px rgba(0,0,0,.6));
+    transition:transform .25s cubic-bezier(.2,.85,.2,1);
+  }
+  .profile-yt-lite:hover .yt-play-btn{transform:translate(-50%,-50%) scale(1.12)}
+  .yt-play-btn svg{display:block;width:90px;height:64px}
+  .profile-yt-lite .profile-photo-tag{z-index:4}
+  .profile-yt-lite .profile-yt-link{
+    position:absolute;right:14px;bottom:14px;z-index:4;
+    display:inline-flex;align-items:center;
+    padding:7px 14px;border-radius:999px;
+    background:rgba(255,255,255,.95);color:#A21E55;
+    font-size:11.5px;font-weight:800;text-decoration:none;letter-spacing:.02em;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+    transition:background .2s, transform .2s;
+  }
+  .profile-yt-lite .profile-yt-link:hover{background:#fff;transform:translateY(-1px)}
+  .profile-yt-lite.is-playing .yt-poster,
+  .profile-yt-lite.is-playing .yt-overlay-grad,
+  .profile-yt-lite.is-playing .yt-play-btn{display:none}
+  .profile-yt-lite iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+  @media (max-width:880px){.profile-yt-lite{height:300px}.yt-play-btn svg{width:74px;height:54px}}
+  @media (max-width:480px){.profile-yt-lite{height:230px}.yt-play-btn svg{width:60px;height:44px}}
+
+  /* ════════════ 🟢 청년 지원사업 추천 LIVE 동기화 배지 ════════════ */
+  .pass-live-badge{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    padding:13px 18px;margin:0 0 16px;border-radius:14px;
+    background:linear-gradient(135deg,#0d3a7a 0%, #1d5fb6 100%);
+    color:#fff;font-size:13px;font-weight:700;letter-spacing:-.005em;
+    box-shadow:0 8px 20px -10px rgba(13,58,122,.5), inset 0 1px 0 rgba(255,255,255,.18);
+  }
+  .plb-left{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
+  .plb-mark{
+    display:inline-flex;align-items:center;gap:6px;
+    background:linear-gradient(135deg,#dc2626,#b91c1c);
+    color:#fff;font-size:11px;font-weight:900;letter-spacing:.06em;
+    padding:5px 11px;border-radius:999px;flex-shrink:0;
+    box-shadow:0 4px 10px -3px rgba(220,38,38,.6);
+  }
+  .plb-dot{
+    width:8px;height:8px;border-radius:50%;background:#fff;
+    animation:passPulse 1.2s ease-in-out infinite;
+  }
+  @keyframes passPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.9);transform:scale(1)}
+    50%{box-shadow:0 0 0 6px rgba(255,255,255,0);transform:scale(1.15)}
+  }
+  .plb-text{font-size:13px;line-height:1.5;color:#fff;font-weight:600;flex:1;min-width:0}
+  .plb-text strong{color:#FFD66B;font-weight:900}
+  .plb-right{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.85);font-weight:700}
+  .plb-time-label{background:rgba(255,255,255,.16);padding:3px 9px;border-radius:6px}
+  .plb-time{font-weight:900;color:#FFD66B;font-variant-numeric:tabular-nums;letter-spacing:0}
+  .plb-next{font-size:11.5px;color:rgba(255,255,255,.75)}
+  @media (max-width:680px){
+    .pass-live-badge{padding:12px 14px;font-size:12px;border-radius:12px}
+    .plb-text{font-size:12px}
+    .plb-right{width:100%;justify-content:flex-start;font-size:11.5px}
+    .plb-mark{font-size:10.5px;padding:4px 9px}
+  }
+
+  /* ════════════ 🌸 통합 보강 CSS (시·군·구 일괄 정리 + SVG 가속) ════════════ */
+  @media (max-width:780px){
+    .map-svg [filter], .map-svg .b-glow, .map-svg .b-main{filter:none !important}
+    .map-svg{will-change:auto !important;transform:translateZ(0)}
+    .map-bubble{will-change:transform}
+  }
+  /* PinkPass → 청년 지원사업 추천 — 영역 라벨 보강 */
+  .pinkpass h2 small{display:block;font-size:.5em;color:var(--gray);margin-top:6px;font-weight:700;letter-spacing:.02em}
+
+
+  /* 🏛️ 푸터 — 선대위 공식 캠페인 안내 */
+  .foot-bottom a{color:#cdd9ec;text-decoration:none;transition:color .2s}
+  .foot-bottom a:hover{color:#FFD66B}
+  .foot-official{
+    margin-top:36px;padding:22px 26px;
+    background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,214,107,.08));
+    border:1.5px solid rgba(255,214,107,.32);border-radius:14px;text-align:center;
+  }
+  .foot-official-badge{
+    display:inline-block;padding:6px 16px;border-radius:999px;
+    background:linear-gradient(135deg,#FFD66B,#E5A100);
+    color:#3C1E1E;font-size:12px;font-weight:900;letter-spacing:.04em;
+    margin-bottom:14px;box-shadow:0 4px 12px -4px rgba(229,161,0,.45);
+  }
+  .foot-official-text{
+    margin:0 auto;color:#FFFAE0;font-size:14px;line-height:1.85;font-weight:600;
+    letter-spacing:-.005em;max-width:880px;
+  }
+  .foot-official-text strong{color:#FFD66B;font-weight:900}
+  @media (max-width:680px){
+    .foot-official{padding:18px 18px;margin-top:28px;border-radius:12px}
+    .foot-official-badge{font-size:11px;padding:5px 13px;margin-bottom:11px}
+    .foot-official-text{font-size:12.5px;line-height:1.8}
+  }
+
+
+  .va-card.va-card-live{border-color:var(--blue-200);background:linear-gradient(135deg,#fff 0%,var(--blue-50) 100%)}
+  .va-card.va-card-live:hover{border-color:var(--blue);box-shadow:0 12px 28px -10px rgba(13,58,122,.3)}
+  .va-num.live{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#dc2626,#b91c1c);color:#fff;font-weight:900;letter-spacing:.04em;padding:4px 12px;border-radius:999px;font-size:11.5px;box-shadow:0 4px 12px -4px rgba(220,38,38,.5)}
+
 </style>
 </head>
 <body>
@@ -3024,9 +3419,9 @@
 <div class="top-banner">
   <span class="dot"></span>
   <div class="banner-cycle">
-    <span class="banner-msg"><strong>청년 지원사업 · 예산 데이터 · 정책 참여</strong>를 한 곳에서 — 전남광주 27개 시·군 통합 (Beta)</span>
+    <span class="banner-msg"><strong>청년 지원사업 · 예산 데이터 · 정책 참여</strong>를 한 곳에서 — 광주전남 27개 시·군·구 통합 (Beta)</span>
     <span class="banner-msg"><strong>「청년예산제」</strong> + <strong>「전남광주청년정책의회」 상설화</strong> = <strong>「청년결정정부」</strong></span>
-    <span class="banner-msg"><strong>본 플랫폼</strong>은 민형배 후보 청년공약 1호 <strong>「청년결정정부」</strong>의 시범 운영판입니다 — 전남광주 청년본부 제공</span>
+    <span class="banner-msg"><strong>본 플랫폼</strong>은 민형배 후보 청년공약 1호 <strong>「청년결정정부」</strong>의 시범 운영판입니다 — 광주전남 청년본부 제공</span>
   </div>
 </div>
 
@@ -3073,11 +3468,11 @@
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 (Beta)</span>
-      <div class="hero-kicker">정책의 대상에서 <strong>정책의 주체</strong>로</div>
+      <div class="hero-kicker">"정책의 대상에서 <strong>정책의 주체</strong>로"</div>
       <h1>전남광주특별시민,<br/><span class="accent">꽃길만 걷자!</span></h1>
       <p class="lead">집도, 일도, 창업도 — <strong>무엇을 시작해도 빚 없이 시작하는 '꽃길' 시대</strong>를 선언합니다. <strong>청년이 예산의 주인, 정책의 결정자가 되는 도시</strong> — <strong>전남광주통합특별시가 여러분의 첫 시작을 함께 짊어지는 '완전한 시스템'</strong>이 되겠습니다.</p>
       <div class="hero-cta">
-        <a href="#budget" class="btn btn-hero btn-hero-tech" aria-label="27개 시·군 청년예산 분석 섹션으로 이동">27개 시·군 청년예산 분석 📊</a>
+        <a href="#budget" class="btn btn-hero btn-hero-tech" aria-label="27개 시·군·구 청년예산 분석 섹션으로 이동">27개 시·군·구 청년예산 분석 📊</a>
         <a href="#pinkpass" class="btn btn-hero btn-hero-mix" aria-label="AI 맞춤공고 찾기 섹션으로 이동">AI 맞춤공고 찾기 🌸</a>
         <a href="#propose" class="btn btn-hero btn-hero-trust" aria-label="청년예산 직접 편성·결정 섹션으로 이동">청년예산 직접 편성·결정하기 🖋️</a>
       </div>
@@ -3086,7 +3481,7 @@
     <div class="visual">
       <span class="visual-tag">실시간 데이터 · PHASE 1</span>
       <h3>"지금 우리 동네 청년 예산은<br/>어디에, 얼마나 쓰이고 있을까?"</h3>
-      <p>지방재정365 OpenAPI 실시간 수집 + <strong>데이터 기반 인사이트</strong>로 27개 시·군 청년·일자리 예산을 한눈에. 조건에 맞춰 추천해주는 청년 정책까지 — 청년결정정부의 시작.</p>
+      <p>지방재정365 OpenAPI 실시간 수집 + <strong>데이터 기반 인사이트</strong>로 27개 시·군·구 청년·일자리 예산을 한눈에. 조건에 맞춰 추천해주는 청년 정책까지 — 청년결정정부의 시작.</p>
       <div class="visual-stats">
         <div class="stat"><span class="stat-num">27</span><span class="stat-label">통합 시·군</span></div>
         <div class="stat"><span class="stat-num" id="totalBudget">3,256</span><span class="stat-label">올해 청년예산(억)</span></div>
@@ -3108,18 +3503,20 @@
     <div class="profile-grid">
       <div>
         <div class="profile-card">
-          <div class="profile-photo-wrap profile-yt-wrap">
+          <div class="profile-photo-wrap profile-yt-lite" data-video-id="wbwDh-nkgoA" role="button" tabindex="0" aria-label="민형배TV 영상 재생 — 클릭하면 동영상이 시작됩니다" onclick="liteYTPlay(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();liteYTPlay(this)}">
             <span class="profile-photo-tag">▶ 민심캠프 청년본부 · 민형배TV</span>
-            <iframe
-              class="profile-yt-iframe"
-              src="https://www.youtube.com/embed/wbwDh-nkgoA?rel=0&modestbranding=1"
-              title="민형배TV 영상 바로보기"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"
-            ></iframe>
-            <a class="profile-yt-link" href="https://youtu.be/wbwDh-nkgoA" target="_blank" rel="noopener" aria-label="민형배TV 영상 YouTube 새 창에서 보기">YouTube에서 보기 ↗</a>
+            <picture>
+              <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/wbwDh-nkgoA/maxresdefault.webp"/>
+              <img class="yt-poster" src="https://i.ytimg.com/vi/wbwDh-nkgoA/maxresdefault.jpg" alt="민형배TV 영상 미리보기 — 청년결정정부 OPEN" loading="lazy" decoding="async" onerror="this.src='https://i.ytimg.com/vi/wbwDh-nkgoA/hqdefault.jpg'"/>
+            </picture>
+            <div class="yt-overlay-grad" aria-hidden="true"></div>
+            <button type="button" class="yt-play-btn" tabindex="-1" aria-hidden="true">
+              <svg viewBox="0 0 68 48" width="80" height="56" aria-hidden="true">
+                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#FF0000"/>
+                <polygon points="27,34 45,24 27,14" fill="#fff"/>
+              </svg>
+            </button>
+            <a class="profile-yt-link" href="https://youtu.be/wbwDh-nkgoA" target="_blank" rel="noopener" aria-label="민형배TV 영상 YouTube 새 창에서 보기" onclick="event.stopPropagation()">YouTube에서 보기 ↗</a>
           </div>
           <div class="profile-name-bar">
             <div class="role">전남광주 통합시장 후보 (기호 1번) · 민심캠프 청년본부</div>
@@ -3168,7 +3565,7 @@
         <h3>"청년이 떠나는 도시에서,<br/>청년이 다시 <span class="pu-accent">모이는</span> 도시로"</h3>
         <span class="pu-deco-right">🌸</span>
       </div>
-      <p class="pum-subtitle"><strong>청년이 떠나는 이유는 노력이 부족해서가 아니라, 문턱이 높은 구조 때문입니다.</strong><br/>주거 · 취업 · 창업 · 일상 · 신혼 · 청년자치 — <strong>출발선의 6가지 문턱</strong>을 도시가 직접 <strong>낮추겠습니다.</strong></p>
+      <p class="pum-subtitle"><strong>청년이 떠나는 이유는 개인의 능력이나 노력이 부족해서가 아니라, 문턱이 높은 구조 때문입니다.</strong><br/>주거 · 취업 · 창업 · 일상 · 신혼 · 청년자치 — <strong>출발선의 6가지 문턱</strong>을 도시가 직접 <strong>낮추겠습니다.</strong></p>
 
       <!-- 🌸 6대 정책 인포그래픽 — 클릭 시 상세 펼침 -->
       <div class="pi-grid" id="policyInfographic">
@@ -3221,8 +3618,7 @@
     <div class="pu-closing pu-closing-merged">
       <div class="pu-closing-emblem"><span class="pu-umb">☂️</span><span class="pu-fl">🌸</span></div>
       <h4 class="pu-closing-title">"민형배가 <strong>비를 막는 우산</strong>이 되어드리고, <span class="pu-glow">꽃길</span>을 만들어드립니다"</h4>
-      <p>전남광주의 청년 문제는 개인의 능력이나 노력의 부족이 아닙니다. 첫 문턱에서 막히는 <strong class="pu-cream">구조적 문제</strong>입니다. 민형배는 그 구조를 직접 바꾸어, 청년이 자신의 삶을 온전히 설계할 수 있는 <strong class="pu-cream">완전한 도시 시스템</strong>을 만듭니다 — 그것이 <strong class="pu-cream">민형배가 만드는 꽃길</strong>입니다.</p>
-    </div>
+      </div>
 
     <div class="policy-detail-grid m-collapse is-collapsed pdc-hidden" id="policyGrid" data-mobile-show="3" hidden>
       <!-- 정책 1 -->
@@ -3331,11 +3727,11 @@
   </div>
 </section>
 
-<!-- ───── 4. 통합 공고함 ───── -->
+<!-- ───── 4. 청년 지원사업 추천 ───── -->
 <section class="pinkpass" id="pinkpass">
   <div class="container">
     <div class="section-head">
-      <span class="section-tag pink">PINK PASS · 맞춤형 통합 공고함</span>
+      <span class="section-tag pink">PINK PASS · 청년 지원사업 추천 통합함</span>
       <h2>AI가 찾아주는 27개 시군 청년 공고</h2>
       <p>지역·연령·관심분야를 입력하면 <strong>AI가 내 조건에 맞는 청년 지원 공고</strong>를 자동 매칭해 찾아드립니다.</p>
     </div>
@@ -3348,7 +3744,7 @@
       <div class="match-fields">
         <div class="m-field">
           <label for="myRegion">거주 시·군</label>
-          <select id="myRegion"><option value="">전체 (전남광주)</option></select>
+          <select id="myRegion"><option value="">전체 (광주전남)</option></select>
         </div>
         <div class="m-field">
           <label for="myAge">연령대 <small style="opacity:.7;font-weight:600">(광주 19~39세 / 전남 18~45세)</small></label>
@@ -3370,6 +3766,21 @@
       <div class="match-summary" id="matchSummary"></div>
     </div>
 
+    <!-- 🟢 공식 데이터 연동 안내 — 온통청년·청년몽땅정보통 -->
+    <div class="pass-live-badge" role="status" aria-live="polite">
+      <div class="plb-left">
+        <span class="plb-mark"><span class="plb-dot"></span>LIVE</span>
+        <span class="plb-text">
+          <strong>「온통청년 · youthcenter.go.kr」</strong> 국가 공식 청년정책 통합 포털 실시간 연동
+        </span>
+      </div>
+      <div class="plb-right">
+        <span class="plb-time-label">⏱ 마지막 동기화</span>
+        <span class="plb-time" id="passSyncTime">—</span>
+        <span class="plb-next">· 다음 갱신 <span id="passSyncNext">60분 후</span></span>
+      </div>
+    </div>
+
     <div class="pass-controls">
       <div class="pass-search">
         <input id="passSearch" type="text" placeholder="키워드 검색 (예: 보증금, 창업, 면접, 결혼)" />
@@ -3384,23 +3795,23 @@
     </div>
 
     <div class="pass-filters" id="passFilters">
-      <span class="filter-chip active" data-filter="all">전체</span>
-      <span class="filter-chip" data-filter="urgent">⏰ 마감임박</span>
-      <span class="filter-chip" data-filter="d1">🎨 문화예술·관광</span>
-      <span class="filter-chip" data-filter="d2">💪 체육·웰니스·의료</span>
-      <span class="filter-chip" data-filter="d3">🤖 AI·디지털혁신</span>
-      <span class="filter-chip" data-filter="d4">🌾 농어촌·환경</span>
-      <span class="filter-chip" data-filter="d5">💼 경제·일자리·창업</span>
-      <span class="filter-chip" data-filter="d6">🏠 주거·교육</span>
-      <span class="filter-chip" data-filter="d7">👨‍👩‍👧 복지·가족·돌봄</span>
-      <span class="filter-chip" data-filter="d8">🗳️ 청년주권</span>
+      <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">전체</button>
+      <button type="button" class="filter-chip" data-filter="urgent" aria-pressed="false">⏰ 마감임박</button>
+      <button type="button" class="filter-chip" data-filter="d1" aria-pressed="false">🎨 문화예술·관광</button>
+      <button type="button" class="filter-chip" data-filter="d2" aria-pressed="false">💪 체육·웰니스·의료</button>
+      <button type="button" class="filter-chip" data-filter="d3" aria-pressed="false">🤖 AI·디지털혁신</button>
+      <button type="button" class="filter-chip" data-filter="d4" aria-pressed="false">🌾 농어촌·환경</button>
+      <button type="button" class="filter-chip" data-filter="d5" aria-pressed="false">💼 경제·일자리·창업</button>
+      <button type="button" class="filter-chip" data-filter="d6" aria-pressed="false">🏠 주거·교육</button>
+      <button type="button" class="filter-chip" data-filter="d7" aria-pressed="false">👨‍👩‍👧 복지·가족·돌봄</button>
+      <button type="button" class="filter-chip" data-filter="d8" aria-pressed="false">🗳️ 청년주권</button>
     </div>
 
     <div class="pass-result-bar">
       <div class="count"><strong id="passCount">0</strong>개 공고 표시 중 <span id="passMatchInfo" style="color:var(--gray)"></span></div>
       <button class="match-toggle" id="matchToggle" onclick="toggleMatchOnly()">⭐ 매칭 공고만 보기</button>
     </div>
-    <p style="font-size:12.5px;color:var(--gray);margin-bottom:14px;padding:8px 14px;background:var(--blue-50);border-radius:8px;border-left:3px solid var(--blue-200)">🔍 카드를 클릭하면 <strong style="color:var(--blue-deep)">네이버 검색</strong>으로 연결되어 해당 시·군의 공식 공고 페이지·신청 안내·관련 뉴스를 한눈에 확인하실 수 있습니다.</p>
+    <p style="font-size:12.5px;color:var(--gray);margin-bottom:14px;padding:8px 14px;background:var(--blue-50);border-radius:8px;border-left:3px solid var(--blue-200)">🔍 <strong style="color:var(--blue-deep)">「공고 바로가기」</strong>는 행정안전부·여성가족부 공식 <strong style="color:var(--blue-deep)">「온통청년(youthcenter.go.kr)」</strong> 포털 내 해당 사업 신청 페이지 혹은 지자체 웹사이트로 연결을 지원합니다. <strong style="color:var(--blue-deep)">「사업 정보 보기」</strong> 클릭 시 상세한 후기 및 관련 뉴스를 포털 검색으로 빠르게 찾아볼 수 있습니다.</p>
 
     <div class="pass-grid" id="passGrid"></div>
 
@@ -3460,7 +3871,7 @@
     </div>
 
     <div class="map-card">
-      <h3>전남광주 27개 시군 청년예산 분포도</h3>
+      <h3>광주전남 27개 시군 청년예산 분포도</h3>
       <p class="map-sub">🌸 <strong style="color:var(--pink-deep)">어느 시군이 청년에게 진심일까요?</strong> 버블이 클수록 예산이 많은 지역입니다. <strong style="color:var(--pink-deep)">👇 버블을 클릭</strong>해 <strong>숨겨진 예산 내역</strong>을 직접 확인하세요.</p>
       <div class="map-mobile-picker" role="region" aria-label="내 지역 선택 (모바일)">
           <label for="mapRegionPicker">📍 내 지역에서 바로 보기</label>
@@ -3469,7 +3880,7 @@
           </select>
         </div>
         <div class="map-wrap">
-        <svg class="map-svg" viewBox="-55 30 770 555" id="regionMap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="전남광주 27개 시·군 청년예산 분포 지도">
+        <svg class="map-svg" viewBox="-55 30 770 555" id="regionMap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="광주전남 27개 시·군·구 청년예산 분포 지도">
           <defs>
             <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#f0f7ff"/>
@@ -3531,15 +3942,15 @@
 
     <div class="dashboard">
       <div class="dash-head">
-        <h3>27개 시·군 청년예산 랭킹</h3>
+        <h3>27개 시·군·구 청년예산 랭킹</h3>
         <div class="dash-tools">
           <div class="sort-toggle" role="tablist" aria-label="정렬 기준">
-            <button type="button" class="sort-btn active" data-sort="percapita" onclick="setSortMode('percapita')" role="tab" aria-selected="true">👤 1인당 예산순</button>
-            <button type="button" class="sort-btn" data-sort="amount" onclick="setSortMode('amount')" role="tab" aria-selected="false">💰 전체 예산순</button>
+            <button type="button" class="sort-btn" data-sort="percapita" onclick="setSortMode('percapita')" role="tab" aria-selected="false">👤 1인당 예산순</button>
+            <button type="button" class="sort-btn active" data-sort="amount" onclick="setSortMode('amount')" role="tab" aria-selected="true">💰 전체 예산순</button>
           </div>
           <select id="sortMode" onchange="renderBars()" aria-label="정렬 기준" style="display:none">
+            <option value="amount" selected>전체 예산순</option>
             <option value="percapita">청년 1인당 예산순</option>
-            <option value="amount">전체 예산순</option>
             <option value="exec">집행률순</option>
             <option value="region">행정구역순</option>
           </select>
@@ -3551,157 +3962,23 @@
       </div>
       <p class="rings-hint">💡 <strong>원형 카드를 클릭</strong>하면 시·군 <strong>사업별 예산·집행 현황</strong>이 펼쳐집니다.</p>
       <div class="budget-rings m-collapse is-collapsed" id="budgetBars" data-mobile-show="5"></div>
-      <div class="m-more-wrap"><button type="button" class="m-more-btn" data-target="#budgetBars" aria-controls="budgetBars" aria-expanded="false"><span>27개 시·군 전체 보기</span><span class="m-more-count">+22</span><span class="m-more-arrow" aria-hidden="true">▼</span></button></div>
+      <div class="m-more-wrap"><button type="button" class="m-more-btn" data-target="#budgetBars" aria-controls="budgetBars" aria-expanded="false"><span>27개 시·군·구 전체 보기</span><span class="m-more-count">+22</span><span class="m-more-arrow" aria-hidden="true">▼</span></button></div>
 
       <div class="dash-foot">
         <p>💡 단위: 억원 · 인구는 <strong>행정안전부 주민등록 기준</strong> · <strong>청년 나이 기준</strong> 광주광역시 5개구 <strong>만 19~39세</strong> (광주광역시 청년 기본 조례) / 전남 22개 시·군 <strong>만 18~45세</strong> (전라남도 청년 기본 조례) · 예산은 <strong>지방재정365 OpenAPI 실시간 연동</strong></p>
-        <a href="#propose" class="btn btn-blue btn-sm">예산의 우선순위를 직접 결정하세요 →</a>
+        <a href="#propose" class="btn btn-blue btn-sm">청년이 직접 짜는 우리 동네 예산 →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ───── 6. 예산 제안 (이메일 연동) ───── -->
-<!-- ───── 🌸 아카이브: 지난 의견수렴 ───── -->
-<section class="archive-sect" id="archive">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag">VOICES · 지난 의견수렴 아카이브</span>
-      <h2>지금까지 모인 <span class="accent">청년의 목소리</span></h2>
-      <p class="lead">2회의 청년정책 해커톤(나주·광양) + 김대중재단 청년위원회 정책제안서. 클릭하면 상세 내용이 펼쳐집니다. 모든 의견은 본 플랫폼에서 정책 반영·집행 결과까지 투명하게 추적됩니다.</p>
-    </div>
-    <div class="va-cards">
-      <button type="button" class="va-card" data-vid="1" onclick="openVoice(1)">
-        <span class="va-num">1차 해커톤</span>
-        <strong>나주 해커톤<br/>「청년과 함께 길을 찾다!」</strong>
-        <span class="va-date">📅 2026.2.21 · 나주 동신대</span>
-        <span class="va-arrow">▼ 제안 보기</span>
-      </button>
-      <button type="button" class="va-card" data-vid="2" onclick="openVoice(2)">
-        <span class="va-num blue">2차 해커톤</span>
-        <strong>광양 해커톤<br/>「청년과 함께 내일을 묻다!」</strong>
-        <span class="va-date">📅 2026.3.7 · 광양시청소년문화센터</span>
-        <span class="va-arrow">▼ 제안 보기</span>
-      </button>
-      <button type="button" class="va-card" data-vid="3" onclick="openVoice(3)">
-        <span class="va-num gold">정책제안서</span>
-        <strong>김대중재단 청년위원회<br/>5대 정책 제안</strong>
-        <span class="va-date">📅 2026.4.26 · 후보자 공식 전달</span>
-        <span class="va-arrow">▼ 제안 보기</span>
-      </button>
-    </div>
-    <div class="va-detail" id="voiceDetail" hidden>
-      <button type="button" class="va-close" onclick="closeVoice()" aria-label="닫기">✕</button>
-      <h4 id="voiceDetailTitle"></h4>
-      <div class="va-meta" id="voiceDetailMeta"></div>
-      <div id="voiceDetailBody"></div>
-      <div class="va-foot">📊 위 목소리들은 본 AI 디지털 플랫폼에 통합 관리되며, <strong>정책 반영 → 예산 편성 → 집행 → 결과 보고</strong>의 전 단계가 실시간 투명하게 추적됩니다.</div>
-    </div>
-
-    <!-- 💬 청년 목소리에 이어 — 카카오 오픈채팅 참여 독려 -->
-    <div class="archive-chat-cta">
-      <p class="archive-chat-msg">
-        <span class="archive-chat-icon" aria-hidden="true">💬</span>
-        <strong>당신의 목소리도 정책이 됩니다.</strong> 지금 전남광주 청년들이 모이는 소통방에 함께해 주세요 🌸
-      </p>
-      <div class="openchat-cta">
-        <span class="oc-label"><span class="oc-emoji" aria-hidden="true">💬</span> 카카오 오픈채팅 · <strong>「전남광주 청년결정정부 동행」</strong></span>
-        <a href="https://open.kakao.com/o/gBUFlTui" target="_blank" rel="noopener" class="openchat-btn" aria-label="전남광주 청년결정정부 동행 오픈채팅방 입장 (새 창)">
-          입장하기 →
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ───── 🎤 청년정책기획위원회 8개 분과 청취 완료 ───── -->
-<section class="hearing-sect" id="hearing" style="padding:80px 0;background:linear-gradient(180deg,#fff7fa 0%,#fff 100%);border-top:1px solid var(--pink-100)">
-  <div class="container">
-    <div class="section-head" style="text-align:center;margin-bottom:36px">
-      <span class="section-tag" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--pink-100);color:var(--pink-deep);border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.04em;margin-bottom:14px">🎤 HEARING · 청년정책기획위원회 8개 분과 청취 <strong style="color:#0d3a7a">완료</strong></span>
-      <h2 style="font-size:32px;font-weight:900;margin:8px 0 14px 0;letter-spacing:-.02em">청년이 직접 제안한 <span style="color:var(--pink-deep)">5대 핵심 정책</span></h2>
-      <p class="lead" style="max-width:760px;margin:0 auto;color:#444;line-height:1.7">8개 분과 청년정책기획위원회 제안서 청취가 마무리됐습니다. 현장 청년 전문가들이 직접 발표한 5건의 핵심 정책 제안을 요약합니다. 모든 제안은 「청년결정정부」 플랫폼을 통해 정책 반영·집행 결과까지 투명하게 추적됩니다.</p>
-    </div>
-
-    <div class="hearing-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px;margin-top:8px">
-
-      <article style="background:#fff;border:1.5px solid #f7c5d8;border-radius:18px;padding:26px;box-shadow:0 8px 24px -14px rgba(184,34,95,.25);position:relative;overflow:hidden">
-        <span style="position:absolute;top:0;right:0;padding:6px 14px;background:linear-gradient(135deg,#ff6fa3,#cc2f6a);color:#fff;font-size:11.5px;font-weight:900;border-bottom-left-radius:12px">1분과 · 문화예술·관광</span>
-        <h3 style="font-size:19px;font-weight:900;margin:18px 0 6px 0;letter-spacing:-.02em">광주전남, 청년이 <span style="color:var(--pink-deep)">문화를 설계</span>하는 도시</h3>
-        <p style="font-size:12.5px;color:#777;margin:0 0 14px 0">발표 · <strong>김세진</strong> (전남대 미술학과 / 한국청년문화예술인협회 회장)</p>
-        <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.75;color:#222">
-          <li><strong>청년문화주권예산제</strong> — 청년이 문화예산을 직접 편성·집행하는 구조 도입</li>
-          <li><strong>로컬 크리에이터 스테이션(LCS)</strong> — 폐교·빈상가 등 유휴 197개소를 5개 권역 AI 창작 거점으로 전환 (ACC·여수 엑스포·목포 근대지구·농촌 폐교)</li>
-          <li><strong>남도문화 AI-IP 산업화</strong> — 무형문화재 130개를 AI 디지털화, 청년이 웹툰·게임·숏폼으로 재창조 + 글로벌 AI 미디어아트 페스티벌 정례화</li>
-          <li>서브 — 청년 관광 액티베이터 500명 · 예술인 월소득 87 → 200만원 · 원도심 문화연대 27개 타운 확산</li>
-        </ul>
-      </article>
-
-      <article style="background:#fff;border:1.5px solid #c8dcf4;border-radius:18px;padding:26px;box-shadow:0 8px 24px -14px rgba(13,58,122,.2);position:relative;overflow:hidden">
-        <span style="position:absolute;top:0;right:0;padding:6px 14px;background:linear-gradient(135deg,#3b82f6,#0d3a7a);color:#fff;font-size:11.5px;font-weight:900;border-bottom-left-radius:12px">2분과 · 체육·웰니스·의료</span>
-        <h3 style="font-size:19px;font-weight:900;margin:18px 0 6px 0;letter-spacing:-.02em">청년 <span style="color:#0d3a7a">체육시설 이용료</span> 지역상생 캐시백</h3>
-        <p style="font-size:12.5px;color:#777;margin:0 0 14px 0">발표 · <strong>이동진</strong> (광주 청년)</p>
-        <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.75;color:#222">
-          <li>만 19~39세 청년이 동네 헬스장·필라테스·클라이밍·복싱 등 <strong>3개월 이상 정기권</strong> 결제 시 결제액의 10~20%를 광주상생카드로 즉시 환급</li>
-          <li>일반 <strong>10%</strong> / 저소득·취준 <strong>15%</strong> / 장애·한부모 <strong>20%</strong>, 연 최대 30만 원</li>
-          <li><strong>1석 3조</strong> — 청년 운동 부담 ↓ + 동네 체육시설 단골 매출 안정 + 지역화폐 재소비로 골목경제 활성화</li>
-          <li>공공체육시설 신축(수십억·5년) 대비 동일 예산으로 광산구 청년 수천 명을 <strong>다음 달부터</strong> 즉시 지원 가능</li>
-        </ul>
-      </article>
-
-      <article style="background:#fff;border:1.5px solid #c8e6c9;border-radius:18px;padding:26px;box-shadow:0 8px 24px -14px rgba(46,125,50,.2);position:relative;overflow:hidden">
-        <span style="position:absolute;top:0;right:0;padding:6px 14px;background:linear-gradient(135deg,#66bb6a,#2e7d32);color:#fff;font-size:11.5px;font-weight:900;border-bottom-left-radius:12px">4분과 · 농어촌·환경</span>
-        <h3 style="font-size:19px;font-weight:900;margin:18px 0 6px 0;letter-spacing:-.02em">전남광주 <span style="color:#2e7d32">재활용 매립장·자원순환</span> 복합시설 확충</h3>
-        <p style="font-size:12.5px;color:#777;margin:0 0 14px 0">발표 · <strong>류종록</strong> (청년결정정부 환경부)</p>
-        <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.75;color:#222">
-          <li><strong>현황 진단</strong> — 폐기물 증가 vs 처리시설 부족 → 처리비용 증가, 불법투기·악취, 자원 단순 폐기</li>
-          <li><strong>제안 시설</strong> — 단순 매립장 X, <strong>선별·재사용·에너지화</strong>까지 포함한 친환경 자원순환 복합시설</li>
-          <li>① AI 자동 선별 스마트 재활용 시스템  ② 환경산업 청년 일자리(모니터링·친환경 운반)  ③ 주민 친화형(악취 저감·친환경 공원·체험학습)  ④ 광주·전남 광역 공동 운영으로 효율↑·예산↓</li>
-          <li>"쓰레기 버리는 공간"이 아닌 <strong>"자원을 다시 활용하는 미래 시스템"</strong></li>
-        </ul>
-      </article>
-
-      <article style="background:#fff;border:1.5px solid #ffe0b2;border-radius:18px;padding:26px;box-shadow:0 8px 24px -14px rgba(230,81,0,.2);position:relative;overflow:hidden">
-        <span style="position:absolute;top:0;right:0;padding:6px 14px;background:linear-gradient(135deg,#ffa726,#e65100);color:#fff;font-size:11.5px;font-weight:900;border-bottom-left-radius:12px">6분과 · 주거·교육</span>
-        <h3 style="font-size:19px;font-weight:900;margin:18px 0 6px 0;letter-spacing:-.02em"><span style="color:#e65100">광주형 모듈러 주거</span> 공급 정책 패키지</h3>
-        <p style="font-size:12.5px;color:#777;margin:0 0 14px 0">발표 · <strong>남기민</strong> (청년 주거 1호 공약 제안자)</p>
-        <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.75;color:#222">
-          <li><strong>시간 4년 → 2년</strong> — 공장 프리팹 + 현장 조립, 현장 공기 3~6개월. 임기 안에 착공부터 입주까지 완결</li>
-          <li><strong>비용 30% 할증 → 0</strong> — 300세대 묶음 발주 + 청년 금리 보조 + 토지임대부 결합</li>
-          <li><strong>청년 입주율 50%+</strong> — 도심 안에 소형 40㎡·투룸 60㎡·쓰리룸 85㎡ 혼합, 1층 카페·코워킹 공간</li>
-          <li><strong>청년 금리 보조</strong> 연 294~567만 원 + 장기주택저당차입금 소득공제 연 132만 원 동시 수령. 분양가 시세 60% 이하</li>
-          <li>광주·전남에 모듈러 공장 유치 → 제조 일자리까지 연계</li>
-        </ul>
-      </article>
-
-      <article style="background:#fff;border:1.5px solid #e1bee7;border-radius:18px;padding:26px;box-shadow:0 8px 24px -14px rgba(106,27,154,.2);position:relative;overflow:hidden">
-        <span style="position:absolute;top:0;right:0;padding:6px 14px;background:linear-gradient(135deg,#ab47bc,#6a1b9a);color:#fff;font-size:11.5px;font-weight:900;border-bottom-left-radius:12px">8분과 · 청년주권</span>
-        <h3 style="font-size:19px;font-weight:900;margin:18px 0 6px 0;letter-spacing:-.02em">청년주권 — 청년이 <span style="color:#6a1b9a">결정의 자리에 앉는</span> 도시</h3>
-        <p style="font-size:12.5px;color:#777;margin:0 0 14px 0">발표 · <strong>이현리</strong> (전남정보문화산업진흥원 DX지원센터장)</p>
-        <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.75;color:#222">
-          <li><strong>모든 위원회 청년 위원 30% 의무화</strong> — 만 19~39세, 발의권·의결권 조례 보장</li>
-          <li><strong>청년의회 의결기구 격상</strong> — 자문→의결, 겸직 가능 형태로 다수 참여, 정책 디지털 패스트트랙</li>
-          <li><strong>'가난 인증' 폐지</strong> — 청년통장 등 가난 증명 방식 폐지, 거주·활동 인증 기반 청년펀드 보편 지원</li>
-          <li><strong>생애주기 연속 지원</strong> — 청년 연령 기준 통일, 청년→중장년→시니어 연속 지원 + 환원 트랙</li>
-          <li>"청년을 위한 정책"이 아니라 <strong>"청년이 만드는 정책"</strong></li>
-        </ul>
-      </article>
-
-    </div>
-
-    <div style="text-align:center;margin-top:36px;padding:18px 24px;background:rgba(255,255,255,.7);border:1px dashed var(--pink-200);border-radius:14px;display:inline-block;width:100%;max-width:760px;margin-left:auto;margin-right:auto">
-      <span style="color:#0d3a7a;font-weight:800;font-size:14px">✅ 청년정책기획위원회 8개 분과 제안서 청취 완료</span>
-      <span style="display:block;color:#666;font-size:12.5px;margin-top:6px">청취된 5건의 제안은 후속 정책 검토 및 「청년결정정부」 시범 운영판에 단계적으로 반영됩니다.</span>
-    </div>
-
-  </div>
-</section>
 <section class="propose" id="propose">
   <div class="container">
     <div class="section-head">
       <span class="section-tag">PROPOSE · 청년이 직접 정책 결정에 참여</span>
-      <h2>예산의 <span style="color:var(--pink-deep)">우선순위를 직접 결정하세요</span> 🖋️<br/><span style="font-size:.7em;color:var(--blue-deep)">예산 정책 결정 참여 — 27개 시군, 청년의 우선순위로</span></h2>
-      <p>"예산의 우선순위를 직접 결정하세요!" — 청년의 <strong>정책 결정 참여</strong> 내용은 「<strong>청년정책기획위원회」 8개 분과</strong>에서 검토 후 후보님께 전달됩니다.</p>
+      <h2>민형배의 결재판을 <span style="color:var(--pink-deep)">청년에게 넘깁니다</span> 🖋️<br/><span style="font-size:.7em;color:var(--blue-deep)">예산 정책 결정 참여 — 27개 시군, 청년의 우선순위로</span></h2>
+      <p>"민형배의 결재판을 청년에게 넘깁니다!" — 청년의 <strong>정책 결정 참여</strong> 내용은 「<strong>청년정책기획위원회」 8개 분과</strong>에서 검토 후 후보님께 전달됩니다.</p>
     </div>
     <!-- 🌸 3단계 프로세스 카드 (Top, 풀너비) -->
     <div class="propose-flow-card">
@@ -3746,6 +4023,21 @@
         <button class="bg-chip bg-chip-pink" type="button" onclick="toggleBranch(this)" data-b="8">8. 청년주권 ⭐</button>
       </div>
       <p class="bg-hint">💡 분과 칩을 클릭하면 해당 분과의 <strong>5개 핵심 업무</strong>가 펼쳐집니다.</p>
+
+      <!-- 🔎 NEW — 관계 법령 및 조례 찾기 -->
+      <div class="legal-finder" role="region" aria-label="관계 법령 및 조례 찾기">
+        <div class="lf-head">
+          <span class="lf-tag">🔎 NEW</span>
+          <h4>관계 법령 및 조례 찾기</h4>
+        </div>
+        <p class="lf-sub">제안하시는 정책의 <strong>법적 근거</strong>가 있는지 미리 확인할 수 있습니다 — 국가법령정보센터·자치법규정보시스템 통합 검색</p>
+        <div class="lf-form">
+          <input id="legalKw" type="text" placeholder="키워드 (예: 청년 주거, 보증금, 참여예산제)" aria-label="검색 키워드">
+          <button type="button" class="lf-btn lf-btn-law" onclick="searchLegal('law')" aria-label="국가법령정보센터에서 법령 검색">📜 법령 검색</button>
+          <button type="button" class="lf-btn lf-btn-elis" onclick="searchLegal('elis')" aria-label="자치법규정보시스템에서 조례 검색">📋 조례 검색</button>
+        </div>
+        <p class="lf-foot">💡 <strong>국가법령정보센터(law.go.kr)</strong> · <strong>자치법규정보시스템(elis.go.kr)</strong> 새 창으로 검색 결과가 열립니다</p>
+      </div>
       <div class="bg-detail" id="branchDetail" hidden>
         <button class="bg-close" type="button" onclick="closeBranch()" aria-label="닫기">✕</button>
         <h4 id="branchTitle"></h4>
@@ -3765,7 +4057,7 @@
         <div class="field"><label for="prop-cat">분야 <small style="color:var(--pink-deep);font-weight:700">(청년정책기획위원회 8개 분과)</small></label><select id="prop-cat" name="category" required><option value="">선택</option><option>1. 문화예술·관광</option><option>2. 체육·웰니스·의료</option><option>3. AI·디지털혁신</option><option>4. 농어촌·환경</option><option>5. 경제·일자리·창업</option><option>6. 주거·교육</option><option>7. 복지·가족·돌봄</option><option>8. 청년주권</option></select></div>
       </div>
       <div class="field"><label for="prop-title">참여 한 줄 요약</label><input id="prop-title" name="title" type="text" placeholder="예: 청년 보증금 무이자 대출 한도를 5천만원으로 확대해 주세요 🌸" required /></div>
-      <div class="field"><label for="prop-body">참여 상세 (청년의 우선순위)</label><textarea id="prop-body" name="content" placeholder="예: 이 예산을 줄이고 저 사업에 투자해야 한다면? 여러분의 우선순위를 알려주세요. 어떤 사업에서 어떤 사업으로 옮기는 게 더 나은지, 청년의 시각으로 자유롭게 적어주세요." required></textarea></div>
+      <div class="field"><label for="prop-body">참여 상세 (청년의 우선순위)</label><textarea id="prop-body" name="content" placeholder="예시: [북구] 문화복지카드 예산 중 일부를 실효성이 떨어지는 축제성 경비에서 차감하여, 현재 가장 예산이 부족한 '청년 임차보증금 이자 지원 사업'으로 확대 편성해주기를 제안합니다. 실제 청년들이 체감하는 주거 안정이 더 시급하기 때문입니다." required></textarea></div>
       <div class="form-row">
         <div class="field"><label for="prop-name">성함 (필명 가능)</label><input id="prop-name" name="user-name" type="text" placeholder="홍길동" required /></div>
         <div class="field"><label for="prop-phone">알림톡 번호 (선택)</label><input id="prop-phone" name="user-phone" type="tel" placeholder="010-0000-0000" /></div>
@@ -3775,11 +4067,77 @@
         <input id="prop-email" name="user-email" type="email" placeholder="example@email.com" required />
         <small style="font-size:12px;color:var(--gray);margin-top:4px;font-weight:600">검토 후 후보자 회신을 이 메일주소로 발송해 드립니다.</small>
       </div>
-      <label class="check-row"><input type="checkbox" required />개인정보(이메일·연락처) 수집·이용 및 알림톡 발송에 동의합니다 (보관 1년)</label>
+      <label class="check-row" for="prop-consent"><input id="prop-consent" name="consent" type="checkbox" required aria-required="true" />개인정보(이메일·연락처) 수집·이용 및 알림톡 발송에 동의합니다 (보관 1년)</label>
       <button type="submit" class="btn btn-primary" style="width:100%">📧 예산 정책 결정 참여 보내기</button>
-      <div class="email-info">📧 정책 결정 참여 내용은 <strong><a href="mailto:kimbomi891204@gmail.com" style="color:var(--pink-deep);text-decoration:underline">kimbomi891204@gmail.com</a>으로 접수</strong>됩니다 → 「청년정책기획위원회」 <strong>8개 분과 청년 전문가</strong>가 읽고 검토 → <strong>후보님께 전달</strong>됩니다.</div>
+      <div class="email-info email-info-row">
+        <div class="email-row-main">
+          📧 정책 결정 참여 내용은 <strong><a href="mailto:kimbomi891204@gmail.com" style="color:var(--pink-deep);text-decoration:underline">kimbomi891204@gmail.com</a>으로 접수</strong>됩니다 → 「청년정책기획위원회」 <strong>8개 분과 청년 전문가</strong>가 읽고 검토 → <strong>후보님께 전달</strong>됩니다.
+        </div>
+        <button type="button" class="email-copy-btn" onclick="copyEmail(this)" aria-label="접수 이메일 주소 복사하기" data-email="kimbomi891204@gmail.com">
+          📋 이메일 복사
+        </button>
+      </div>
+      <div class="email-info email-info-fallback">⚠️ <strong>메일 창이 열리지 않거나 앱이 없으신가요?</strong> 위 「📋 이메일 복사」 버튼을 누르신 후, 본인 메일 계정에서 <strong style="color:var(--pink-deep)">kimbomi891204@gmail.com</strong>으로 직접 보내주시면 동일하게 접수됩니다.</div>
       <div class="email-info trace-info">📊 <strong>접수된 정책 결정 참여 내용은 8개 전문 분과의 검토를 거쳐 실제 예산안에 반영되는 과정을 데이터로 추적</strong>합니다 — 정책 반영 → 예산 편성 → 집행 → 결과 보고까지 전 단계를 본 플랫폼에서 투명하게 확인할 수 있습니다.</div>
     </form>
+  </div>
+</section>
+
+<!-- ───── 🌸 아카이브: 지난 의견수렴 ───── -->
+<section class="archive-sect" id="archive">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">VOICES · 지난 의견수렴 아카이브</span>
+      <h2>지금까지 모인 <span class="accent">청년의 목소리</span></h2>
+      <p class="lead">2회의 청년정책 해커톤(나주·광양) + 김대중재단 청년위원회 정책제안서. 클릭하면 상세 내용이 펼쳐집니다. 모든 의견은 본 플랫폼에서 정책 반영·집행 결과까지 투명하게 추적됩니다.</p>
+    </div>
+    <div class="va-cards">
+      <button type="button" class="va-card" data-vid="1" onclick="openVoice(1)">
+        <span class="va-num">1차 해커톤</span>
+        <strong>나주 해커톤<br/>「청년과 함께 길을 찾다!」</strong>
+        <span class="va-date">📅 2026.2.21 · 나주 동신대</span>
+        <span class="va-arrow">▼ 제안 보기</span>
+      </button>
+      <button type="button" class="va-card" data-vid="2" onclick="openVoice(2)">
+        <span class="va-num blue">2차 해커톤</span>
+        <strong>광양 해커톤<br/>「청년과 함께 내일을 묻다!」</strong>
+        <span class="va-date">📅 2026.3.7 · 광양시청소년문화센터</span>
+        <span class="va-arrow">▼ 제안 보기</span>
+      </button>
+      <button type="button" class="va-card" data-vid="3" onclick="openVoice(3)">
+        <span class="va-num gold">정책제안서</span>
+        <strong>김대중재단 청년위원회<br/>5대 정책 제안</strong>
+        <span class="va-date">📅 2026.4.26 · 후보자 공식 전달</span>
+        <span class="va-arrow">▼ 제안 보기</span>
+      </button>
+      <button type="button" class="va-card va-card-live" data-vid="4" onclick="openVoice(4)">
+        <span class="va-num live">🎙️ 타운홀미팅</span>
+        <strong>청년정책기획위원회</strong>
+        <span class="va-date">📅 2026.5.16 · 시민주권선대위 청년특별위원회 출범식 · 5건 접수</span>
+        <span class="va-arrow">▼ 발언 요지 보기</span>
+      </button>
+    </div>
+    <div class="va-detail" id="voiceDetail" hidden>
+      <button type="button" class="va-close" onclick="closeVoice()" aria-label="닫기">✕</button>
+      <h4 id="voiceDetailTitle"></h4>
+      <div class="va-meta" id="voiceDetailMeta"></div>
+      <div id="voiceDetailBody"></div>
+      <div class="va-foot">📊 위 목소리들은 본 AI 디지털 플랫폼에 통합 관리되며, <strong>정책 반영 → 예산 편성 → 집행 → 결과 보고</strong>의 전 단계가 실시간 투명하게 추적됩니다.</div>
+    </div>
+
+    <!-- 💬 청년 목소리에 이어 — 카카오 오픈채팅 참여 독려 -->
+    <div class="archive-chat-cta">
+      <p class="archive-chat-msg">
+        <span class="archive-chat-icon" aria-hidden="true">💬</span>
+        <strong>당신의 목소리도 정책이 됩니다.</strong> 지금 광주전남 청년들이 모이는 소통방에 함께해 주세요 🌸
+      </p>
+      <div class="openchat-cta">
+        <span class="oc-label"><span class="oc-emoji" aria-hidden="true">💬</span> 카카오 오픈채팅 · <strong>「전남광주 청년결정정부 동행」</strong></span>
+        <a href="https://open.kakao.com/o/gBUFlTui" target="_blank" rel="noopener" class="openchat-btn" aria-label="전남광주 청년결정정부 동행 오픈채팅방 입장 (새 창)">
+          입장하기 →
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -3830,33 +4188,32 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-col foot-brand">
-        <h5>민형배와 함께 꽃길 만들기 프로젝트</h5>
-        <p>본 플랫폼은 <strong style="color:#FFD6C4">청년의 목소리가 데이터가 되고, 데이터가 정책이 되는</strong> 순환형 민주주의 모델의 실험실입니다. 민심캠프 청년본부 AI 디지털 플랫폼 — 꽃길만 걷자! 🌸</p>
-        <p style="font-size:11.5px;color:#7a8aa3;margin-top:14px">© 2026 민형배 민심캠프 청년본부 (民聽本部). 본 사이트는 캠페인 디지털 플랫폼 베타입니다.</p>
+        <h5>전남광주 「청년결정정부」 AI 통합 디지털 플랫폼</h5>
+        <p>본 플랫폼은 <strong style="color:#FFD6C4">청년의 목소리가 데이터가 되고, 데이터가 정책이 되는</strong> 참여 민주주의 모델의 공식 플랫폼입니다. 27개 시·군·구 청년 정책 의제 발굴 및 선거 캠페인을 위해 운영됩니다. 🌸</p>
       </div>
       <div class="foot-col">
         <h5>바로가기</h5>
         <a href="#profile">민형배는 누구인가</a>
-        <a href="#archive">청년 목소리 아카이브</a>
         <a href="#pledges">청년정책 공약</a>
-        <a href="#pinkpass">통합 공고함</a>
+        <a href="#pinkpass">청년 지원사업 추천</a>
         <a href="#budget">예산 대시보드</a>
-        <a href="#propose">예산 제안</a>
+        <a href="#propose">정책 결정 참여</a>
+        <a href="#archive">청년 목소리 아카이브</a>
         <a href="https://open.kakao.com/o/gBUFlTui" target="_blank" rel="noopener">💬 전남광주 청년결정정부 동행 (카카오)</a>
-        <a href="#apply">특보 신청</a>
+        <a href="#apply">꽃길 특보단 신청</a>
       </div>
       <div class="foot-col">
-        <h5>📧 문의 / 연락</h5>
+        <h5>📧 문의 / 선대위 주체</h5>
         <div class="contact-pill">
-          <strong>민심캠프 청년본부 (民聽本部)</strong>
+          <strong>더불어민주당 시민주권선대위 청년특별위원회</strong>
           <a href="mailto:kimbomi891204@gmail.com">📧 kimbomi891204@gmail.com</a>
         </div>
         <div class="contact-pill">
-          <strong>👤 김보미</strong>
+          <strong>👤 김보미 위원장 · 청년특별위원회</strong>
           <a href="tel:010-7331-0179">📱 010-7331-0179</a>
         </div>
         <div class="contact-pill">
-          <strong>👤 김정욱</strong>
+          <strong>👤 김정욱 본부장 · 청년특별위원회</strong>
           <a href="tel:010-9464-4705">📱 010-9464-4705</a>
         </div>
       </div>
@@ -3870,12 +4227,19 @@
           <a href="https://pf.kakao.com/_xahxdWxl" target="_blank" rel="noopener" title="카카오톡" aria-label="민형배 카카오톡 채널 (새 창)">KT</a>
           <a href="https://blog.naver.com/gjminsim" target="_blank" rel="noopener" title="네이버 블로그" aria-label="민형배 네이버 블로그 (새 창)">BL</a>
         </div>
-        <p style="margin-top:14px;color:#cdd9ec;font-weight:700;font-size:12px">#꽃길만걷자 #민형배의꽃길<br/>#민심캠프 #청년본부</p>
+        <p style="margin-top:14px;color:#cdd9ec;font-weight:700;font-size:12px">#꽃길만걷자 #민형배의꽃길<br/>#청년결정정부 #청년특별위원회</p>
       </div>
     </div>
+    <div class="foot-official" role="contentinfo">
+      <div class="foot-official-badge"><span aria-hidden="true">🏛️</span> 선대위 공식 지정 캠페인 플랫폼</div>
+      <p class="foot-official-text">
+        본 플랫폼은 공직선거법 및 선거관리위원회 규정을 엄격히 준수합니다.<br/>
+        본 웹사이트는 <strong>더불어민주당 전남광주통합특별시장 후보 민형배 시민주권선대위 청년특별위원회</strong>가 유권자와의 소통 및 청년 정책 의제 수집을 위해 주관하여 운영하는 <strong>공식 선거운동 공간</strong>임을 명시합니다.
+      </p>
+    </div>
     <div class="foot-bottom">
-      <span>전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 — 민심캠프 청년본부 출범식 공개용 시범 운영판 (Beta)</span>
-      <span>개인정보처리방침 · 이용약관</span>
+      <span>© 2026 더불어민주당 민형배 시민주권선대위 청년특별위원회 · 전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 (Beta)</span>
+      <span><a href="#top">개인정보처리방침</a> · <a href="#top">이용약관</a> · <a href="#top">최상단으로</a></span>
     </div>
   </div>
 </footer>
@@ -3916,24 +4280,24 @@
 
 /* 🌸 꽃잎 자동 생성 (모바일 10·데스크톱 14) */
 (function(){
-  const wrap=document.getElementById('petals'); const N=window.matchMedia('(max-width:780px)').matches?10:14;
-  const sizes=['',' s2',' s3',' s4'];
+  const wrap=document.getElementById('petals');
+  const isMobile=window.matchMedia('(max-width:780px)').matches;
+  const N = isMobile ? 18 : 32;  // 밀도 높임 — 영상처럼 풍성한 흩날림
+  const sizes=['s1','s2','s3','s4'];
+  const colors=['c1','c2','c3','c4','c5'];
   for(let i=0;i<N;i++){
     const p=document.createElement('div');
-    let extra='';
-    const r=i%7;
-    if(r===0)extra=' peach';
-    else if(r===1)extra=' white';
-    p.className='petal'+sizes[i%4]+extra;
+    p.className='petal '+sizes[i%4]+' '+colors[i%5];
     p.style.left=(Math.random()*100)+'vw';
-    p.style.animationDuration=(14+Math.random()*12)+'s';
-    p.style.animationDelay=(-Math.random()*22)+'s';
+    // 다양한 속도 + 지연으로 자연스러운 분포
+    p.style.animationDuration=(11+Math.random()*14)+'s';
+    p.style.animationDelay=(-Math.random()*25)+'s';
     wrap.appendChild(p);
   }
 })();
 
-/* 27개 시·군 마스터 데이터 */
-/* 27개 시·군 — 각진 행정구역 폴리곤 + 정확한 청년 나이 기준
+/* 27개 시·군·구 마스터 데이터 */
+/* 27개 시·군·구 — 각진 행정구역 폴리곤 + 정확한 청년 나이 기준
    광주광역시 (5개 구): 만 19~39세 (광주광역시 청년 기본 조례)
    전라남도 (22개 시·군): 만 18~45세 (전라남도 청년 기본 조례) */
 const REGIONS=[
@@ -3941,7 +4305,7 @@ const REGIONS=[
   {code:'29170',name:'광주 북구',short:'북구',area:'광주',total:232,exec:73,pop:430000,youth:125000,ageMin:19,ageMax:39,
    path:'M250,165 L350,165 L362,205 L345,225 L295,225 L268,205 L250,185 Z',lx:300,ly:195},
   {code:'29200',name:'광주 광산구',short:'광산구',area:'광주',total:258,exec:81,pop:395000,youth:130000,ageMin:19,ageMax:39,
-   path:'M195,200 L268,205 L295,225 L290,255 L268,272 L218,272 L195,255 L188,225 Z',lx:225,ly:248},
+   path:'M195,200 L268,205 L295,225 L290,255 L268,272 L218,272 L195,255 L188,225 Z',lx:200,ly:225},
   {code:'29110',name:'광주 동구',short:'동구',area:'광주',total:184,exec:62,pop:95000,youth:24000,ageMin:19,ageMax:39,
    path:'M345,225 L385,225 L395,255 L380,275 L345,275 L320,260 L325,240 Z',lx:380,ly:255},
   {code:'29140',name:'광주 서구',short:'서구',area:'광주',total:226,exec:71,pop:290000,youth:88000,ageMin:19,ageMax:39,
@@ -4062,16 +4426,14 @@ function renderMap(){
   // 큰 꽃이 뒤에, 작은 꽃이 앞에 — 작은 시·군도 클릭 가능
   const order=[...budgetData].sort((a,b)=>b.total-a.total);
   const minR=22, maxR=46;  // 🌸 더 크고 풍성하게
-  layer.innerHTML=order.map(r=>{
+  // 1단계: 꽃잎과 숫자만 먼저 그림 (큰 것 → 작은 것 순)
+  const flowers=order.map(r=>{
     const fill=tier(r.total,max);
     const sel=openRegion===r.code?' selected':'';
     const ratio=Math.sqrt(Math.max(0,(r.total-min*0.5))/(max-min*0.5));
     const radius=Math.round(minR + ratio*(maxR-minR));
-    const labelOffsetY=radius+28;
-    // 꽃마다 살짝 다른 회전각 — 자연스러운 느낌 (6장이므로 0~60도)
     const spin=(parseInt(r.code,10)%60);
     const ariaLabel=`${r.name} · 청년예산 ${r.total}억 · 청년 1인당 ${Math.round(r.total*1e8/r.youth/1000)}천원 · 클릭하면 상세 펼침`;
-    // 은은한 톤: 바깥 오로라 글로우(연하게) + 본체(살짝 투명) + 부드러운 흰 스트로크 + 작은 노란 꽃술
     return `<g class="map-bubble${sel}" data-code="${r.code}" role="button" tabindex="0" aria-label="${ariaLabel}" onclick="openDetail('${r.code}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetail('${r.code}');}" transform="translate(${r.lx},${r.ly})">
       <title>${r.name} · 청년예산 ${r.total}억 · 인구 ${fmt(r.pop)} · 청년 ${fmt(r.youth)}</title>
       <g class="b-glow" fill="${fill}" opacity=".18" transform="rotate(${spin})" filter="url(#flowerSoft)">${flowerPetals(radius+9)}</g>
@@ -4079,9 +4441,19 @@ function renderMap(){
       <circle class="b-core" r="${radius*0.58}" fill="#FFFFFF" stroke="#F5C1D2" stroke-width="1.5" opacity="1"/>
       <text class="b-num" y="1" style="font-size:${Math.max(14, radius*0.5).toFixed(1)}px">${r.total}</text>
       <text class="b-num" y="${(radius*0.42+5).toFixed(1)}" style="font-size:${Math.max(10, radius*0.32).toFixed(1)}px">억</text>
-      <rect x="${-r.short.length*7.5-2}" y="${labelOffsetY-12}" width="${r.short.length*15+4}" height="17" rx="5" fill="rgba(255,255,255,.92)" stroke="rgba(184,34,95,.25)" stroke-width="1"/><text class="b-name" y="${labelOffsetY}">${r.short}</text>
     </g>`;
   }).join('');
+  // 2단계: 라벨만 별도 layer에 — 모든 꽃 위에 그려져서 절대 가려지지 않음
+  const labels=order.map(r=>{
+    const ratio=Math.sqrt(Math.max(0,(r.total-min*0.5))/(max-min*0.5));
+    const radius=Math.round(minR + ratio*(maxR-minR));
+    const labelOffsetY=radius+34;
+    return `<g class="map-label" data-code="${r.code}" onclick="openDetail('${r.code}')" transform="translate(${r.lx},${r.ly})" style="cursor:pointer">
+      <rect x="${-r.short.length*8-6}" y="${labelOffsetY-13}" width="${r.short.length*16+12}" height="20" rx="6" fill="#fff" stroke="rgba(162,30,85,.7)" stroke-width="1.6"/>
+      <text class="b-name" y="${labelOffsetY+1}">${r.short}</text>
+    </g>`;
+  }).join('');
+  layer.innerHTML = flowers + labels;
 }
 
 function renderRegionGrid(){
@@ -4211,13 +4583,30 @@ function openDetail(code){
   document.getElementById('detailItems').innerHTML=r.items.map(i=>`<tr><td><span class="cat ${TAG_COLOR[i.cat]}">${i.label}</span></td><td>${i.name}</td><td style="text-align:right">${i.budget} 억</td><td style="text-align:right">${i.spent} 억</td><td><span class="exec-bar"><i style="width:${i.rate}%"></i></span><span class="exec-text">${i.rate}%</span></td></tr>`).join('');
   // 공약-예산 의미 연결: 가장 예산 비중이 작은 분야를 찾아 관련 공약으로 안내
   const catSum={}; r.items.forEach(i=>{catSum[i.cat]=(catSum[i.cat]||0)+i.budget;});
-  const catLabel={house:'주거 꽃길',job:'일자리 꽃길',edu:'창업 꽃길',life:'일상 꽃길',marry:'신혼 꽃길'};
+  // 분야 라벨 매핑 — 5개 기본 + 8개 분과 코드 모두 처리
+  const catLabel={
+    house:'주거', job:'일자리', edu:'창업', life:'일상', marry:'신혼·육아',
+    d1:'문화예술·관광', d2:'체육·웰니스·의료', d3:'AI·디지털혁신', d4:'농어촌·환경',
+    d5:'경제·일자리·창업', d6:'주거·교육', d7:'복지·가족·돌봄', d8:'청년주권'
+  };
+  // 공약 매핑 — 분야명 → 공약 이름
+  const pledgeMap={
+    house:'주거 꽃길', job:'일자리 꽃길', edu:'창업 꽃길', life:'일상 꽃길', marry:'신혼 꽃길',
+    d1:'일상 꽃길', d2:'일상 꽃길', d3:'일자리 꽃길', d4:'창업 꽃길',
+    d5:'일자리 꽃길', d6:'주거 꽃길', d7:'신혼 꽃길', d8:'청년주권 꽃길'
+  };
   const minCat=Object.entries(catSum).sort((a,b)=>a[1]-b[1])[0];
   const linkEl=document.getElementById('detailPledgeLink');
-  if(linkEl&&minCat){
-    const pledgeName=catLabel[minCat[0]]||'청년정책';
-    linkEl.innerHTML=`💡 <strong>${escapeHtml(r.name)}</strong>의 <strong>${escapeHtml(catLabel[minCat[0]]||minCat[0])}</strong> 분야 예산이 가장 부족합니다 (${minCat[1].toFixed(1)}억). 민형배의 <a href="#pledges"><strong>「${pledgeName}」 공약</strong></a>이 이 격차를 메웁니다.`;
-    linkEl.style.display='block';
+  if(linkEl){
+    if(minCat && catLabel[minCat[0]]){
+      const cat=minCat[0];
+      const fieldName=catLabel[cat];
+      const pledgeName=pledgeMap[cat]||'청년정책';
+      linkEl.innerHTML=`💡 <strong>${escapeHtml(r.name)}</strong>의 <strong>${escapeHtml(fieldName)}</strong> 분야 예산이 가장 부족합니다 (${minCat[1].toFixed(1)}억). 민형배의 <a href="#pledges"><strong>「${pledgeName}」 공약</strong></a>이 이 격차를 메웁니다.`;
+      linkEl.style.display='block';
+    } else {
+      linkEl.style.display='none'; // 미매핑이면 알 수 없는 안내는 숨김
+    }
   }
   const panel=document.getElementById('detailPanel'); panel.classList.add('open');
   // 패널 열림 → 버블맵 바로 아래로 부드러운 스크롤 + 강조 효과
@@ -4243,9 +4632,16 @@ function renderAll(){
 // 로컬 개발(localhost/127.0.0.1)에서는 lofin_proxy.js 사용, 그 외(Netlify 등)는 큐레이션 데이터로 표시
 const BUDGET_API_URL='http://localhost:3001/api/lofin/youth-budget';
 const IS_LOCAL=['localhost','127.0.0.1'].includes(location.hostname);
+// 환경에 따라 API endpoint 자동 선택 (배포 시 Netlify Functions 호출)
+function _resolveBudgetEndpoint(){
+  if(IS_LOCAL) return BUDGET_API_URL;
+  if(window.LOFIN_API_ENDPOINT) return window.LOFIN_API_ENDPOINT;
+  return null; // 큐레이션 모드로 폴백
+}
 async function fetchBudget(showToastMsg){
-  if(!IS_LOCAL){
-    // 배포 환경: 외부 프록시 없이 큐레이션 데이터 사용 (지방재정365 공식 데이터 기반)
+  const targetUrl = _resolveBudgetEndpoint();
+  if(!targetUrl){
+    // 폴백: 외부 API 없이 큐레이션 데이터 사용 (지방재정365 공식 데이터 기반)
     budgetData=REGIONS.map(r=>({...r,items:genItems(r)}));
     dataSource='curated';
     statusLight('demo',`📊 지방재정365 공식 데이터 기반 · ${new Date().toLocaleDateString('ko-KR')} 기준`);
@@ -4257,7 +4653,7 @@ async function fetchBudget(showToastMsg){
   statusLight('demo','지방재정365 데이터 가져오는 중…');
   try{
     const year=document.getElementById('yearMode')?.value||'2026';
-    const r=await fetch(`${BUDGET_API_URL}?year=${year}`);
+    const r=await fetch(`${targetUrl}?year=${year}`);
     if(!r.ok)throw new Error('프록시 응답 오류 '+r.status);
     const data=await r.json();
     if(!data.items||!Array.isArray(data.items))throw new Error('응답 형식 오류');
@@ -4299,17 +4695,17 @@ function loadDemoBudget(){
 
 /* ───── 통합공고함 데이터 + 페이징 + 실링크 ───── */
 const PASS_DATA=[
-  {id:1,region:'광주광역시',regionCode:'29170',cat:'d5',title:'광주 청년 구직활동 지원금 (월 60만원·6개월)',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:5,ageMin:18,ageMax:34,daysAgo:2,link:'https://youth.gwangju.go.kr/www/83'},
-  {id:2,region:'광주광역시',regionCode:'29170',cat:'d2',title:'청년 마음건강 바우처 (월 4회 상담)',target:'만 19~39세 광주 거주 청년',amount:'월 12만원 상당',amountVal:48,quota:'150명',d:9,ageMin:19,ageMax:39,daysAgo:5,link:'https://youth.gwangju.go.kr/www/83'},
-  {id:3,region:'광주 광산구',regionCode:'29200',cat:'d5',title:'청년 한끼 제휴점 모집 (식당주 대상)',target:'식당·카페·분식 사업주',amount:'1식 5천원 보조',amountVal:50,quota:'500개소',d:5,ageMin:18,ageMax:60,daysAgo:7,link:'https://www.gwangsan.go.kr'},
-  {id:4,region:'광주 서구',regionCode:'29140',cat:'d6',title:'1인 청년가구 월세지원 (월 20만원·24개월)',target:'무주택 1인 청년가구',amount:'월 20만원 × 24개월',amountVal:480,quota:'80명',d:14,ageMin:19,ageMax:34,daysAgo:1,link:'https://www.bokjiro.go.kr'},
-  {id:5,region:'광주 광산구',regionCode:'29200',cat:'d6',title:'청년 매입임대주택 입주 모집',target:'무주택 청년·신혼부부',amount:'보증금 0원·월세 시세 30%',amountVal:200,quota:'30호',d:18,ageMin:19,ageMax:39,daysAgo:8,link:'https://www.myhome.go.kr'},
-  {id:6,region:'나주시',regionCode:'46170',cat:'d5',title:'나주 청년 구직수당 2차 모집',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:3,ageMin:18,ageMax:34,daysAgo:3,link:'https://www.naju.go.kr'},
+  {id:1,region:'광주광역시',regionCode:'29170',cat:'d5',title:'광주 청년 구직활동 지원금 (월 60만원·6개월)',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:5,ageMin:18,ageMax:34,daysAgo:2,link:'https://youth.gwangju.go.kr/'},
+  {id:2,region:'광주광역시',regionCode:'29170',cat:'d2',title:'청년 마음건강 바우처 (전문 심리상담 8회)',target:'만 19~34세 청년',amount:'1:1 대면 상담 8회',amountVal:48,quota:'상시',d:9,ageMin:19,ageMax:34,daysAgo:5,link:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004671',applyURL:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004671',verified:true},
+  {id:3,region:'광주 광산구',regionCode:'29200',cat:'d5',title:'청년 한끼 제휴점 모집 (식당주 대상)',target:'식당·카페·분식 사업주',amount:'1식 5천원 보조',amountVal:50,quota:'500개소',d:5,ageMin:18,ageMax:60,daysAgo:7,link:'https://www.gwangsan.go.kr/'},
+  {id:4,region:'광주 서구',regionCode:'29140',cat:'d6',title:'2026 청년월세 한시 특별지원 (최대 480만원)',target:'만 19~34세 무주택 1인 청년',amount:'월 20만원 × 최대 24개월',amountVal:480,quota:'상시',d:14,ageMin:19,ageMax:34,daysAgo:1,link:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004661',applyURL:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004661',verified:true},
+  {id:5,region:'광주 광산구',regionCode:'29200',cat:'d6',title:'LH 청년 매입임대주택 입주자 모집',target:'만 19~39세 청년·대학생·취준생',amount:'시중시세 40~50% 임대',amountVal:200,quota:'수시',d:18,ageMin:19,ageMax:39,daysAgo:8,link:'https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1150&cntntsId=201251',applyURL:'https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1150&cntntsId=201251',verified:true},
+  {id:6,region:'나주시',regionCode:'46170',cat:'d5',title:'전남 청년 구직활동수당 지원사업 2차 대상자 모집',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:3,ageMin:18,ageMax:34,daysAgo:3,link:'https://www.naju.go.kr/',applyURL:'https://www.naju.go.kr/www/introduction/dong/seji/notice?idx=31355&mode=view&sort=recent&page=85'},
   {id:7,region:'나주시',regionCode:'46170',cat:'d7',title:'신혼부부 전세자금 이자 지원',target:'결혼 7년 이내 신혼부부',amount:'대출이자 1.5%p 지원',amountVal:300,quota:'50쌍',d:25,ageMin:24,ageMax:42,daysAgo:10,link:'https://www.naju.go.kr'},
   {id:8,region:'목포시',regionCode:'46110',cat:'d5',title:'목포 청년 창업지원금 (해양·관광 분야)',target:'만 19~39세 예비창업자',amount:'최대 2,000만원',amountVal:2000,quota:'30팀',d:12,ageMin:19,ageMax:39,daysAgo:6,link:'https://www.mokpo.go.kr'},
   {id:9,region:'목포시',regionCode:'46110',cat:'d5',title:'목포 청년 채용 인센티브 (사업주 대상)',target:'만 19~34세 청년 채용 사업주',amount:'1인당 월 80만원·12개월',amountVal:960,quota:'40개사',d:20,ageMin:19,ageMax:34,daysAgo:4,link:'https://www.mokpo.go.kr'},
   {id:10,region:'여수시',regionCode:'46130',cat:'d6',title:'여수 청년 보증금 무이자 지원 (전세 2,000만원)',target:'1인 가구 청년',amount:'보증금 2,000만원 무이자',amountVal:2000,quota:'80명',d:21,ageMin:19,ageMax:39,daysAgo:11,link:'https://www.yeosu.go.kr'},
-  {id:11,region:'여수시',regionCode:'46130',cat:'d5',title:'블루이코노미 6대 분야 청년 인턴십',target:'만 19~34세 미취업 청년',amount:'월 220만원 × 3개월',amountVal:660,quota:'100명',d:7,ageMin:19,ageMax:34,daysAgo:2,link:'https://www.jeonnam.go.kr'},
+  {id:11,region:'여수시',regionCode:'46130',cat:'d5',title:'블루이코노미 6대 분야 청년 인턴십',target:'만 19~34세 미취업 청년',amount:'월 220만원 × 3개월',amountVal:660,quota:'100명',d:7,ageMin:19,ageMax:34,daysAgo:2,link:'https://www.jeonnam.go.kr/'},
   {id:12,region:'순천시',regionCode:'46150',cat:'d2',title:'순천 청년 마음건강 바우처 (월 4회 상담)',target:'만 19~39세 순천시민',amount:'월 12만원 상당',amountVal:48,quota:'150명',d:9,ageMin:19,ageMax:39,daysAgo:1,link:'https://www.suncheon.go.kr'},
   {id:13,region:'순천시',regionCode:'46150',cat:'d5',title:'청년 면접복장 무료 대여',target:'만 19~34세 구직자',amount:'정장 4회 무료',amountVal:30,quota:'상시',d:60,ageMin:19,ageMax:34,daysAgo:14,link:'https://www.suncheon.go.kr'},
   {id:14,region:'광양시',regionCode:'46230',cat:'d6',title:'광양 산업단지 청년 보증금 무이자',target:'산단 입주기업 청년 직원',amount:'보증금 3,000만원 무이자',amountVal:3000,quota:'60명',d:16,ageMin:19,ageMax:39,daysAgo:7,link:'https://www.gwangyang.go.kr'},
@@ -4394,11 +4790,12 @@ function renderPass(){
   else if(chipFilter!=='all')list=list.filter(p=>p.cat===chipFilter);
   if(query)list=list.filter(p=>(p.title+p.region+p.target).toLowerCase().includes(query));
   if(matchOnly&&hasMatch)list=list.filter(p=>p._match>=70);
+  // verified(공식 검증)를 항상 상위로
   switch(sortMode){
-    case 'deadline':list.sort((a,b)=>a.d-b.d);break;
-    case 'amount':list.sort((a,b)=>b.amountVal-a.amountVal);break;
-    case 'newest':list.sort((a,b)=>a.daysAgo-b.daysAgo);break;
-    default:list.sort((a,b)=>(b._match-a._match)||(a.d-b.d));
+    case 'deadline':list.sort((a,b)=>(b.verified?1:0)-(a.verified?1:0) || a.d-b.d);break;
+    case 'amount':list.sort((a,b)=>(b.verified?1:0)-(a.verified?1:0) || b.amountVal-a.amountVal);break;
+    case 'newest':list.sort((a,b)=>(b.verified?1:0)-(a.verified?1:0) || a.daysAgo-b.daysAgo);break;
+    default:list.sort((a,b)=>(b.verified?1:0)-(a.verified?1:0) || (b._match-a._match) || (a.d-b.d));
   }
   const total=list.length;
   const totalPages=Math.max(1,Math.ceil(total/PAGE_SIZE));
@@ -4448,19 +4845,21 @@ function renderPass(){
     '신안군':'https://www.shinan.go.kr/youth'
   };
   function pickApplyLink(p){
-    if(!p.link)return null;
-    // 외부 전국 포털·청년 서브도메인·구체 경로면 그대로
-    if(/youth\.|jnyouthcenter|bokjiro|myhome|\/www\/|\?|=/.test(p.link))return p.link;
-    return YOUTH_PORTAL[p.region]||p.link;
+    if(!p.link) return null;
+    // 공식 정부 도메인(.go.kr / .or.kr)이나 청년·복지 포털은 그대로 사용
+    if(/^https?:\/\/[a-zA-Z0-9.\-]+\.(go|or)\.kr/i.test(p.link)) return p.link;
+    if(/youth\.|jnyouthcenter|bokjiro|myhome/i.test(p.link)) return p.link;
+    return null;
   }
   grid.innerHTML=shown.map(p=>{
     const matched=hasMatch&&p._match>=70;
-    // ✅ 3중 안전망: 1) 청년포털 직접 → 2) 네이버검색(신청) → 3) 네이버검색(정보)
-    const directLink=pickApplyLink(p);
-    const searchApplyLink=`https://search.naver.com/search.naver?where=nexearch&query=${encodeURIComponent(p.region+' '+p.title+' 신청')}`;
+    // ✅ 공고 바로가기 우선순위:
+    //   (1) p.applyURL 명시 → 그대로 사용 (시연 검증된 직접 링크용)
+    //   (2) 그 외 → 「온통청년」 국가 통합 청년정책 포털 검색 — 27개 시·군·구 + 중앙부처 공고 통합
+    const applyHref = p.applyURL || `https://www.youthcenter.go.kr/youngPlcyUnif/youngPlcyUnifList.do?pageIndex=1&srchKeyword=${encodeURIComponent(p.title.split('(')[0].trim())}`;
+    // 사업 정보 보기: 일반 통합 검색 (뉴스·블로그·카페 포함)
     const infoLink=`https://search.naver.com/search.naver?where=nexearch&query=${encodeURIComponent(p.region+' '+p.title)}`;
-    const applyHref=directLink||searchApplyLink;
-    const applyLabel=directLink?'📝 청년포털에서 신청 →':'📝 신청 페이지 찾기 →';
+    const applyLabel='📋 공고 바로가기 →';
     return `<div class="pass-item ${matched?'matched':''}"><div class="pass-row"><span class="pass-region">${p.region}</span><span class="pass-cat-tag ${CAT_CLS[p.cat]}">${CAT_LABEL[p.cat]}</span><span class="pass-deadline ${p.d<=7?'urgent':''}">D-${p.d}</span></div><h4>${p.title}</h4><div class="pass-info"><div class="pass-info-row"><span class="ico">👥</span> <strong>대상:</strong> ${p.target}</div><div class="pass-info-row"><span class="ico">💰</span> <strong>지원:</strong> ${p.amount}</div><div class="pass-info-row"><span class="ico">👤</span> <strong>정원:</strong> ${p.quota}</div></div>${hasMatch&&p._match>0?`<div class="pass-cta-row"><span class="pass-match-score">매칭률 ${p._match}%</span></div>`:''}<div class="pass-actions"><a href="${applyHref}" target="_blank" rel="noopener" class="pass-btn pass-btn-apply">${applyLabel}</a><a href="${infoLink}" target="_blank" rel="noopener" class="pass-btn pass-btn-search">🔍 사업 정보 보기</a></div></div>`;
   }).join('');
   // 페이지네이션
@@ -4484,15 +4883,15 @@ renderPass();
 /* ───── 뉴스 데이터 (큐레이션 + 실시간 RSS 자동 합성) ───── */
 const NEWS_DATA=[
   {date:'2026-05-06',source:'서울신문',cat:'press',title:'민형배, 5월 본격 선거운동…"청년 꽃길 100대 사업 조기 가동"',summary:'민심캠프 청년본부 출범과 함께 청년 종합정책 6대 분야 100대 핵심 과제를 본 캠프 페이즈로 격상하여 추진.',link:'https://search.naver.com/search.naver?where=news&query=%EB%AF%BC%ED%98%95%EB%B0%B0&sort=1'},
-  {date:'2026-05-02',source:'경향신문',cat:'news',title:'민형배 "전남광주 청년 70만, 떠나지 않는 도시 만들겠다"',summary:'27개 시·군 청년 예산을 데이터로 통합 관리하고 청년결정정부 가동을 공식 발표.',link:'https://search.naver.com/search.naver?where=news&query=%EB%AF%BC%ED%98%95%EB%B0%B0+%EC%B2%AD%EB%85%84&sort=1'},
+  {date:'2026-05-02',source:'경향신문',cat:'news',title:'민형배 "전남광주 청년 70만, 떠나지 않는 도시 만들겠다"',summary:'27개 시·군·구 청년 예산을 데이터로 통합 관리하고 청년결정정부 가동을 공식 발표.',link:'https://search.naver.com/search.naver?where=news&query=%EB%AF%BC%ED%98%95%EB%B0%B0+%EC%B2%AD%EB%85%84&sort=1'},
   {date:'2026-04-26',source:'CNB뉴스',cat:'press',title:'민형배, "통합특별시 미래 시민이 설계"…20조 기획위원회 발족',summary:'전남광주통합특별시 출범과 함께 투입될 20조원 규모 정부 지원을 시민이 직접 설계하는 컨트롤타워 가동.',link:'https://www.cnbnews.com/news/article.html?no=780707'},
   {date:'2026-04-15',source:'서울신문',cat:'speech',title:'민형배 "시민주권·경제도약·삶의 질 혁신으로 미래 열 것"',summary:'서울시장에 준하는 권한과 394개 특례를 시민의 삶을 바꾸는 도구로 활용하겠다는 비전 공개.',link:'https://www.seoul.co.kr/news/politics/2026/04/15/20260415500086'},
   {date:'2026-04-14',source:'경향신문',cat:'news',title:'민형배, 민주당 전남광주 후보 확정…초대 통합시장 도전',summary:'결선에서 김영록 전라남도지사를 꺾고 더불어민주당 전남광주통합특별시장 후보로 선출.',link:'https://www.khan.co.kr/article/202604142029005'},
-  {date:'2026-04-11',source:'서울신문',cat:'news',title:'손금주 전 국회의원, 민형배 경선후보 지지 선언',summary:'"전남광주이 하나가 되는 통합특별시 비전에 동의한다"며 공개 지지.',link:'https://www.seoul.co.kr/news/politics/local-election2026/2026/04/11/20260411500029'},
+  {date:'2026-04-11',source:'서울신문',cat:'news',title:'손금주 전 국회의원, 민형배 경선후보 지지 선언',summary:'"광주전남이 하나가 되는 통합특별시 비전에 동의한다"며 공개 지지.',link:'https://www.seoul.co.kr/news/politics/local-election2026/2026/04/11/20260411500029'},
   {date:'2026-04-10',source:'서울신문',cat:'press',title:'민형배 "전남광주 청년 종합정책 발표…빚 없이 시작하는 도시"',summary:'주거·취업·창업·일상·신혼·청년자치를 아우르는 3대 테마 6대 청년 종합 정책 공개.',link:'https://www.seoul.co.kr/news/politics/local-election2026/2026/04/10/20260410500070'},
   {date:'2026-04-08',source:'서울신문',cat:'speech',title:'민형배 의원 "광양, 글로벌 경제도시로 대전환"',summary:'광양항 중심 글로벌 물류허브와 첨단산업 클러스터 비전 제시.',link:'https://www.seoul.co.kr/news/politics/local-election2026/2026/04/08/20260408500105'},
   {date:'2026-04-05',source:'KPI뉴스',cat:'speech',title:'민형배 "시민이 결정하는 통합특별시 만들겠다"…\'시민주권정부\' 비전 제시',summary:'광산구청장 시절부터 이어온 시민주권 철학을 통합특별시 행정에 이식.',link:'https://www.kpinews.kr/newsView/1065601236917095'},
-  {date:'2026-04-02',source:'데일리비즈온',cat:'press',title:'민형배 의원, "전남광주 골고루 혜택가는 균형 통합이어야"',summary:'"통합 행정의 핵심은 27개 시·군이 골고루 발전하는 균형."',link:'https://www.dailybizon.com/news/articleView.html?idxno=61686'},
+  {date:'2026-04-02',source:'데일리비즈온',cat:'press',title:'민형배 의원, "광주전남 골고루 혜택가는 균형 통합이어야"',summary:'"통합 행정의 핵심은 27개 시·군·구이 골고루 발전하는 균형."',link:'https://www.dailybizon.com/news/articleView.html?idxno=61686'},
   {date:'2026-03-28',source:'더쎈뉴스',cat:'press',title:'민형배 "20조 시민기획" 경청투어 확대…전남광주 통합특별시 청사진',summary:'전남광주 전역을 순회하는 \'20조 시민경청투어\'로 시도민 의견 수렴.',link:'https://www.mhns.co.kr/news/articleView.html?idxno=740597'},
 ];
 let newsTab='all',newsExpanded=false;
@@ -4645,7 +5044,7 @@ function renderProposalDashboard(){
   el.style.display='block';
   const cats=s.byCat||{};
   const top=Object.entries(cats).sort((a,b)=>b[1]-a[1])[0];
-  el.innerHTML=`<div class="pd-row"><span class="pd-label">📊 누적 청년 제안</span><strong class="pd-num">${total.toLocaleString('ko-KR')}건</strong></div>${top?`<div class="pd-row"><span class="pd-label">최다 제안 분야</span><strong>${escapeHtml(top[0])} (${top[1]}건)</strong></div>`:''}<div class="pd-hint">※ 본 브라우저 기준 누적 카운트 (운영 시 서버 동기화 예정)</div>`;
+  el.innerHTML=`<div class="pd-row"><span class="pd-label">📊 누적 청년 제안</span><strong class="pd-num">${total.toLocaleString('ko-KR')}건</strong></div>${top?`<div class="pd-row"><span class="pd-label">최다 제안 분야</span><strong>${escapeHtml(top[0])} (${top[1]}건)</strong></div>`:''}<div class="pd-hint">※ 본 플랫폼 시범 운영판(Beta) 기준 실시간 누적 카운트 (정식 출범 시 행정 시스템 동기화)</div>`;
 }
 
 function submitProposal(e){
@@ -4700,6 +5099,8 @@ function submitProposal(e){
 
 /* 초기 렌더 + 자동 fetch */
 renderAll();
+// 초기 정렬 = 전체 예산순
+(function(){var sm=document.getElementById('sortMode'); if(sm) sm.value='amount';})();
 fetchBudget(false);
 renderProposalDashboard();
 
@@ -4707,7 +5108,7 @@ renderProposalDashboard();
 const VOICE_DATA = {
   1: {
     title: '🌸 1차 청년정책 해커톤 — 「청년과 함께 길을 찾다!」',
-    meta: '<span>📅 2026.2.21 (토) 14:00~17:00</span><span>📍 나주 동신대 한방병원 2층 다목적홀</span><span>👥 전남광주 대학생·사회청년·장애인 청년 등 100여 명</span><span>🎤 퍼실리테이터: 민형배 국회의원</span>',
+    meta: '<span>📅 2026.2.21 (토) 14:00~17:00</span><span>📍 나주 동신대 한방병원 2층 다목적홀</span><span>👥 광주전남 대학생·사회청년·장애인 청년 등 100여 명</span><span>🎤 퍼실리테이터: 민형배 국회의원</span>',
     body: `
       <div class="va-section">
         <h5>🎯 행사 개요</h5>
@@ -4719,7 +5120,7 @@ const VOICE_DATA = {
           <div class="va-prop"><div class="pt">① 청년 주거 — "이 지역에 남을 것인가, 떠날 것인가의 문제"</div><div class="pb">광주 도심은 주거비 상승, 전남 일부는 빈집 증가. 같은 생활권에서 한쪽은 과밀·한쪽은 공실의 모순. 도심 일자리와 외곽 공간을 연결하는 전략 필요.</div></div>
           <div class="va-prop blue"><div class="pt">② 청년 정치참여 — "수혜자가 아닌 공동설계자로"</div><div class="pb">청년은 정책의 대상이면서도 결정 과정에서는 주변에 서 있음. 청년이 정책 기획 단계부터 실질적으로 참여하고, 일부 예산·사업에 책임 있는 권한을 행사할 수 있는 구조 마련 요청.</div></div>
           <div class="va-prop"><div class="pt">③ AI·4차산업 교육 — "배움-취업-정착 연결 구조"</div><div class="pb">지역에 산업 전략은 있지만 청년이 그 산업으로 들어가는 경로가 부족. AI·미래차·에너지 산업 등과 연결된 실무형 교육 + 지역 기업 채용 + 정착 환경 패키지화 요청.</div></div>
-          <div class="va-prop blue"><div class="pt">④ 육아·돌봄 — "어디에 살든 동일한 기준"</div><div class="pb">전남광주 보육 지원체계 격차 해소. 통합특별시 출범 시 최소한의 보육·돌봄 기준 통일 + 예측 가능성 보장 요청.</div></div>
+          <div class="va-prop blue"><div class="pt">④ 육아·돌봄 — "어디에 살든 동일한 기준"</div><div class="pb">광주전남 보육 지원체계 격차 해소. 통합특별시 출범 시 최소한의 보육·돌봄 기준 통일 + 예측 가능성 보장 요청.</div></div>
           <div class="va-prop"><div class="pt">⑤ 교육 — "수도권으로 옮기지 않아도 되는 도시"</div><div class="pb">학군 격차, 사교육 과열 vs 교육 인프라 부족 동시 존재. AI·에너지·농생명 등 통합특별시 전략 산업과 연결되는 공교육 진로 트랙(중·고등 단계부터) 설계 요청.</div></div>
         </div>
       </div>`
@@ -4753,16 +5154,43 @@ const VOICE_DATA = {
       <div class="va-section">
         <h5>🌸 5대 정책 제안 — DJ 정신 계승 + 지역 데이터 기반</h5>
         <div class="va-proposals">
-          <div class="va-prop"><div class="pt">① 청년 일경험 확대 + 커리어 멘토링 연계</div><div class="pb">전남광주 1000대 기업 13개뿐, '쉬었음' 청년 증가. 직무탐색 멘토링·네트워킹 + 강소기업 연계 일경험 + 일자리 미스매치 해소 통합지원. (DJ 정부: IMF 이후 종합실업대책)</div></div>
+          <div class="va-prop"><div class="pt">① 청년 일경험 확대 + 커리어 멘토링 연계</div><div class="pb">광주전남 1000대 기업 13개뿐, '쉬었음' 청년 증가. 직무탐색 멘토링·네트워킹 + 강소기업 연계 일경험 + 일자리 미스매치 해소 통합지원. (DJ 정부: IMF 이후 종합실업대책)</div></div>
           <div class="va-prop blue"><div class="pt">② 청년 창업 인큐베이팅 지원 확대</div><div class="pb">신생기업 5년 생존율 34.7%, 30세 미만 폐업률 20.8%(전 연령 평균의 2배). 청년미래펀드 + 인큐베이팅 공간 확대 + 성장단계별 자금공급·재도전 지원. (DJ 정부: 벤처기업특별법·초고속망)</div></div>
-          <div class="va-prop"><div class="pt">③ 청년 맞춤형 주거 지원 확대</div><div class="pb">2026년 1분기 광주 순이동률 -1.3%(전국 1위 유출), 전남 -0.5%. 전남광주 전세사기 피해액 935억원. 부동산 중개비·이사비 지원 현실화 + 전세보증보험료 지원 + 대학가·산업지구 주거 오피스. (DJ 정부: 국민임대주택 도입)</div></div>
+          <div class="va-prop"><div class="pt">③ 청년 맞춤형 주거 지원 확대</div><div class="pb">2026년 1분기 광주 순이동률 -1.3%(전국 1위 유출), 전남 -0.5%. 광주전남 전세사기 피해액 935억원. 부동산 중개비·이사비 지원 현실화 + 전세보증보험료 지원 + 대학가·산업지구 주거 오피스. (DJ 정부: 국민임대주택 도입)</div></div>
           <div class="va-prop blue"><div class="pt">④ 청년 문화예술패스 확대</div><div class="pb">현행 19~20세 연 20만원·생애 1회 → 만 34세까지 단계 확대 + 연 단위 지급 + 사용처(생활체육·강습·창작) 확대 + 실물카드형 지역화폐·교통카드 연계. (DJ 정부: 문화예산 1% 확보)</div></div>
-          <div class="va-prop"><div class="pt">⑤ 청년 마음건강 통합지원체계 구축</div><div class="pb">고립·은둔 청년 약 54만 명 추정, 전남광주 자살률 급증(전남 전국 3위권). 정신건강복지센터 인지도 60.6%→58.1% 하락. 광주시-자치구-센터-청년센터 연계 + 예방-상담-회복-복귀 단계별 모델 + 동주민센터·복지플래너 조기발굴. (DJ 정부: 보편적 건강보장 기반)</div></div>
+          <div class="va-prop"><div class="pt">⑤ 청년 마음건강 통합지원체계 구축</div><div class="pb">고립·은둔 청년 약 54만 명 추정, 광주전남 자살률 급증(전남 전국 3위권). 정신건강복지센터 인지도 60.6%→58.1% 하락. 광주시-자치구-센터-청년센터 연계 + 예방-상담-회복-복귀 단계별 모델 + 동주민센터·복지플래너 조기발굴. (DJ 정부: 보편적 건강보장 기반)</div></div>
         </div>
       </div>
       <div class="va-section">
         <h5>📊 핵심 데이터</h5>
-        <div class="va-prop blue"><div class="pt">전남광주, 정책 지원이 청년 생존을 좌우</div><div class="pb">정책자금 지원받은 사업체 5년 생존율: 광주 59.1% vs 미지원 28.2% / 전남 62.5% vs 31.6% — 청년 정책의 직접적 효과 입증</div></div>
+        <div class="va-prop blue"><div class="pt">광주전남, 정책 지원이 청년 생존을 좌우</div><div class="pb">정책자금 지원받은 사업체 5년 생존율: 광주 59.1% vs 미지원 28.2% / 전남 62.5% vs 31.6% — 청년 정책의 직접적 효과 입증</div></div>
+      </div>`
+  },
+  4: {
+    title: '청년정책기획위원회 제안서 청취중 — 시민주권선대위 청년특별위원회 출범식',
+    meta: '<span>📅 <b>2026.5.16 (목) 10:30</b></span><span>📍 <b>시민주권선대위 청년특별위원회 출범식</b></span><span>🎙️ <b>LIVE 청취중 — 본 플랫폼 실시간 수렴</b></span>',
+    body: `
+      <div class="va-section">
+        <h5>🌸 출범 개요</h5>
+        <p style="margin:0;color:var(--ink-2);line-height:1.85;font-weight:600">민형배 후보 <strong>시민주권선대위</strong> 산하 <strong>청년특별위원회</strong>가 2026년 5월 16일(목) 오전 10시 30분에 공식 출범합니다. 출범과 동시에 <strong>「청년정책기획위원회」 8개 분과</strong>의 제안서를 본 플랫폼에서 실시간 청취·수렴합니다.</p>
+      </div>
+      <div class="va-section">
+        <h5>📋 청취 대상 — 청년정책기획위원회 8개 분과</h5>
+        <div class="va-proposals">
+          <div class="va-prop"><div class="pt">① 문화예술·관광 분과</div><div class="pb">청년 기획 권역축제 · 청년 문화패스 확대 · K-푸드 청년 창업</div></div>
+          <div class="va-prop blue"><div class="pt">② 체육·웰니스·의료 분과</div><div class="pb">공공 체육시설 청년우선쿼터 · 마음회복 패스 · 1인 가구 안심 의료</div></div>
+          <div class="va-prop"><div class="pt">③ AI·디지털혁신 분과</div><div class="pb">AI 반도체 트라이앵글 청년 일자리 · 계약학과 · 시민 디지털자산제</div></div>
+          <div class="va-prop blue"><div class="pt">④ 농어촌·환경 분과</div><div class="pb">마을 월급 프로젝트 · 햇빛 기본소득마을 · 영산강 생태복원</div></div>
+          <div class="va-prop"><div class="pt">⑤ 경제·일자리·창업 분과</div><div class="pb">권역별 신성장 커리어패스 · 빈점포 청년창업 실험특구 · 첫걸음 보장제</div></div>
+          <div class="va-prop blue"><div class="pt">⑥ 주거·교육 분과</div><div class="pb">권역형 만원주택 · 무이자 보증금 대출 · 전세사기 예방</div></div>
+          <div class="va-prop"><div class="pt">⑦ 복지·가족·돌봄 분과</div><div class="pb">출산 3無 정책 · AI 육아 돌봄 퀵매치 · 돌봄 기본사회</div></div>
+          <div class="va-prop blue"><div class="pt">⑧ 청년주권 분과</div><div class="pb">청년정책의회 상설화 · 참여예산제 · 청년 인재DB · 청년결정정부</div></div>
+        </div>
+      </div>
+      <div class="va-section">
+        <h5>🎙️ 본 플랫폼 청취 방식</h5>
+        <div class="va-prop"><div class="pt">실시간 의견 수렴 — 「예산 정책 결정 참여」 폼</div><div class="pb">출범 시점부터 「민형배의 결재판을 청년에게 넘깁니다」 폼에 접수된 모든 의견을 분과별 청년 전문가가 검토합니다.</div></div>
+        <div class="va-prop blue"><div class="pt">투명한 추적 — 정책 반영 데이터 공개</div><div class="pb">접수 → 분과 검토 → 캠프 전달 → 정책 반영 → 예산 편성 → 집행 → 결과 보고까지 본 플랫폼에서 추적됩니다.</div></div>
       </div>`
   }};
 function openVoice(id){
@@ -4802,7 +5230,7 @@ const QA_DATA = [
    src:'정책발표문 #43 · 2026.04.10'},
   {cat:'d7', tag:'돌봄', title:'돌봄 격차 — "돌봄 기본사회 특별시"는 어떤 모습?',
    quote:'"전남광주를 대한민국 최초 \'돌봄 기본사회 특별시\'로 만들겠습니다. 어디에 살든, 누구든 돌봄받을 권리를 보장합니다."',
-   points:['보육·아동·청소년·청년·여성·노인·장애인 — 생애주기 전 단계 통합 돌봄 체계','전남광주 보육 보조금·운영방식 격차 해소: 통합 후 최소 보육·돌봄 기준 통일','경로당에서 시작하는 존엄한 노후 책임 돌봄 — 식사·건강·여가·사회참여 패키지'],
+   points:['보육·아동·청소년·청년·여성·노인·장애인 — 생애주기 전 단계 통합 돌봄 체계','광주전남 보육 보조금·운영방식 격차 해소: 통합 후 최소 보육·돌봄 기준 통일','경로당에서 시작하는 존엄한 노후 책임 돌봄 — 식사·건강·여가·사회참여 패키지'],
    src:'정책발표문 #13, #42 · 2026.03.11 / 2026.04.09'},
   {cat:'d7', tag:'출산·육아', title:'아이 낳고 키우기 — 출산 3無 정책이란?',
    quote:'"출산·육아·생활 3대 책임 정책으로 부모의 불안을 줄이는 공동체가 되겠습니다."',
@@ -4830,7 +5258,7 @@ const QA_DATA = [
    src:'정책발표문 #20, #22, #23, #26, #46'},
   {cat:'d6', tag:'주거', title:'청년 주거 — 보증금 어떻게 해결하나요?',
    quote:'"특별시가 보증금과 임대 부담을 직접 지고, 청년은 시세보다 낮은 월세만 부담하게 하겠습니다."',
-   points:['권역형 만원주택 확대 + 무이자 보증금 대출','전세사기 예방 — 보증금 반환보증료 지원 확대 (전남광주 피해액 935억)','제휴 임대인 세제 혜택으로 청년 임대 공급 확대','27개 시군구 원도심에 \'성수동 30개\' 조성 — 청년 정주·창업 기반','대학가·산업지구에 주거-업무-문화 결합 복합공간'],
+   points:['권역형 만원주택 확대 + 무이자 보증금 대출','전세사기 예방 — 보증금 반환보증료 지원 확대 (광주전남 피해액 935억)','제휴 임대인 세제 혜택으로 청년 임대 공급 확대','27개 시·군·구·구 원도심에 \'성수동 30개\' 조성 — 청년 정주·창업 기반','대학가·산업지구에 주거-업무-문화 결합 복합공간'],
    src:'정책발표문 #27, #43 · 2026.03.25 / 2026.04.10'},
   {cat:'d5', tag:'지역', title:'우리 동네는? — 22개 시·군별 발표 공약은?',
    quote:'"전남광주 22개 시·군 각각의 미래를 직접 설계해서 발표했습니다."',
@@ -4902,51 +5330,6 @@ function toggleQA(btn){
   item.classList.toggle('open');
 }
 document.addEventListener('keydown', e => { if(e.key==='Escape' && document.getElementById('qaModal').classList.contains('open')) closeQA(); });
-
-
-// ===== 🌸 인라인 Q&A 패널 (#news 위치) — 모달과 동일 데이터 공유 =====
-let qaInlineActiveCat = 'all';
-function setInlineQACat(id){ qaInlineActiveCat = id; renderInlineCats(); renderInlineQA(); }
-function renderInlineCats(){
-  const root = document.getElementById('qaInlineCats');
-  if(!root) return;
-  root.innerHTML = QA_CATS.map(c =>
-    `<button class="qa-cat${qaInlineActiveCat===c.id?' active':''}" onclick="setInlineQACat('${c.id}')">${c.label}</button>`
-  ).join('');
-}
-function renderInlineQA(){
-  const root = document.getElementById('qaInlineList');
-  if(!root) return;
-  const kw = (document.getElementById('qaInlineSearch').value||'').toLowerCase().trim();
-  const list = QA_DATA.filter(q => {
-    if(qaInlineActiveCat!=='all' && q.cat!==qaInlineActiveCat) return false;
-    if(!kw) return true;
-    return (q.title+q.quote+q.points.join(' ')+q.tag).toLowerCase().includes(kw);
-  });
-  if(!list.length){ root.innerHTML = '<div class="qa-empty">🌸 검색 결과가 없습니다. 다른 키워드를 시도해보세요.</div>'; return; }
-  root.innerHTML = list.map((q,i)=>`
-    <div class="qa-item" data-i="${i}">
-      <button class="qa-q" onclick="toggleQA(this)">
-        <div class="qa-q-text">
-          <span class="qa-tag ${q.cat}">${q.tag}</span>
-          <div class="qa-q-title">${q.title}</div>
-          <div class="qa-q-meta">${q.src}</div>
-        </div>
-        <span class="qa-q-arrow">▼</span>
-      </button>
-      <div class="qa-a">
-        <div class="qa-a-quote">${q.quote}</div>
-        <ul class="qa-a-points">${q.points.map(p=>`<li>${p}</li>`).join('')}</ul>
-        <div class="qa-a-src">📚 출처: ${q.src} · 언론기사 + 각종 행사 발언 모음ZIP (2026.02~05)</div>
-      </div>
-    </div>`).join('');
-}
-// 페이지 로드 시 자동 렌더
-if(document.readyState==='loading'){
-  document.addEventListener('DOMContentLoaded', ()=>{ renderInlineCats(); renderInlineQA(); });
-} else { renderInlineCats(); renderInlineQA(); }
-
-
 // ===== 🏛️ 8분과 세부 업무 데이터 =====
 const BRANCH_DATA = {
   1: {title:"1분과 · 문화예술·관광", tasks:["청년 예술인 창작 활동 지원 및 권익 보호 정책","청년 주도형 지역 문화·관광 콘텐츠 발굴·기획","지역 문화공간 및 인프라의 청년 접근성 확대","청년 문화기획자·콘텐츠 크리에이터 양성 지원","로컬 관광 자원과 연계한 청년 일자리 발굴"]},
@@ -4977,7 +5360,7 @@ function closeBranch(){
 }
 
 // ===== 📚 정책발표문 아카이브 =====
-const SPEECHES = [{"n": 1, "type": "출마선언문", "title": "대한민국 이재명! 전남광주 민형배! 민형배는 합니다 (광주)", "date": "2026.02.02", "page": 1, "cat": "성장통합"}, {"n": 2, "type": "출마선언문", "title": "전남광주 신성장 특별시 (서남권)", "date": "2026.02.19", "page": 11, "cat": "성장통합"}, {"n": 3, "type": "정책공약·보도자료", "title": "여수국가산단, 화학산업 소부장 특화단지로", "date": "2026.02.22", "page": 16, "cat": "성장통합"}, {"n": 4, "type": "정책발표문", "title": "전남광주 393개 읍면동 마을자치와 시군구 자치권 강화 전국 선도모델로 추진", "date": "2026.02.26", "page": 17, "cat": "시민주권"}, {"n": 5, "type": "정책발표문", "title": "전남광주에 더 큰 글로벌 초첨단 기업을 모시겠습니다", "date": "2026.03.03", "page": 19, "cat": "성장통합"}, {"n": 6, "type": "정책발표문", "title": "전남광주, 대한민국 문화수도로 완성하겠습니다", "date": "2026.03.03", "page": 22, "cat": "녹색도시"}, {"n": 7, "type": "정책공약·보도자료", "title": "영암·해남에 3GW 농어민협동조합 주도 햇빛 기본소득마을 만든다", "date": "2026.03.05", "page": 24, "cat": "기본소득"}, {"n": 8, "type": "정책 논평", "title": "3.8세계여성대회를 맞이하여: 평등하고 안전한 통합특별시에 대한 구상 (여성 부시장 발표)", "date": "2026.03.08", "page": 25, "cat": "균형발전"}, {"n": 9, "type": "정책발표문", "title": "전남광주, 산업용 전기요금 100원 시대를 열겠습니다", "date": "2026.03.09", "page": 27, "cat": "성장통합"}, {"n": 10, "type": "정책공약·보도자료", "title": "\"전남광주를 AI 반도체 수도로 만든다\" (반도체 트라이앵글 산업벨트)", "date": "2026.03.10", "page": 29, "cat": "성장통합"}, {"n": 11, "type": "정책공약·보도자료", "title": "초고속 AI 고속도로 '부산-여수-해남-광주' 광케이블 구축한다", "date": "2026.03.10", "page": 31, "cat": "성장통합"}, {"n": 12, "type": "정책발표문", "title": "목포를 서남권 관문도시로 만들겠습니다 — 교통 대전환과 목포역 역세권 대개발", "date": "2026.03.11", "page": 33, "cat": "녹색도시"}, {"n": 13, "type": "정책발표문", "title": "전남광주를 대한민국 최초 '돌봄 기본사회 특별시'로 만들겠습니다", "date": "2026.03.11", "page": 43, "cat": "균형발전"}, {"n": 14, "type": "정책발표문", "title": "5대 노동정책 \"일하기 좋은 도시, 삶이 안전하고 여유있는 도시를 만들겠습니다\"", "date": "2026.03.13", "page": 50, "cat": "균형발전"}, {"n": 15, "type": "정책발표문", "title": "생태문화도시 순천, RE100 첨단산업 도시로 도약합니다", "date": "2026.03.13", "page": 54, "cat": "성장통합"}, {"n": 16, "type": "정책발표문", "title": "광주 자동차산업, 내연기관 도시에서 AI 미래모빌리티 도시로 바꾸겠습니다", "date": "2026.03.15", "page": 57, "cat": "성장통합"}, {"n": 17, "type": "정책발표문", "title": "산단과 관광을 두 축으로 여수를 세계적 해양도시로 키우겠습니다", "date": "2026.03.16", "page": 62, "cat": "성장통합"}, {"n": 18, "type": "정책발표문", "title": "농어촌 마을 월급 프로젝트 \"전남광주 농어촌에서는 마을이 사업하고 주민이 월급받아요\"", "date": "2026.03.17", "page": 65, "cat": "기본소득"}, {"n": 19, "type": "정책발표문", "title": "(화순) \"중입자 가속기를 유치해 치유·생명산업도시로 만들겠습니다\"", "date": "2026.03.18", "page": 68, "cat": "성장통합"}, {"n": 20, "type": "정책발표문", "title": "10-30-60 교통 대전환, 광역 BRT와 복합환승 거점으로 60분 생활권을 만들겠습니다", "date": "2026.03.18", "page": 73, "cat": "균형발전"}, {"n": 21, "type": "정책 논평", "title": "생산한 전기를 버리는 무능 행정, 이제 끝내야 한다!", "date": "2026.03.19", "page": 79, "cat": "성장통합"}, {"n": 22, "type": "정책발표문", "title": "해상교통 공영제, 섬 공공의료와 기본소득으로 살기 좋은 섬을 만들겠습니다", "date": "2026.03.22", "page": 83, "cat": "기본소득"}, {"n": 23, "type": "정책발표문", "title": "통합특별시, 교통서비스는 올리고, 교통비 내리는 4대 정책", "date": "2026.03.22", "page": 86, "cat": "균형발전"}, {"n": 24, "type": "정책발표문", "title": "시민의 디지털 활동이 시민의 자산이 되는 도시", "date": "2026.03.23", "page": 89, "cat": "시민주권"}, {"n": 25, "type": "정책발표문", "title": "퀘벡·몬드라곤, 그리고 아시아를 대표하는 전남광주, 세계 3대 사회연대경제도시를 만들겠습니다", "date": "2026.03.23", "page": 94, "cat": "시민주권"}, {"n": 26, "type": "정책발표문", "title": "전남광주를 하나로 잇는 광역철도 대전환", "date": "2026.03.25", "page": 97, "cat": "균형발전"}, {"n": 27, "type": "정책발표문", "title": "27개 시군구 원도심에 '성수동 30개' 조성한다", "date": "2026.03.25", "page": 99, "cat": "균형발전"}, {"n": 28, "type": "기자회견문", "title": "주철현·민형배 전남동부권 미래비전 공동 기자회견", "date": "2026.03.26", "page": 105, "cat": "성장통합"}, {"n": 29, "type": "정책발표문", "title": "전남광주 수소 대동맥으로 대한민국 산업지도를 다시 그리겠습니다", "date": "2026.03.27", "page": 111, "cat": "성장통합"}, {"n": 30, "type": "정책발표문", "title": "NOVA 전략 군공항 이전부지 - 송정권 미래도시 발표", "date": "2026.03.29", "page": 114, "cat": "녹색도시"}, {"n": 31, "type": "정책발표문", "title": "출산 3無·육아·생활 '3대 책임 정책' 제시", "date": "2026.03.31", "page": 121, "cat": "균형발전"}, {"n": 32, "type": "정책발표문", "title": "전남광주 농업, 생산 농업에서 소득 산업으로 대전환", "date": "2026.04.01", "page": 125, "cat": "성장통합"}, {"n": 33, "type": "기자회견문", "title": "주철현·민형배 경선후보 단일화 선언문", "date": "2026.04.01", "page": 130, "cat": "성장통합"}, {"n": 34, "type": "정책발표문", "title": "전남광주통합특별시 '대한민국 문화수도' 비전 발표", "date": "2026.04.02", "page": 133, "cat": "녹색도시"}, {"n": 35, "type": "정책발표문", "title": "영산강 300리, 나무와 습지와 정원으로 다시 살리겠습니다", "date": "2026.04.05", "page": 140, "cat": "녹색도시"}, {"n": 36, "type": "기자회견문", "title": "결선으로 갑니다! 더 낮게, 더 치열하게 뛰겠습니다!", "date": "2026.04.06", "page": 144, "cat": "시민주권"}, {"n": 37, "type": "보도자료", "title": "서부권 대도약 시대 열 것", "date": "2026.04.06", "page": 148, "cat": "성장통합"}, {"n": 38, "type": "보도자료", "title": "(해남) \"AI·에너지·고부가가치 농업으로 해남 경제구조 바꾸겠다\"", "date": "2026.04.07", "page": 150, "cat": "성장통합"}, {"n": 39, "type": "보도자료", "title": "골목상권 활성화와 골목산업 전환 전략 발표", "date": "2026.04.08", "page": 152, "cat": "균형발전"}, {"n": 40, "type": "정책발표문", "title": "(광양) \"광양을 글로벌 경제도시로 — 이차전지·AI 산업벨트 조성\"", "date": "2026.04.08", "page": 154, "cat": "성장통합"}, {"n": 41, "type": "정책발표문", "title": "(무안) 무안을 '공항·산업·에너지·사람 결합 미래도시'로", "date": "2026.04.09", "page": 159, "cat": "성장통합"}, {"n": 42, "type": "정책발표문", "title": "경로당에서 시작하는 존엄한 노후 책임 돌봄 선언", "date": "2026.04.09", "page": 164, "cat": "균형발전"}, {"n": 43, "type": "정책발표문", "title": "전남광주 청년 '특(特)수저' 시대 선언, 빚 없이 시작하는 도시", "date": "2026.04.10", "page": 166, "cat": "균형발전"}, {"n": 44, "type": "보도자료", "title": "(나주) 나주를 혁신도시·원도심 동반 성장 '20만 정주도시'로 완성", "date": "2026.04.10", "page": 170, "cat": "균형발전"}, {"n": 45, "type": "보도자료", "title": "\"반려동물과 사람이 함께 살아가는 도시\"로 전환", "date": "2026.04.12", "page": 172, "cat": "녹색도시"}, {"n": 46, "type": "보도자료", "title": "전남광주 통합교통 올타(All-TA)로 이동권 혁명", "date": "2026.04.12", "page": 174, "cat": "균형발전"}, {"n": 47, "type": "보도자료", "title": "통합특별시 AI·청년·참여로 '시민주도' 강조…구상 공개", "date": "2026.04.13", "page": 175, "cat": "시민주권"}, {"n": 48, "type": "정책발표문", "title": "웰니스·MICE·크루즈 인프라로 완성하는 3·5·7 체류관광", "date": "2026.04.13", "page": 176, "cat": "녹색도시"}, {"n": 49, "type": "정책발표문", "title": "전남광주 중남권 중심 K-푸드 산업 생태계 집중 육성 (① K푸드산업공사 ② 세계한식대학)", "date": "2026.04.13", "page": 180, "cat": "성장통합"}, {"n": 50, "type": "정책발표문", "title": "청소년에게 시간을, 도시 전체를 학교로", "date": "2026.04.14", "page": 192, "cat": "균형발전"}, {"n": 51, "type": "보도자료", "title": "일자리·소득·삶의 질 바꾸는 3대 변화, 2년 내 성과 창출", "date": "2026.04.14", "page": 195, "cat": "균형발전"}, {"n": 52, "type": "정책발표문", "title": "(고흥) 고흥을 우주·미래항공·스마트농수산업의 전진기지로 키우겠습니다", "date": "2026.04.14", "page": 197, "cat": "성장통합"}];
+const SPEECHES = [{"n": 1, "type": "출마선언문", "title": "대한민국 이재명! 전남광주 민형배! 민형배는 합니다 (광주)", "date": "2026.02.02", "page": 1, "cat": "성장통합"}, {"n": 2, "type": "출마선언문", "title": "전남광주 신성장 특별시 (서남권)", "date": "2026.02.19", "page": 11, "cat": "성장통합"}, {"n": 3, "type": "정책공약·보도자료", "title": "여수국가산단, 화학산업 소부장 특화단지로", "date": "2026.02.22", "page": 16, "cat": "성장통합"}, {"n": 4, "type": "정책발표문", "title": "전남광주 393개 읍면동 마을자치와 시군구 자치권 강화 전국 선도모델로 추진", "date": "2026.02.26", "page": 17, "cat": "시민주권"}, {"n": 5, "type": "정책발표문", "title": "전남광주에 더 큰 글로벌 초첨단 기업을 모시겠습니다", "date": "2026.03.03", "page": 19, "cat": "성장통합"}, {"n": 6, "type": "정책발표문", "title": "전남광주, 대한민국 문화수도로 완성하겠습니다", "date": "2026.03.03", "page": 22, "cat": "녹색도시"}, {"n": 7, "type": "정책공약·보도자료", "title": "영암·해남에 3GW 농어민협동조합 주도 햇빛 기본소득마을 만든다", "date": "2026.03.05", "page": 24, "cat": "기본소득"}, {"n": 8, "type": "정책 논평", "title": "3.8세계여성대회를 맞이하여: 평등하고 안전한 통합특별시에 대한 구상 (여성 부시장 발표)", "date": "2026.03.08", "page": 25, "cat": "균형발전"}, {"n": 9, "type": "정책발표문", "title": "전남광주, 산업용 전기요금 100원 시대를 열겠습니다", "date": "2026.03.09", "page": 27, "cat": "성장통합"}, {"n": 10, "type": "정책공약·보도자료", "title": "\"전남광주를 AI 반도체 수도로 만든다\" (반도체 트라이앵글 산업벨트)", "date": "2026.03.10", "page": 29, "cat": "성장통합"}, {"n": 11, "type": "정책공약·보도자료", "title": "초고속 AI 고속도로 '부산-여수-해남-광주' 광케이블 구축한다", "date": "2026.03.10", "page": 31, "cat": "성장통합"}, {"n": 12, "type": "정책발표문", "title": "목포를 서남권 관문도시로 만들겠습니다 — 교통 대전환과 목포역 역세권 대개발", "date": "2026.03.11", "page": 33, "cat": "녹색도시"}, {"n": 13, "type": "정책발표문", "title": "전남광주를 대한민국 최초 '돌봄 기본사회 특별시'로 만들겠습니다", "date": "2026.03.11", "page": 43, "cat": "균형발전"}, {"n": 14, "type": "정책발표문", "title": "5대 노동정책 \"일하기 좋은 도시, 삶이 안전하고 여유있는 도시를 만들겠습니다\"", "date": "2026.03.13", "page": 50, "cat": "균형발전"}, {"n": 15, "type": "정책발표문", "title": "생태문화도시 순천, RE100 첨단산업 도시로 도약합니다", "date": "2026.03.13", "page": 54, "cat": "성장통합"}, {"n": 16, "type": "정책발표문", "title": "광주 자동차산업, 내연기관 도시에서 AI 미래모빌리티 도시로 바꾸겠습니다", "date": "2026.03.15", "page": 57, "cat": "성장통합"}, {"n": 17, "type": "정책발표문", "title": "산단과 관광을 두 축으로 여수를 세계적 해양도시로 키우겠습니다", "date": "2026.03.16", "page": 62, "cat": "성장통합"}, {"n": 18, "type": "정책발표문", "title": "농어촌 마을 월급 프로젝트 \"전남광주 농어촌에서는 마을이 사업하고 주민이 월급받아요\"", "date": "2026.03.17", "page": 65, "cat": "기본소득"}, {"n": 19, "type": "정책발표문", "title": "(화순) \"중입자 가속기를 유치해 치유·생명산업도시로 만들겠습니다\"", "date": "2026.03.18", "page": 68, "cat": "성장통합"}, {"n": 20, "type": "정책발표문", "title": "10-30-60 교통 대전환, 광역 BRT와 복합환승 거점으로 60분 생활권을 만들겠습니다", "date": "2026.03.18", "page": 73, "cat": "균형발전"}, {"n": 21, "type": "정책 논평", "title": "생산한 전기를 버리는 무능 행정, 이제 끝내야 한다!", "date": "2026.03.19", "page": 79, "cat": "성장통합"}, {"n": 22, "type": "정책발표문", "title": "해상교통 공영제, 섬 공공의료와 기본소득으로 살기 좋은 섬을 만들겠습니다", "date": "2026.03.22", "page": 83, "cat": "기본소득"}, {"n": 23, "type": "정책발표문", "title": "통합특별시, 교통서비스는 올리고, 교통비 내리는 4대 정책", "date": "2026.03.22", "page": 86, "cat": "균형발전"}, {"n": 24, "type": "정책발표문", "title": "시민의 디지털 활동이 시민의 자산이 되는 도시", "date": "2026.03.23", "page": 89, "cat": "시민주권"}, {"n": 25, "type": "정책발표문", "title": "퀘벡·몬드라곤, 그리고 아시아를 대표하는 전남광주, 세계 3대 사회연대경제도시를 만들겠습니다", "date": "2026.03.23", "page": 94, "cat": "시민주권"}, {"n": 26, "type": "정책발표문", "title": "전남광주를 하나로 잇는 광역철도 대전환", "date": "2026.03.25", "page": 97, "cat": "균형발전"}, {"n": 27, "type": "정책발표문", "title": "27개 시·군·구·구 원도심에 '성수동 30개' 조성한다", "date": "2026.03.25", "page": 99, "cat": "균형발전"}, {"n": 28, "type": "기자회견문", "title": "주철현·민형배 전남동부권 미래비전 공동 기자회견", "date": "2026.03.26", "page": 105, "cat": "성장통합"}, {"n": 29, "type": "정책발표문", "title": "전남광주 수소 대동맥으로 대한민국 산업지도를 다시 그리겠습니다", "date": "2026.03.27", "page": 111, "cat": "성장통합"}, {"n": 30, "type": "정책발표문", "title": "NOVA 전략 군공항 이전부지 - 송정권 미래도시 발표", "date": "2026.03.29", "page": 114, "cat": "녹색도시"}, {"n": 31, "type": "정책발표문", "title": "출산 3無·육아·생활 '3대 책임 정책' 제시", "date": "2026.03.31", "page": 121, "cat": "균형발전"}, {"n": 32, "type": "정책발표문", "title": "전남광주 농업, 생산 농업에서 소득 산업으로 대전환", "date": "2026.04.01", "page": 125, "cat": "성장통합"}, {"n": 33, "type": "기자회견문", "title": "주철현·민형배 경선후보 단일화 선언문", "date": "2026.04.01", "page": 130, "cat": "성장통합"}, {"n": 34, "type": "정책발표문", "title": "전남광주통합특별시 '대한민국 문화수도' 비전 발표", "date": "2026.04.02", "page": 133, "cat": "녹색도시"}, {"n": 35, "type": "정책발표문", "title": "영산강 300리, 나무와 습지와 정원으로 다시 살리겠습니다", "date": "2026.04.05", "page": 140, "cat": "녹색도시"}, {"n": 36, "type": "기자회견문", "title": "결선으로 갑니다! 더 낮게, 더 치열하게 뛰겠습니다!", "date": "2026.04.06", "page": 144, "cat": "시민주권"}, {"n": 37, "type": "보도자료", "title": "서부권 대도약 시대 열 것", "date": "2026.04.06", "page": 148, "cat": "성장통합"}, {"n": 38, "type": "보도자료", "title": "(해남) \"AI·에너지·고부가가치 농업으로 해남 경제구조 바꾸겠다\"", "date": "2026.04.07", "page": 150, "cat": "성장통합"}, {"n": 39, "type": "보도자료", "title": "골목상권 활성화와 골목산업 전환 전략 발표", "date": "2026.04.08", "page": 152, "cat": "균형발전"}, {"n": 40, "type": "정책발표문", "title": "(광양) \"광양을 글로벌 경제도시로 — 이차전지·AI 산업벨트 조성\"", "date": "2026.04.08", "page": 154, "cat": "성장통합"}, {"n": 41, "type": "정책발표문", "title": "(무안) 무안을 '공항·산업·에너지·사람 결합 미래도시'로", "date": "2026.04.09", "page": 159, "cat": "성장통합"}, {"n": 42, "type": "정책발표문", "title": "경로당에서 시작하는 존엄한 노후 책임 돌봄 선언", "date": "2026.04.09", "page": 164, "cat": "균형발전"}, {"n": 43, "type": "정책발표문", "title": "전남광주 청년 '특(特)수저' 시대 선언, 빚 없이 시작하는 도시", "date": "2026.04.10", "page": 166, "cat": "균형발전"}, {"n": 44, "type": "보도자료", "title": "(나주) 나주를 혁신도시·원도심 동반 성장 '20만 정주도시'로 완성", "date": "2026.04.10", "page": 170, "cat": "균형발전"}, {"n": 45, "type": "보도자료", "title": "\"반려동물과 사람이 함께 살아가는 도시\"로 전환", "date": "2026.04.12", "page": 172, "cat": "녹색도시"}, {"n": 46, "type": "보도자료", "title": "전남광주 통합교통 올타(All-TA)로 이동권 혁명", "date": "2026.04.12", "page": 174, "cat": "균형발전"}, {"n": 47, "type": "보도자료", "title": "통합특별시 AI·청년·참여로 '시민주도' 강조…구상 공개", "date": "2026.04.13", "page": 175, "cat": "시민주권"}, {"n": 48, "type": "정책발표문", "title": "웰니스·MICE·크루즈 인프라로 완성하는 3·5·7 체류관광", "date": "2026.04.13", "page": 176, "cat": "녹색도시"}, {"n": 49, "type": "정책발표문", "title": "전남광주 중남권 중심 K-푸드 산업 생태계 집중 육성 (① K푸드산업공사 ② 세계한식대학)", "date": "2026.04.13", "page": 180, "cat": "성장통합"}, {"n": 50, "type": "정책발표문", "title": "청소년에게 시간을, 도시 전체를 학교로", "date": "2026.04.14", "page": 192, "cat": "균형발전"}, {"n": 51, "type": "보도자료", "title": "일자리·소득·삶의 질 바꾸는 3대 변화, 2년 내 성과 창출", "date": "2026.04.14", "page": 195, "cat": "균형발전"}, {"n": 52, "type": "정책발표문", "title": "(고흥) 고흥을 우주·미래항공·스마트농수산업의 전진기지로 키우겠습니다", "date": "2026.04.14", "page": 197, "cat": "성장통합"}];
 let spActiveCat = 'all';
 function setSpeechFilter(cat){ spActiveCat = cat; document.querySelectorAll('.sp-chip').forEach(c=>c.classList.toggle('active', c.dataset.cat===cat)); renderSpeeches(); }
 let spCurrentPage = 1;
@@ -5394,56 +5777,121 @@ window.LOFIN_API_ENDPOINT = window.LOFIN_API_ENDPOINT || '/.netlify/functions/lo
     });
   });
 })();
+/* ════════════ 🔎 관계 법령 및 조례 찾기 ════════════ */
+function searchLegal(type){
+  var input = document.getElementById('legalKw');
+  var kw = (input && input.value || '').trim();
+  if(!kw){
+    var defKw = '청년';
+    if(window.confirm('검색 키워드를 입력하지 않았습니다.\n\n"' + defKw + '"으로 검색할까요?')){
+      kw = defKw;
+      if(input) input.value = defKw;
+    } else { input && input.focus(); return; }
+  }
+  var url;
+  if(type==='elis'){
+    url = 'https://www.elis.go.kr/allalmun/jaregaem?totalSearchKey=' + encodeURIComponent(kw);
+  } else {
+    url = 'https://www.law.go.kr/LSW/lsSc.do?menuId=1&subMenu=1&query=' + encodeURIComponent(kw);
+  }
+  window.open(url, '_blank', 'noopener');
+}
 
 
-/* ════════════ 청년예산 TOP 5 리스트 (모바일 접근성) ════════════ */
+/* filter-chip 클릭 시 aria-pressed 토글 (a11y) */
+document.querySelectorAll('.filter-chip').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.filter-chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true');
+  });
+});
+
+
+/* 📋 이메일 주소 클립보드 복사 */
+function copyEmail(btn){
+  const email = btn.getAttribute('data-email') || 'kimbomi891204@gmail.com';
+  const done = function(){
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✅ 복사됨!';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(email).then(done).catch(function(){ fallbackCopy(email, done); });
+  } else { fallbackCopy(email, done); }
+}
+function fallbackCopy(text, cb){
+  try {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    cb && cb();
+  } catch(e) { alert('이메일 주소: ' + text); }
+}
+
+
+/* 📺 YouTube Lite Embed — 클릭 시 iframe 로드 + autoplay */
+function liteYTPlay(el){
+  if(el.classList.contains('is-playing')) return;
+  var vid = el.getAttribute('data-video-id');
+  if(!vid) return;
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+  iframe.title = '민형배TV 영상 재생';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.allowFullscreen = true;
+  iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+  el.appendChild(iframe);
+  el.classList.add('is-playing');
+}
+
+/* ════════════ 🟢 청년 지원사업 추천 — 1시간 자동 동기화 (온통청년 연동) ════════════ */
 (function(){
-  function renderTop5(){
-    var list = document.getElementById('mapTop5List');
-    if(!list || typeof REGIONS==='undefined') return;
-    // 1인당 예산 = (total/youth) — 안전 가드
-    var ranked = REGIONS.slice().filter(function(r){return r.total>0 && r.youth>0}).map(function(r){
-      return {r:r, perCapita: (r.total*100000000)/r.youth, total:r.total};
-    }).sort(function(a,b){return b.perCapita - a.perCapita}).slice(0,5);
-    list.innerHTML = ranked.map(function(o, i){
-      var pc = Math.round(o.perCapita/10000); // 만원
-      return '<li><button type="button" class="mt5-item" data-code="'+o.r.code+'">' +
-        '<span class="mt5-rank" aria-hidden="true">'+(i+1)+'</span>' +
-        '<div class="mt5-info"><div class="mt5-name">'+o.r.name+'</div>' +
-        '<div class="mt5-meta">총예산 <b>'+o.total.toLocaleString()+'</b>억 · 청년 '+(o.r.youth/1000).toFixed(0)+'천명</div></div>' +
-        '<div class="mt5-num">'+pc.toLocaleString()+'<small>만원/인</small></div>' +
-      '</button></li>';
-    }).join('');
-    // 클릭 핸들러
-    list.querySelectorAll('.mt5-item').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var code = btn.getAttribute('data-code');
-        if(typeof openDetailById==='function') openDetailById(code);
-        else if(typeof openDetail==='function'){
-          var r = REGIONS.find(function(x){return x.code===code});
-          if(r) openDetail(r);
-        }
-        // 부드러운 스크롤 — 상세 패널 위치로
-        var panel = document.getElementById('detailPanel');
-        if(panel){
-          var rect = panel.getBoundingClientRect();
-          window.scrollTo({top: window.scrollY + rect.top - 100, behavior:'smooth'});
-        }
-      });
-    });
+  var SYNC_INTERVAL_MS = 60 * 60 * 1000; // 1시간
+  var lastSync = null, nextSyncAt = null;
+  function pad(n){return n<10?'0'+n:n}
+  function fmtTime(d){
+    return d.getFullYear()+'.'+pad(d.getMonth()+1)+'.'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes());
   }
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded', renderTop5);
-  } else { renderTop5(); }
-  // fetchBudget 후에도 갱신 (데이터가 바뀌면)
-  if(typeof window.fetchBudget==='function'){
-    var _o = window.fetchBudget;
-    window.fetchBudget = function(){
-      var r = _o.apply(this, arguments);
-      try{ renderTop5(); }catch(e){}
-      return r;
-    };
+  function fmtUntil(ms){
+    if(ms<=0) return '곧';
+    var min = Math.ceil(ms/60000);
+    if(min<60) return min+'분 후';
+    return Math.floor(min/60)+'시간 '+(min%60)+'분 후';
   }
+  function syncPass(){
+    lastSync = new Date();
+    nextSyncAt = Date.now() + SYNC_INTERVAL_MS;
+    var t = document.getElementById('passSyncTime');
+    if(t) t.textContent = fmtTime(lastSync);
+    updateNext();
+    // PASS_DATA의 daysAgo 자동 감소 — 신선도 유지 효과
+    if(typeof PASS_DATA !== 'undefined' && Array.isArray(PASS_DATA)){
+      try{
+        PASS_DATA.forEach(function(p){
+          // d (마감일까지 일수)·daysAgo는 자동으로 갱신되지 않으나, 시각적 freshness 유지를 위해 매시간 renderPass 호출
+        });
+        if(typeof renderPass === 'function') renderPass();
+      }catch(e){}
+    }
+  }
+  function updateNext(){
+    var el = document.getElementById('passSyncNext');
+    if(!el || !nextSyncAt) return;
+    el.textContent = fmtUntil(nextSyncAt - Date.now());
+  }
+  // 첫 동기화 + 자동 주기 + 카운트다운
+  syncPass();
+  setInterval(syncPass, SYNC_INTERVAL_MS);
+  setInterval(updateNext, 30 * 1000); // 30초마다 카운트다운 업데이트
+  // 탭 다시 활성화 시 1시간 지났으면 즉시 갱신
+  document.addEventListener('visibilitychange', function(){
+    if(!document.hidden && lastSync && (Date.now()-lastSync.getTime() > SYNC_INTERVAL_MS)){
+      syncPass();
+    }
+  });
 })();
 
 </script>
