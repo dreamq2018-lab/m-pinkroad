@@ -1,0 +1,21 @@
+# Claude Code local settings
+.claude/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Dependencies (혹시 향후 추가될 경우)
+node_modules/
+
+# Vercel
+.vercel/

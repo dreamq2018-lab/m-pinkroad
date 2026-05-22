@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 sitemap
+  한글 도메인 : https://www.청년결정정부.kr/
+  punycode    : https://www.xn[2hyphen]p89av0gr2mutka661e.kr/
+  검색 결과·주소창에는 자동으로 한글(청년결정정부.kr)로 표시됩니다.
+  loc 에는 RFC 표준인 punycode 호스트를 사용합니다.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.xn--p89av0gr2mutka661e.kr/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.xn--p89av0gr2mutka661e.kr/og-preview.jpg</image:loc>
+      <image:title>전남광주 「청년결정정부」 AI 통합 디지털 플랫폼</image:title>
+      <image:caption>27개 시·군·구 청년 지원사업·예산 데이터·정책 참여 통합 플랫폼</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,24 @@
+# 전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 — robots.txt
+# 모든 검색엔진 크롤러 전체 허용
+
+User-agent: *
+Allow: /
+
+# 주요 검색엔진 봇 명시 허용
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+# (Yeti = 네이버 검색로봇)
+
+User-agent: Daumoa
+Allow: /
+# (Daumoa = 다음/카카오 검색로봇)
+
+User-agent: bingbot
+Allow: /
+
+# 사이트맵 위치 (한글 도메인 / punycode 병기)
+Sitemap: https://www.청년결정정부.kr/sitemap.xml
+# punycode: https://www.xn--p89av0gr2mutka661e.kr/sitemap.xml
