@@ -3338,10 +3338,10 @@
   .plb-left{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
   .plb-mark{
     display:inline-flex;align-items:center;gap:6px;
-    background:linear-gradient(135deg,#dc2626,#b91c1c);
+    background:linear-gradient(135deg,#0d3a7a,#1e40af);
     color:#fff;font-size:11px;font-weight:900;letter-spacing:.06em;
     padding:5px 11px;border-radius:999px;flex-shrink:0;
-    box-shadow:0 4px 10px -3px rgba(220,38,38,.6);
+    box-shadow:0 4px 10px -3px rgba(13,58,122,.5);
   }
   .plb-dot{
     width:8px;height:8px;border-radius:50%;background:#fff;
@@ -4050,18 +4050,18 @@ section[id]{scroll-margin-top:74px;}
       <div class="match-summary" id="matchSummary"></div>
     </div>
 
-    <!-- 🟢 공식 데이터 연동 안내 — 온통청년·청년몽땅정보통 -->
+    <!-- 📋 공식 사이트 안내 — 온통청년·청년몽땅정보통 -->
     <div class="pass-live-badge" role="status" aria-live="polite">
       <div class="plb-left">
-        <span class="plb-mark"><span class="plb-dot"></span>LIVE</span>
+        <span class="plb-mark"><span class="plb-dot"></span>📋 안내</span>
         <span class="plb-text">
-          <strong>「온통청년 · youthcenter.go.kr」</strong> 국가 공식 청년정책 통합 포털 실시간 연동
+          <strong>「온통청년 · youthcenter.go.kr」</strong> 국가 공식 청년정책 통합 포털 — 큐레이션 정책 목록
         </span>
       </div>
       <div class="plb-right">
-        <span class="plb-time-label">⏱ 마지막 동기화</span>
-        <span class="plb-time" id="passSyncTime">—</span>
-        <span class="plb-next">· 다음 갱신 <span id="passSyncNext">60분 후</span></span>
+        <span class="plb-time-label">📅 데이터 기준</span>
+        <span class="plb-time" id="passSyncTime">2026년 본예산</span>
+        <span class="plb-next">· 신청·접수는 공식 사이트 확인</span>
       </div>
     </div>
 
@@ -6374,20 +6374,9 @@ function liteYTPlay(el){
     return Math.floor(min/60)+'시간 '+(min%60)+'분 후';
   }
   function syncPass(){
-    lastSync = new Date();
-    nextSyncAt = Date.now() + SYNC_INTERVAL_MS;
-    var t = document.getElementById('passSyncTime');
-    if(t) t.textContent = fmtTime(lastSync);
-    updateNext();
-    // PASS_DATA의 daysAgo 자동 감소 — 신선도 유지 효과
-    if(typeof PASS_DATA !== 'undefined' && Array.isArray(PASS_DATA)){
-      try{
-        PASS_DATA.forEach(function(p){
-          // d (마감일까지 일수)·daysAgo는 자동으로 갱신되지 않으나, 시각적 freshness 유지를 위해 매시간 renderPass 호출
-        });
-        if(typeof renderPass === 'function') renderPass();
-      }catch(e){}
-    }
+    // ⚠️ 실제 외부 API 동기화는 수행하지 않음 (PASS_DATA는 큐레이션 데이터).
+    // 카드 freshness 유지를 위한 재렌더만 수행.
+    if(typeof renderPass === 'function'){ try{ renderPass(); }catch(e){} }
   }
   function updateNext(){
     var el = document.getElementById('passSyncNext');
