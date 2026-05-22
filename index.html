@@ -2281,9 +2281,9 @@
   .live-badge{
     display:inline-flex;align-items:center;gap:8px;
     padding:8px 16px;border-radius:999px;
-    background:linear-gradient(135deg,#dc2626,#b91c1c);
+    background:linear-gradient(135deg,#0d3a7a,#1e40af);
     color:#fff;font-size:13px;font-weight:900;letter-spacing:.06em;
-    box-shadow:0 6px 16px -4px rgba(220,38,38,.55);
+    box-shadow:0 6px 16px -4px rgba(13,58,122,.45);
     text-transform:uppercase;flex-shrink:0;
   }
   .live-pulse{
@@ -4128,9 +4128,9 @@ section[id]{scroll-margin-top:74px;}
 
     <div class="live-panel" id="apiStatus" role="status" aria-live="polite">
       <div class="live-panel-left">
-        <span class="live-badge" id="liveBadge">
+        <span class="live-badge" id="liveBadge" style="background:linear-gradient(135deg,#0d3a7a,#1e40af);box-shadow:0 6px 16px -4px rgba(13,58,122,.45)">
           <span class="live-pulse" id="apiDot" aria-hidden="true"></span>
-          <span class="live-text">📊 초기화 중…</span>
+          <span class="live-text">📊 공식 데이터 기반 (2026 본예산)</span>
         </span>
         <div class="live-info">
           <div class="live-source">
@@ -6134,16 +6134,24 @@ document.addEventListener('keydown', e => { if(e.key==='Escape' && document.getE
   (function(){
     var dot = document.getElementById('apiDot');
     if(!dot) return;
-    var origClassName = Object.getOwnPropertyDescriptor(Element.prototype, 'className');
-    // 간단 보정: 텍스트가 LIVE/DEMO/ERROR 인지에 따라 라벨 갱신
-    var observer = new MutationObserver(function(){
+    function syncBadge(){
       var lbl = document.querySelector('#liveBadge .live-text');
-      if(!lbl) return;
-      if(dot.classList.contains('error')){ lbl.textContent = 'OFFLINE · 연결 끊김'; document.getElementById('liveBadge').style.background='linear-gradient(135deg,#6b7280,#374151)'; }
-      else if(dot.classList.contains('demo')){ lbl.textContent = '📊 공식 데이터 기반 (2026 본예산)'; document.getElementById('liveBadge').style.background='linear-gradient(135deg,#0d3a7a,#1e40af)'; }
-      else if(dot.classList.contains('live')){ lbl.textContent = '🟢 LIVE · 지방재정365 실시간'; document.getElementById('liveBadge').style.background='linear-gradient(135deg,#dc2626,#b91c1c)'; }
-    });
-    observer.observe(dot, {attributes:true, attributeFilter:['class']});
+      var badge = document.getElementById('liveBadge');
+      if(!lbl || !badge) return;
+      if(dot.classList.contains('error')){
+        lbl.textContent = 'OFFLINE · 연결 끊김';
+        badge.style.background='linear-gradient(135deg,#6b7280,#374151)';
+      } else if(dot.classList.contains('live')){
+        lbl.textContent = '🟢 LIVE · 지방재정365 실시간';
+        badge.style.background='linear-gradient(135deg,#dc2626,#b91c1c)';
+      } else {
+        // demo 또는 미상태 = 큐레이션(파랑)
+        lbl.textContent = '📊 공식 데이터 기반 (2026 본예산)';
+        badge.style.background='linear-gradient(135deg,#0d3a7a,#1e40af)';
+      }
+    }
+    syncBadge();  // 등록 즉시 한 번 동기화
+    new MutationObserver(syncBadge).observe(dot, {attributes:true, attributeFilter:['class']});
   })();
 
   // 1초마다 시계 갱신
