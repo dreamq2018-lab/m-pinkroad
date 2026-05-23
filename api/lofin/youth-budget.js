@@ -161,6 +161,8 @@ module.exports = async function handler(req, res){
       let parsed = null, parseErr = null;
       try{ parsed = JSON.parse(text); }catch(e){ parseErr = e.message; }
       const extracted = parsed ? extractRows(parsed, 'QWGJK') : [];
+      // 보안: params 출력 시 Key 마스킹
+      const safeParams = { ...params, Key: '***KEY***' };
       return res.status(200).json({
         debug: true,
         urlMasked: debugUrl.replace(apiKey, '***KEY***'),
@@ -172,7 +174,7 @@ module.exports = async function handler(req, res){
         parsedTopKeys: parsed ? Object.keys(parsed) : null,
         extractedRowCount: extracted.length,
         firstRow: extracted[0] || null,
-        params,
+        params: safeParams,
       });
     }catch(e){
       return res.status(200).json({
