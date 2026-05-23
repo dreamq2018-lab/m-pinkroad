@@ -973,6 +973,20 @@
     background:linear-gradient(135deg,var(--pink-100),var(--blue-100));
     border-left:4px solid var(--pink);font-size:13.5px;line-height:1.6;color:var(--ink-2);
   }
+  /* 전체 본예산 중 청년 비중 컨텍스트 박스 */
+  .detail-context-banner{
+    margin:0 0 16px;padding:16px 20px;border-radius:14px;
+    background:linear-gradient(135deg,#0d3a7a 0%,#1e40af 100%);
+    color:#fff;font-size:13.5px;line-height:1.6;
+    box-shadow:0 8px 20px -10px rgba(13,58,122,.45);
+  }
+  .detail-context-banner .ctx-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .detail-context-banner .ctx-title{font-size:12px;font-weight:800;letter-spacing:.04em;color:#FFD66B;text-transform:uppercase}
+  .detail-context-banner .ctx-share{font-size:22px;font-weight:900;color:#FFD66B;font-variant-numeric:tabular-nums}
+  .detail-context-banner .ctx-detail{font-size:12.5px;color:rgba(255,255,255,.88);margin-top:6px}
+  .detail-context-banner .ctx-funds{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:12px}
+  .detail-context-banner .ctx-fund{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-weight:700}
+  .detail-context-banner .ctx-fund.self{background:rgba(255,214,107,.22);color:#FFE9B0}
   .detail-pledge-link strong{color:var(--pink-deep);font-weight:800}
   .detail-pledge-link a{color:var(--pink-deep);text-decoration:underline;font-weight:800}
   .detail-pledge-link a:hover{color:var(--pink-700)}
@@ -4217,6 +4231,7 @@ section[id]{scroll-margin-top:74px;}
         <button class="detail-close" type="button" onclick="closeDetail()" aria-label="상세 패널 닫기">✕</button>
       </div>
       <div class="detail-summary" id="detailSummary"></div>
+      <div class="detail-context-banner" id="detailContextBanner" style="display:none" role="status" aria-live="polite"></div>
       <div class="detail-pledge-link" id="detailPledgeLink" style="display:none" role="status"></div>
       <table class="item-table">
         <thead><tr><th style="width:90px">분야</th><th>사업명</th><th style="width:90px;text-align:right">예산</th><th style="width:90px;text-align:right">집행</th><th style="width:200px">집행률</th></tr></thead>
@@ -5049,6 +5064,19 @@ function openDetail(code){
   const ordinance=r.area==='광주'?'광주광역시 청년 기본 조례':'전라남도 청년 기본 조례';
   document.getElementById('detailSummary').innerHTML=`<div class="summary-card"><div class="label">2026 청년예산</div><div class="value pink">${totalBudget} 억</div><div class="sub">전체 사업 합계</div></div><div class="summary-card"><div class="label">집행액</div><div class="value blue">${totalSpent} 억</div><div class="sub">집행률 ${rate}%</div></div><div class="summary-card"><div class="label">총 인구</div><div class="value">${fmt(r.pop)}</div><div class="sub">행안부 주민등록</div></div><div class="summary-card"><div class="label">청년 인구 (만 ${r.ageMin}~${r.ageMax}세)</div><div class="value pink">${fmt(r.youth)}</div><div class="sub">${(r.youth/r.pop*100).toFixed(1)}% · ${ordinance}</div></div><div class="summary-card"><div class="label">청년 1인당 예산</div><div class="value blue">${fmt(perCap)} 천원</div><div class="sub">예산 ÷ 청년인구</div></div>`;
   document.getElementById('detailItems').innerHTML=r.items.map(i=>`<tr><td><span class="cat ${TAG_COLOR[i.cat]}">${i.label}</span></td><td>${i.name}</td><td style="text-align:right">${i.budget} 억</td><td style="text-align:right">${i.spent} 억</td><td><span class="exec-bar"><i style="width:${i.rate}%"></i></span><span class="exec-text">${i.rate}%</span></td></tr>`).join('');
+  // 전체 본예산 중 청년 비중 컨텍스트 박스 (LOFIN 실데이터 연동 시에만 표시)
+  const ctxEl=document.getElementById('detailContextBanner');
+  if(ctxEl){
+    if(r.totalRegionBudget && r.youthShare!=null){
+      const ntep=r.ntep||0, capep=r.capep||0, sggep=r.sggep||0;
+      const knownSum=ntep+capep+sggep;
+      const selfPct = r.total ? Math.round(sggep/r.total*100) : 0;
+      ctxEl.innerHTML=`<div class="ctx-row"><div><div class="ctx-title">전체 본예산 중 청년 비중</div><div class="ctx-detail">${escapeHtml(r.name)} 2026 본예산 <strong>${fmt(r.totalRegionBudget)}억</strong> 중 청년 사업 <strong>${r.total}억</strong></div></div><div class="ctx-share">${r.youthShare}%</div></div>${knownSum>0?`<div class="ctx-funds"><span class="ctx-fund">🇰🇷 국비 ${fmt(ntep)}억</span><span class="ctx-fund">🏛 시도비 ${fmt(capep)}억</span><span class="ctx-fund self">🌸 자체 ${fmt(sggep)}억 (${selfPct}%)</span></div>`:''}`;
+      ctxEl.style.display='block';
+    } else {
+      ctxEl.style.display='none';
+    }
+  }
   // 공약-예산 의미 연결: 가장 예산 비중이 작은 분야를 찾아 관련 공약으로 안내
   const catSum={}; r.items.forEach(i=>{catSum[i.cat]=(catSum[i.cat]||0)+i.budget;});
   // 분야 라벨 매핑 — 5개 기본 + 8개 분과 코드 모두 처리
@@ -5150,6 +5178,13 @@ async function fetchBudget(showToastMsg){
       const total=live?Math.round(live.youthBudget):reg.total;
       const exec=live&&live.youthBudget?Math.round(live.executed/live.youthBudget*100):reg.exec;
       const r2={...reg,total,exec};
+      if(live){
+        r2.totalRegionBudget = live.totalRegionBudget || null;
+        r2.youthShare        = live.youthShare        || null;
+        r2.ntep              = live.ntep              || 0;
+        r2.capep             = live.capep             || 0;
+        r2.sggep             = live.sggep             || 0;
+      }
       r2.items=live?.items?.length?live.items:genItems(r2);
       return r2;
     });
