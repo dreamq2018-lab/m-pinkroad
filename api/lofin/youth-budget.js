@@ -148,6 +148,41 @@ module.exports = async function handler(req, res){
     });
   }
 
+  // 🔍 디버그 모드: /api/lofin/youth-budget?year=2026&debug=1[&laf_cd=29170][&nofilter=1]
+  if(req.query?.debug === '1'){
+    const lafCd = (req.query?.laf_cd || '29170').toString();
+    const noFilter = req.query?.nofilter === '1';
+    const params = { Key: apiKey, Type: 'json', pIndex: 1, pSize: 10, fyr, exe_ymd, laf_cd: lafCd };
+    if(!noFilter) params.dbiz_nm = '청년';
+    const debugUrl = buildUrl(LOFIN_QWGJK, params);
+    try{
+      const rsp = await fetch(debugUrl, { headers: { Accept: 'application/json' } });
+      const text = await rsp.text();
+      let parsed = null, parseErr = null;
+      try{ parsed = JSON.parse(text); }catch(e){ parseErr = e.message; }
+      const extracted = parsed ? extractRows(parsed, 'QWGJK') : [];
+      return res.status(200).json({
+        debug: true,
+        urlMasked: debugUrl.replace(apiKey, '***KEY***'),
+        httpStatus: rsp.status,
+        contentType: rsp.headers.get('content-type'),
+        textLength: text.length,
+        textHead: text.slice(0, 1500),
+        parseError: parseErr,
+        parsedTopKeys: parsed ? Object.keys(parsed) : null,
+        extractedRowCount: extracted.length,
+        firstRow: extracted[0] || null,
+        params,
+      });
+    }catch(e){
+      return res.status(200).json({
+        debug: true,
+        error: e.message,
+        urlMasked: debugUrl.replace(apiKey, '***KEY***'),
+      });
+    }
+  }
+
   try{
     // 1) 세부사업별 — 27개 자치단체 병렬 호출 (dbiz_nm=청년 서버 측 필터)
     const youthResults = await Promise.allSettled(
