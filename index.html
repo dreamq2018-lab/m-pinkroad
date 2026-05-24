@@ -62,7 +62,7 @@
     --blue-500:#3a7cd9; --blue-400:#5b95e4;
     --blue-200:#B5D1F0; --blue-100:#D9E8F8; --blue-50:#EDF4FB;
     /* 잉크/배경 */
-    --ink:#1A0C14; --ink-2:#2c2440; --gray:#5a5a6e; --gray-2:#9090a4;
+    --ink:#1A0C14; --ink-2:#2c2440; --gray:#5a5a6e; --gray-2:#6f6982;
     --bg:#F8FAFE;
     --shadow-sm:0 2px 10px rgba(29,95,182,.10);
     --shadow-md:0 10px 28px rgba(29,95,182,.14);
@@ -3683,6 +3683,18 @@ section[id]{scroll-margin-top:74px;}
   .a11y-fab-btn{width:44px;height:44px;font-size:20px;}
 }
 
+/* ════════════ ✨ 디자인 폴리시 보강 (전반 점검) ════════════ */
+/* 텍스트 선택 강조 — 브랜드 핑크 */
+::selection{background:rgba(204,47,106,.22);color:var(--pink-700)}
+html[data-theme="dark"] ::selection{background:rgba(240,135,176,.30);color:#fff}
+/* 제목 줄바꿈 균형 — 한 줄에 단어 하나 떨어지는 현상 방지 (지원 브라우저에서만 적용) */
+h1,h2,.section-head h2,.hero-kicker,.pu-hero h3,.up-title{text-wrap:balance}
+/* 본문 단락 줄끝 정돈 */
+.lead,.section-head p,.profile-text>p,.pum-subtitle{text-wrap:pretty}
+/* 포커스 이동 시 헤더에 가리지 않도록(앵커 외 일반 포커스에도) */
+:target{scroll-margin-top:78px}
+@media (max-width:768px){:target{scroll-margin-top:64px}}
+
 </style>
 </head>
 <body>
@@ -4590,10 +4602,10 @@ section[id]{scroll-margin-top:74px;}
         <span class="va-arrow">▼ 제안 보기</span>
       </button>
       <button type="button" class="va-card va-card-live" data-vid="4" onclick="openVoice(4)">
-        <span class="va-num live">🎙️ 타운홀미팅</span>
-        <strong>청년정책기획위원회</strong>
-        <span class="va-date">📅 2026.5.16 · 시민주권선대위 청년특별위원회 출범식 · 5건 접수</span>
-        <span class="va-arrow">▼ 발언 요지 보기</span>
+        <span class="va-num live">📋 최종 제안서</span>
+        <strong>청년정책기획위원회 8대 분과</strong>
+        <span class="va-date">📅 2026.5 · 청년특별위원회 × 청년정책기획위원회 (최종본)</span>
+        <span class="va-arrow">▼ 8대 분과 보기</span>
       </button>
     </div>
     <div class="va-detail" id="voiceDetail" hidden>
@@ -4707,7 +4719,7 @@ section[id]{scroll-margin-top:74px;}
     </div>
     <div class="foot-bottom">
       <span>© 2026 더불어민주당 민형배 시민주권선대위 청년특별위원회 · 전남광주 「청년결정정부」 AI 통합 디지털 플랫폼 (Beta)</span>
-      <span><a href="#top">개인정보처리방침</a> · <a href="#top">이용약관</a> · <a href="#top">최상단으로</a></span>
+      <span><a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a> · <a href="#top">최상단으로</a></span>
     </div>
   </div>
 </footer>
@@ -4835,26 +4847,10 @@ const REGIONS=[
 
 const TAG_COLOR={house:'cat-house',job:'cat-job',edu:'cat-edu',life:'cat-life',marry:'cat-marry'};
 function genItems(region){
-  const base=[
-    {cat:'d6',label:'주거·교육',name:'청년 월세 한시 특별지원 (월 최대 20만원)',share:.13},
-    {cat:'d6',label:'주거·교육',name:'청년 임차보증금 이자 지원',share:.10},
-    {cat:'d6',label:'주거·교육',name:'1인가구 안심 패키지 지원',share:.06},
-    {cat:'d5',label:'경제·일자리·창업',name:'청년 구직활동 지원금 (월 60만원·6개월)',share:.14},
-    {cat:'d5',label:'경제·일자리·창업',name:'지역주도형 청년일자리 (행안부 매칭사업)',share:.12},
-    {cat:'d5',label:'경제·일자리·창업',name:'청년 일경험 드림+ / 인턴십',share:.08},
-    {cat:'d4',label:'경제·일자리·창업',name:'청년창업농·청년농업인 영농정착 지원',share:.10},
-    {cat:'d5',label:'경제·일자리·창업',name:'블루이코노미 6대 분야 청년 인턴십',share:.06},
-    {cat:'d1',label:'복지·가족·돌봄',name:'전남형 청년 문화복지카드 (25만원)',share:.07},
-    {cat:'d2',label:'복지·가족·돌봄',name:'청년 마음건강 바우처',share:.05},
-    {cat:'d8',label:'복지·가족·돌봄',name:'청년 정책참여단·청년센터 운영',share:.05},
-    {cat:'d7',label:'복지·가족·돌봄',name:'농어촌 청년 결혼·만남 지원 (군 단위)',share:.04},
-  ];
-  return base.map((b,i)=>{
-    const budget=+(region.total*b.share).toFixed(1);
-    const rate=Math.max(15,Math.min(98,region.exec+(Math.sin(i+region.code.length)*22|0)));
-    const spent=+(budget*rate/100).toFixed(1);
-    return {...b,budget,spent,rate};
-  });
+  // ⛔ 합성(추정) 데이터 생성 제거 — 가짜 수치 양산 방지.
+  // 지방재정365 OpenAPI 실시간 응답(source:'lofin')의 실제 사업 항목만 표시한다.
+  // 실데이터 미연동 시에는 빈 배열을 반환해 가짜 숫자를 만들지 않는다.
+  return [];
 }
 
 let budgetData=REGIONS.map(r=>({...r,items:genItems(r)}));
@@ -5143,10 +5139,10 @@ async function fetchBudget(showToastMsg){
     // 폴백: 외부 API 없이 큐레이션 데이터 사용 (지방재정365 공식 데이터 기반)
     budgetData=REGIONS.map(r=>({...r,items:genItems(r)}));
     dataSource='curated';
-    statusLight('demo',`📊 지방재정365 공식 데이터 기반 · ${new Date().toLocaleDateString('ko-KR')} 기준`);
+    statusLight('demo',`⚠️ 추정 예시 데이터 — 실시간 미연동(공식 수치 아님) · ${new Date().toLocaleDateString('ko-KR')}`);
     renderAll();
     if(openRegion)openDetail(openRegion);
-    if(showToastMsg)showToast('🌸 지방재정365 공식 데이터(2026년 본예산) 기준입니다');
+    if(showToastMsg)showToast('⚠️ 실시간 미연동 — 추정 예시 데이터입니다 (공식 수치 아님)');
     return;
   }
   statusLight('demo','지방재정365 데이터 가져오는 중…');
@@ -5165,10 +5161,10 @@ async function fetchBudget(showToastMsg){
     if(data.source!=='lofin' || data.items.length===0){
       budgetData=REGIONS.map(r=>({...r,items:genItems(r)}));
       dataSource='curated';
-      statusLight('demo',`📊 지방재정365 공식 데이터 기반 · ${new Date().toLocaleDateString('ko-KR')} 기준`);
+      statusLight('demo',`⚠️ 추정 예시 데이터 — 실시간 미연동(공식 수치 아님) · ${new Date().toLocaleDateString('ko-KR')}`);
       renderAll();
       if(openRegion)openDetail(openRegion);
-      if(showToastMsg)showToast('🌸 지방재정365 공식 데이터(2026 본예산) 기준입니다');
+      if(showToastMsg)showToast('⚠️ 실시간 미연동 — 추정 예시 데이터입니다 (공식 수치 아님)');
       return;
     }
 
@@ -5197,7 +5193,7 @@ async function fetchBudget(showToastMsg){
     budgetData=REGIONS.map(r=>({...r,items:genItems(r)}));
     dataSource='curated';
     const reason=(err&&err.name==='AbortError')?'응답 지연(타임아웃)':'서버 연결 불가';
-    statusLight('demo',`📊 ${reason} — 지방재정365 공식 데이터(2026 본예산) 기준으로 표시 중`);
+    statusLight('demo',`⚠️ ${reason} — 추정 예시 데이터 표시 중 (공식 수치 아님)`);
     renderAll();
     if(openRegion)openDetail(openRegion);
     if(showToastMsg)showToast('🌸 안정적인 큐레이션 데이터로 표시 중입니다 (실시간 연동 일시 불가)');
@@ -5220,9 +5216,9 @@ function loadDemoBudget(){
 /* ───── 통합공고함 데이터 + 페이징 + 실링크 ───── */
 const PASS_DATA=[
   {id:1,region:'광주광역시',regionCode:'29170',cat:'d5',title:'광주 청년 구직활동 지원금 (월 60만원·6개월)',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:5,ageMin:18,ageMax:34,daysAgo:2,link:'https://youth.gwangju.go.kr/www/50?policyId=1276',applyURL:'https://youth.gwangju.go.kr/www/50?policyId=1276',verified:true},
-  {id:2,region:'광주광역시',regionCode:'29170',cat:'d2',title:'청년 마음건강 바우처 (전문 심리상담 8회)',target:'만 19~34세 청년',amount:'1:1 대면 상담 8회',amountVal:48,quota:'상시',d:9,ageMin:19,ageMax:34,daysAgo:5,link:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004671',applyURL:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004671',verified:true},
+  {id:2,region:'광주광역시',regionCode:'29170',cat:'d2',title:'청년 마음건강 바우처 (전문 심리상담 8회)',target:'만 19~34세 청년',amount:'1:1 대면 상담 8회',amountVal:48,quota:'상시',d:9,ageMin:19,ageMax:34,daysAgo:5,link:'https://youth.gwangju.go.kr/',applyURL:'https://youth.gwangju.go.kr/',verified:true},
   {id:3,region:'광주 광산구',regionCode:'29200',cat:'d5',title:'청년 한끼 제휴점 모집 (식당주 대상)',target:'식당·카페·분식 사업주',amount:'1식 5천원 보조',amountVal:50,quota:'500개소',d:5,ageMin:18,ageMax:60,daysAgo:7,link:'https://www.gwangsan.go.kr/'},
-  {id:4,region:'광주 서구',regionCode:'29140',cat:'d6',title:'2026 청년월세 한시 특별지원 (최대 480만원)',target:'만 19~34세 무주택 1인 청년',amount:'월 20만원 × 최대 24개월',amountVal:480,quota:'상시',d:14,ageMin:19,ageMax:34,daysAgo:1,link:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004661',applyURL:'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004661',verified:true},
+  {id:4,region:'광주 서구',regionCode:'29140',cat:'d6',title:'2026 청년월세 한시 특별지원 (최대 480만원)',target:'만 19~34세 무주택 1인 청년',amount:'월 20만원 × 최대 24개월',amountVal:480,quota:'상시',d:14,ageMin:19,ageMax:34,daysAgo:1,link:'https://youth.gwangju.go.kr/',applyURL:'https://youth.gwangju.go.kr/',verified:true},
   {id:5,region:'광주 광산구',regionCode:'29200',cat:'d6',title:'LH 청년 매입임대주택 입주자 모집',target:'만 19~39세 청년·대학생·취준생',amount:'시중시세 40~50% 임대',amountVal:200,quota:'수시',d:18,ageMin:19,ageMax:39,daysAgo:8,link:'https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1150&cntntsId=201251',applyURL:'https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1150&cntntsId=201251',verified:true},
   {id:6,region:'나주시',regionCode:'46170',cat:'d5',title:'전남 청년 구직활동수당 지원사업 2차 대상자 모집',target:'만 18~34세 미취업 청년',amount:'월 60만원 × 6개월',amountVal:360,quota:'200명',d:3,ageMin:18,ageMax:34,daysAgo:3,link:'https://www.naju.go.kr/',applyURL:'https://www.naju.go.kr/www/introduction/dong/seji/notice?idx=31355&mode=view&sort=recent&page=85'},
   {id:7,region:'나주시',regionCode:'46170',cat:'d7',title:'신혼부부 전세자금 이자 지원',target:'결혼 7년 이내 신혼부부',amount:'대출이자 1.5%p 지원',amountVal:300,quota:'50쌍',d:25,ageMin:24,ageMax:42,daysAgo:10,link:'https://www.naju.go.kr'},
@@ -5336,37 +5332,39 @@ function renderPass(){
     document.getElementById('passPagination').innerHTML='';
     return;
   }
-  // 🌸 27개 시군 청년포털·정책 페이지 직접 매핑
+  // 🌸 27개 시군 청년포털·정책 페이지 매핑
+  //  - 광주광역시·전남: 실제 청년 전용 포털 유지
+  //  - 그 외 시·군: 추정 /youth 경로(404 위험)를 도달 확실한 공식 대표 도메인으로 교체 (브라우저 실측 후 정확한 청년 하위페이지로 갱신 예정)
   const YOUTH_PORTAL={
     '광주광역시':'https://youth.gwangju.go.kr/',
-    '광주 동구':'https://www.donggu.kr/youth/',
-    '광주 서구':'https://www.seogu.gwangju.kr/youth/',
-    '광주 남구':'https://namgu.gwangju.kr/youth/',
-    '광주 북구':'https://bukgu.gwangju.kr/youth/',
-    '광주 광산구':'https://www.gwangsan.go.kr/youth/',
+    '광주 동구':'https://www.donggu.kr/',
+    '광주 서구':'https://www.seogu.gwangju.kr/',
+    '광주 남구':'https://namgu.gwangju.kr/',
+    '광주 북구':'https://bukgu.gwangju.kr/',
+    '광주 광산구':'https://www.gwangsan.go.kr/',
     '전남 전체':'https://www.jnyouthcenter.kr/',
-    '목포시':'https://www.mokpo.go.kr/www/life/youth',
-    '여수시':'https://www.yeosu.go.kr/youth',
-    '순천시':'https://www.suncheon.go.kr/youth',
-    '나주시':'https://www.naju.go.kr/youth',
-    '광양시':'https://www.gwangyang.go.kr/youth',
-    '담양군':'https://www.damyang.go.kr/youth',
-    '곡성군':'https://www.gokseong.go.kr/youth',
-    '구례군':'https://www.gurye.go.kr/youth',
-    '고흥군':'https://www.goheung.go.kr/youth',
-    '보성군':'https://www.boseong.go.kr/youth',
-    '화순군':'https://www.hwasun.go.kr/youth',
-    '장흥군':'https://www.jangheung.go.kr/youth',
-    '강진군':'https://www.gangjin.go.kr/youth',
-    '해남군':'https://www.haenam.go.kr/youth',
-    '영암군':'https://www.yeongam.go.kr/youth',
-    '무안군':'https://www.muan.go.kr/youth',
-    '함평군':'https://www.hampyeong.go.kr/youth',
-    '영광군':'https://www.yeonggwang.go.kr/youth',
-    '장성군':'https://www.jangseong.go.kr/youth',
-    '완도군':'https://www.wando.go.kr/youth',
-    '진도군':'https://www.jindo.go.kr/youth',
-    '신안군':'https://www.shinan.go.kr/youth'
+    '목포시':'https://www.mokpo.go.kr/',
+    '여수시':'https://www.yeosu.go.kr/',
+    '순천시':'https://www.suncheon.go.kr/',
+    '나주시':'https://www.naju.go.kr/',
+    '광양시':'https://www.gwangyang.go.kr/',
+    '담양군':'https://www.damyang.go.kr/',
+    '곡성군':'https://www.gokseong.go.kr/',
+    '구례군':'https://www.gurye.go.kr/',
+    '고흥군':'https://www.goheung.go.kr/',
+    '보성군':'https://www.boseong.go.kr/',
+    '화순군':'https://www.hwasun.go.kr/',
+    '장흥군':'https://www.jangheung.go.kr/',
+    '강진군':'https://www.gangjin.go.kr/',
+    '해남군':'https://www.haenam.go.kr/',
+    '영암군':'https://www.yeongam.go.kr/',
+    '무안군':'https://www.muan.go.kr/',
+    '함평군':'https://www.hampyeong.go.kr/',
+    '영광군':'https://www.yeonggwang.go.kr/',
+    '장성군':'https://www.jangseong.go.kr/',
+    '완도군':'https://www.wando.go.kr/',
+    '진도군':'https://www.jindo.go.kr/',
+    '신안군':'https://www.shinan.go.kr/'
   };
   function pickApplyLink(p){
     if(!p.link) return null;
@@ -5709,26 +5707,33 @@ const VOICE_DATA = {
       </div>`
   },
   4: {
-    title: '청년정책기획위원회 제안서 — 시민주권선대위 청년특별위원회 출범식',
-    meta: '<span>📅 <b>2026.5.16 (금)</b></span><span>📍 <b>시민주권선대위 청년특별위원회 출범식</b></span><span>🎙️ <b>타운홀미팅 · 5건 접수</b></span>',
+    title: '청년정책기획위원회 제안서 — 8대 분과 청년정책 (최종본)',
+    meta: '<span>📅 <b>2026. 5. 최종본</b></span><span>🏛️ <b>청년특별위원회 × 청년정책기획위원회</b></span><span>📊 <b>정책별 예산·재원·추계 포함</b></span>',
     body: `
       <div class="va-section">
-        <h5>🌸 타운홀미팅 개요</h5>
-        <p style="margin:0;color:var(--ink-2);line-height:1.85;font-weight:600">민형배 후보 <strong>시민주권선대위</strong> 산하 <strong>청년특별위원회</strong> 출범식 타운홀미팅에서 청년 전문가 5인이 직접 발언한 정책 제안 요지입니다.</p>
+        <h5>🌸 제안 개요</h5>
+        <p style="margin:0;color:var(--ink-2);line-height:1.85;font-weight:600">청년 당사자가 직접 제안한 정책에 타 지자체 우수사례를 더해, 정책마다 <strong>예산·재원·비용 추계</strong>를 갖춘 실행형 제안서로 정리한 <strong>8대 분과 최종본</strong>입니다.</p>
       </div>
       <div class="va-section">
-        <h5>📋 청취 내용 — 5건 발언 요지</h5>
+        <h5>📋 8대 분과 핵심 제안</h5>
         <div class="va-proposals">
-          <div class="va-prop"><div class="pt">① 김세진 — <strong>1분과 문화예술·관광</strong> (전남대 미술학과 / 한국청년문화예술인협회 회장)</div><div class="pb"><strong>1) 청년문화주권예산제</strong> — 광주전남 문화예산 청년 직접 편성 비율 현행 5% → 단계 확대. <strong>2) 로컬 크리에이터 스테이션(LCS)</strong> — 유휴공간 197개소를 권역별 5개 거점으로 전환, AI 편집 장비 갖춘 청년 창작 거점화. <strong>3) 남도문화 AI-IP 산업화</strong> — 무형문화재 130개 AI 디지털 아카이빙 + 청년 웹툰·게임·숏폼 재창조.</div></div>
-          <div class="va-prop blue"><div class="pt">② 이동진 — <strong>2분과 체육·웰니스·의료</strong> (광주 청년)</div><div class="pb"><strong>청년 체육시설 이용료 지역상생 캐시백</strong> — 만 19~39세 청년이 헬스·필라테스·복싱장 등 민간 체육시설 3개월 이상 정기권 결제 시 <strong>10~20% 광주상생카드 즉시 환급</strong>(연 최대 30만원).</div></div>
-          <div class="va-prop"><div class="pt">③ 류종록 — <strong>4분과 농어촌·환경</strong></div><div class="pb"><strong>광주전남 재활용 매립장 및 자원순환 복합시설 신설</strong> — AI 기반 자동 선별 + 자원 재사용 + 에너지화 시스템 + 광주전남 공동 광역 자원순환 협력체계.</div></div>
-          <div class="va-prop blue"><div class="pt">④ 남기민 — <strong>6분과 주거·교육</strong></div><div class="pb"><strong>광주형 모듈러 주거공급 정책 패키지</strong> — 시간 4년→<strong>2년</strong>(공장 프리팹+현장 조립), 비용 30%할증→<strong>0</strong>(300세대 발주+금리 보조+토지임대부), 청년 금리 보조 연 <strong>294~567만원</strong>.</div></div>
-          <div class="va-prop"><div class="pt">⑤ 이현리 — <strong>8분과 청년주권</strong> (전남정보문화산업진흥원 DX지원센터장)</div><div class="pb"><strong>청년주권 4대 제안 — '청년을 위한 정책'이 아닌 '청년이 만드는 정책'으로.</strong> ① 모든 위원회 청년 위원 <strong>30% 의무화</strong> ② 청년의회 의결기구 격상 + 디지털 패스트트랙 ③ 청년통장 <strong>'가난 인증' 폐지</strong> ④ 청년 연령 통일 + 생애주기 연속 지원.</div></div>
+          <div class="va-prop"><div class="pt">① <strong>문화예술·관광</strong></div><div class="pb">청년 창작 거점(로컬 크리에이터 스테이션·ACC) + 청년 예술인 소득·권익(표준단가·고용보험) + 청년 주도 축제·워케이션 거점 + 청년 문화예산 직접 편성 참여.</div></div>
+          <div class="va-prop blue"><div class="pt">② <strong>체육·웰니스·의료</strong></div><div class="pb">5대 권역 스포츠케어센터 + 청년 체육비 지역화폐 캐시백(연 최대 30만원) + 마음건강 1:1 상담 바우처 + 전남 국립의대·동서부 상급병원 유치.</div></div>
+          <div class="va-prop"><div class="pt">③ <strong>AI·디지털혁신</strong></div><div class="pb">국가 AI 데이터센터 <strong>청년 전용 GPU 쿼터(목표 30%)</strong> + 산학 AI 부트캠프·실무 인턴십 + 생활AI OS '찍으면 정책' + 시·군 위성 코워킹 거점.</div></div>
+          <div class="va-prop blue"><div class="pt">④ <strong>농어촌·환경</strong></div><div class="pb">임대형 스마트팜·세대통합 승계 + 귀농·귀어 가공·라이브커머스 + 빈집 에코 마을호텔 + 광역 자원순환·재생에너지 청년 정착연금.</div></div>
+          <div class="va-prop"><div class="pt">⑤ <strong>경제·일자리·창업</strong></div><div class="pb">청년 창업 파이프라인(시드펀드·재도전) + <strong>청년드림은행·자산형성</strong> + 디딤패스·기업 승계 + 프리랜서 현장공간·행안부 청년마을.</div></div>
+          <div class="va-prop blue"><div class="pt">⑥ <strong>주거·교육</strong></div><div class="pb">모듈러 반값 청년주택(공급 2년 단축, 월 20~30만원) + 안심전세·웰컴 패키지 + 통합형 청년 정주단지 + 평생교육·리스킬링·무상교통.</div></div>
+          <div class="va-prop"><div class="pt">⑦ <strong>복지·가족·돌봄</strong></div><div class="pb"><strong>찾아가는 맞춤복지·자동지급</strong>('카드 한 장') + 지역아동센터·방과후 돌봄 + 1인가구·한부모·신혼 패키지 + 고립·은둔 청년 데이터 기반 선제 발굴.</div></div>
+          <div class="va-prop blue"><div class="pt">⑧ <strong>청년주권</strong></div><div class="pb">위원회 <strong>청년 30% 의무</strong>·발의·의결권 + 청년예산제·청년정책의회 상설화 + 청년사업 예산 직접 편성 모델 + 자금지원 보편화('가난 인증' 폐지).</div></div>
         </div>
       </div>
       <div class="va-section">
+        <h5>💰 예산 총괄</h5>
+        <div class="va-prop blue"><div class="pt">4년 약 3,700~6,200억 (연 약 900~1,550억)</div><div class="pb">국비 공모·행정통합지원금·기존사업 재구조화를 우선 활용해 신규 시비 부담 최소화. 연 추계는 통합지원금(연 약 5조 추정)의 약 2~3% 수준으로 청년 목적예산으로 감당 가능. 정밀 산출은 통합시 예산부서·전문기관 검증 필요.</div></div>
+      </div>
+      <div class="va-section">
         <h5>🎙️ 본 플랫폼 청취 방식</h5>
-        <div class="va-prop"><div class="pt">실시간 의견 수렴 — 「예산 정책 결정 참여」 폼</div><div class="pb">출범 시점부터 「민형배의 결재판을 청년에게 넘깁니다」 폼에 접수된 모든 의견을 분과별 청년 전문가가 검토합니다.</div></div>
+        <div class="va-prop"><div class="pt">실시간 의견 수렴 — 「예산 정책 결정 참여」 폼</div><div class="pb">「민형배의 결재판을 청년에게 넘깁니다」 폼에 접수된 모든 의견을 분과별 청년 전문가가 검토합니다.</div></div>
         <div class="va-prop blue"><div class="pt">투명한 추적 — 정책 반영 데이터 공개</div><div class="pb">접수 → 분과 검토 → 캠프 전달 → 정책 반영 → 예산 편성 → 집행 → 결과 보고까지 본 플랫폼에서 추적됩니다.</div></div>
       </div>`
   }};
