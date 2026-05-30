@@ -4847,22 +4847,27 @@ h1,h2,.section-head h2,.hero-kicker,.pu-hero h3,.up-title{text-wrap:balance}
   });
 })();
 
-/* 🌸 꽃잎 자동 생성 (모바일 10·데스크톱 14) */
+/* 🌸 꽃잎 — 처음 진입 시에만, 양 10%로 축소 (한 번만 흩날리고 사라짐) */
 (function(){
   const wrap=document.getElementById('petals');
+  if(!wrap) return;
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
   const isMobile=window.matchMedia('(max-width:780px)').matches;
-  const N = isMobile ? 18 : 32;  // 밀도 높임 — 영상처럼 풍성한 흩날림
+  const N = isMobile ? 2 : 3;  // 기존 대비 약 10%로 축소
   const sizes=['s1','s2','s3','s4'];
   const colors=['c1','c2','c3','c4','c5'];
   for(let i=0;i<N;i++){
     const p=document.createElement('div');
     p.className='petal '+sizes[i%4]+' '+colors[i%5];
     p.style.left=(Math.random()*100)+'vw';
-    // 다양한 속도 + 지연으로 자연스러운 분포
-    p.style.animationDuration=(11+Math.random()*14)+'s';
-    p.style.animationDelay=(-Math.random()*25)+'s';
+    p.style.animationDuration=(9+Math.random()*5)+'s';
+    p.style.animationDelay=(Math.random()*1.5)+'s';
+    p.style.animationIterationCount='1';   // 무한 반복 X — 처음 한 번만
+    p.style.animationFillMode='forwards';
     wrap.appendChild(p);
   }
+  // 처음 흩날림이 끝나면 컨테이너 제거 (이후엔 꽃잎 없음)
+  setTimeout(function(){ if(wrap) wrap.remove(); }, 18000);
 })();
 
 /* 27개 시·군·구 마스터 데이터 */
@@ -5890,7 +5895,7 @@ function buildActWall(){
   const cell=o=>`<button type="button" class="actwall-card" onclick="openLightbox(${o.i})" aria-label="${o.a.title}">`
     +`<span class="gal-thumb"><img src="${o.a.file}" alt="${o.a.title}" loading="lazy" onerror="this.classList.add('miss')"/>`
     +`<span class="gal-ph"><b>🌸</b>사진 준비 중</span>`
-    +`<span class="actwall-cap"><b>${o.a.title}</b><i>${o.a.date}</i></span></span></button>`;
+    +`<span class="actwall-cap"><i>${o.a.date}</i></span></span></button>`;
   buckets.forEach((items,r)=>{ if(!items.length){rows[r].innerHTML='';return;} const html=items.map(cell).join(''); rows[r].innerHTML = html+html; });
 }
 function openLightbox(i){
