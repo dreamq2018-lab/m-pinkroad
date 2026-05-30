@@ -1221,6 +1221,81 @@
   .va-prop.blue .pt{color:var(--blue-deep)}
   .va-foot{margin-top:20px;padding:14px 16px;background:linear-gradient(135deg,var(--pink-50),var(--blue-50));border-radius:10px;font-size:13px;color:var(--ink-2);font-weight:700;line-height:1.6;text-align:center}
   @media (max-width:680px){.archive-sect h2{font-size:24px}.va-detail{padding:24px 18px}.va-detail h4{font-size:18px}}
+  .va-num.vote{background:linear-gradient(135deg,#2b6cb0,#1a4e8a)}
+  .va-num.act{background:linear-gradient(135deg,#7b3fa0,#5b2d83)}
+  .va-card.va-card-photo{border-color:var(--blue-50)}
+  .va-card.va-card-photo:hover{border-color:var(--blue)}
+
+  /* 📸 활동현황 — 3줄 교차 자동 슬라이드 (포토월) */
+  .actwall-sect{max-width:1080px;margin:34px auto 0;overflow-x:clip;overflow-y:visible}
+  .actwall-head{text-align:center;margin-bottom:18px}
+  .actwall-tag{display:inline-block;font-size:11px;font-weight:900;color:#fff;background:linear-gradient(135deg,#7b3fa0,#5b2d83);padding:4px 12px;border-radius:999px;letter-spacing:.04em}
+  .actwall-head h3{font-size:22px;font-weight:900;color:var(--blue-deep);margin:9px 0 6px}
+  .actwall-head h3 span{color:var(--pink-deep)}
+  .actwall-head p{font-size:13px;color:var(--gray);font-weight:600;max-width:640px;margin:0 auto;line-height:1.6}
+  .actwall{display:flex;flex-direction:column;gap:16px;overflow:visible;padding:10px 0}
+  .actwall-row{overflow:visible}
+  .actwall-track{display:flex;gap:14px;width:max-content;will-change:transform}
+  .actwall-row.l .actwall-track{animation:actScrollL 40s linear infinite}
+  .actwall-row.r .actwall-track{animation:actScrollR 46s linear infinite}
+  .actwall:hover .actwall-track{animation-play-state:paused}
+  @keyframes actScrollL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes actScrollR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+  .actwall-card{flex:0 0 auto;width:160px;padding:0;border:none;border-radius:12px;overflow:hidden;background:var(--pink-50);cursor:pointer;font-family:inherit;text-align:left;position:relative;z-index:1;transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s;box-shadow:var(--shadow-sm)}
+  .actwall-card:hover{transform:scale(1.34);z-index:8;box-shadow:0 20px 48px rgba(8,6,14,.36)}
+  .actwall-card:focus-visible{outline:3px solid var(--pink-deep);outline-offset:2px}
+  .actwall-card .gal-thumb{aspect-ratio:3/4;border-radius:12px}
+  .actwall-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:22px 10px 9px;background:linear-gradient(to top,rgba(8,6,14,.88),rgba(8,6,14,.42) 55%,transparent);display:flex;flex-direction:column;gap:1px}
+  .actwall-cap b{font-size:11.5px;font-weight:800;color:#fff;line-height:1.32}
+  .actwall-cap i{font-size:10px;color:#f3dbe5;font-weight:700;font-style:normal}
+  @media (max-width:680px){.actwall-card{width:130px}.actwall-cap b{font-size:10.5px}.actwall-head h3{font-size:18px}}
+  @media (prefers-reduced-motion:reduce){.actwall-row .actwall-track{animation:none}.actwall{-webkit-mask-image:none;mask-image:none}.actwall-row{overflow-x:auto}}
+
+  /* 📸 활동 갤러리 모달 (청년특별위원회 활동 + 투표독려) */
+  .gal-modal{position:fixed;inset:0;z-index:210;display:none;align-items:flex-start;justify-content:center;padding:30px 16px;background:rgba(20,15,30,.55);backdrop-filter:blur(6px);overflow-y:auto}
+  .gal-modal.open{display:flex;animation:qaFade .25s}
+  .gal-box{background:#fff;border-radius:24px;max-width:1000px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.3);overflow:hidden;animation:qaSlide .35s}
+  .gal-head{padding:22px 26px;background:linear-gradient(135deg,var(--blue-deep),var(--pink-deep));color:#fff;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+  .gal-head h3{font-size:20px;font-weight:900;margin:0}
+  .gal-head .sub{font-size:12.5px;opacity:.92;margin-top:3px;font-weight:600}
+  .gal-close-btn{background:rgba(255,255,255,.2);border:none;width:36px;height:36px;border-radius:50%;color:#fff;font-size:18px;cursor:pointer;font-weight:900;transition:all .2s;flex-shrink:0}
+  .gal-close-btn:hover{background:rgba(255,255,255,.35);transform:rotate(90deg)}
+  .gal-cats{padding:16px 26px 0;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1.5px solid var(--pink-100);flex-shrink:0}
+  .gal-cat{padding:8px 16px;border-radius:999px;background:var(--pink-50);color:var(--ink-2);font-size:13px;font-weight:800;cursor:pointer;border:1.5px solid transparent;transition:all .2s}
+  .gal-cat:hover{background:var(--pink-100)}
+  .gal-cat.active{background:var(--blue-deep);color:#fff;border-color:var(--blue-deep)}
+  .gal-body{padding:20px 26px 26px;overflow-y:auto;flex:1}
+  .gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+  .gal-item{padding:0;border:1.8px solid var(--pink-100);border-radius:14px;overflow:hidden;background:#fff;cursor:pointer;font-family:inherit;text-align:left;transition:all .25s;display:flex;flex-direction:column}
+  .gal-item:hover{border-color:var(--pink-deep);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+  .gal-item:hover .gal-thumb img{transform:scale(1.05)}
+  .gal-thumb{position:relative;display:block;width:100%;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,var(--pink-100),var(--blue-50))}
+  .gal-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s;z-index:1}
+  .gal-thumb img.miss{opacity:0}
+  .gal-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--pink-deep);font-weight:800;font-size:12.5px;text-align:center;z-index:0;line-height:1.5}
+  .gal-ph b{font-size:22px}
+  .gal-cap{padding:11px 13px;display:flex;flex-direction:column;gap:3px}
+  .gal-cap b{font-size:13.5px;font-weight:800;color:var(--ink);line-height:1.4}
+  .gal-cap i{font-size:11.5px;color:var(--gray);font-weight:700;font-style:normal}
+  .gal-empty{grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--gray);font-weight:700;font-size:14px;line-height:1.7}
+  /* lightbox */
+  .gal-lightbox{position:fixed;inset:0;z-index:230;display:none;align-items:center;justify-content:center;background:rgba(8,6,14,.92);padding:30px 60px}
+  .gal-lightbox.open{display:flex;animation:qaFade .2s}
+  .gal-lb-fig{margin:0;max-width:1000px;width:100%;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .gal-lb-imgwrap{position:relative;width:100%;max-height:74vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2a2433,#1c1826);border-radius:14px;overflow:hidden;min-height:240px}
+  .gal-lb-imgwrap img{max-width:100%;max-height:74vh;object-fit:contain;display:block;z-index:1}
+  .gal-lb-imgwrap img.miss{display:none}
+  .gal-lb-imgwrap .gal-ph{color:#FFD6C4}
+  .gal-lb-cap{color:#fff;text-align:center;max-width:760px}
+  .gal-lb-cap b{display:block;font-size:17px;font-weight:900;margin-bottom:5px}
+  .gal-lb-cap span{font-size:13px;color:#d6c9dd;font-weight:600;line-height:1.6}
+  .gal-lb-close{position:fixed;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.16);color:#fff;font-size:22px;font-weight:900;cursor:pointer;transition:all .2s;z-index:2}
+  .gal-lb-close:hover{background:rgba(255,255,255,.32);transform:rotate(90deg)}
+  .gal-lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.16);color:#fff;font-size:30px;font-weight:900;cursor:pointer;transition:all .2s;z-index:2;display:flex;align-items:center;justify-content:center;line-height:1}
+  .gal-lb-nav:hover{background:rgba(255,255,255,.34)}
+  .gal-lb-nav.prev{left:16px}
+  .gal-lb-nav.next{right:16px}
+  @media (max-width:680px){.gal-box{max-height:95vh;border-radius:18px}.gal-head h3{font-size:16px}.gal-head{padding:16px 18px}.gal-cats{padding:13px 18px 0}.gal-cat{font-size:12px;padding:6px 12px}.gal-body{padding:16px 18px 20px}.gal-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}.gal-lightbox{padding:16px 10px}.gal-lb-nav{width:40px;height:40px;font-size:24px}.gal-lb-nav.prev{left:6px}.gal-lb-nav.next{right:6px}}
 
 
   /* 🌸 정책 Q&A 모달 — 민형배 후보 발표/공약 라이브러리 */
@@ -4580,7 +4655,7 @@ h1,h2,.section-head h2,.hero-kicker,.pu-hero h3,.up-title{text-wrap:balance}
     <div class="section-head">
       <span class="section-tag">VOICES · 지난 의견수렴 아카이브</span>
       <h2>지금까지 모인 <span class="accent">청년의 목소리</span></h2>
-      <p class="lead">2회의 청년정책 해커톤(나주·광양) + 김대중재단 청년위원회 정책제안서. 클릭하면 상세 내용이 펼쳐집니다. 모든 의견은 본 플랫폼에서 정책 반영·집행 결과까지 투명하게 추적됩니다.</p>
+      <p class="lead">2회의 청년정책 해커톤(나주·광양) + 김대중재단 청년위원회 정책제안서. 클릭하면 상세 내용이 펼쳐집니다. 모든 의견은 본 플랫폼에서 정책 반영·집행 결과까지 투명하게 추적됩니다. <strong style="color:var(--pink-deep)">📸 청년특별위원회 활동현황과 투표독려 캠페인 사진</strong>도 함께 확인하세요.</p>
     </div>
     <div class="va-cards">
       <button type="button" class="va-card" data-vid="1" onclick="openVoice(1)">
@@ -4614,6 +4689,20 @@ h1,h2,.section-head h2,.hero-kicker,.pu-hero h3,.up-title{text-wrap:balance}
       <div class="va-meta" id="voiceDetailMeta"></div>
       <div id="voiceDetailBody"></div>
       <div class="va-foot">📊 위 목소리들은 본 AI 디지털 플랫폼에 통합 관리되며, <strong>정책 반영 → 예산 편성 → 집행 → 결과 보고</strong>의 전 단계가 실시간 투명하게 추적됩니다.</div>
+    </div>
+
+    <!-- 📸 청년특별위원회 활동현황 — 3줄 교차 자동 슬라이드 -->
+    <div class="actwall-sect">
+      <div class="actwall-head">
+        <span class="actwall-tag">📸 ACTIVITY · 활동현황</span>
+        <h3>청년특별위원회가 <span>걸어온 길</span></h3>
+        <p>출범식 · 현장 탐방 · 정책 간담회 · 투표독려 캠페인 — 사진을 클릭하면 크게 볼 수 있어요 🌸 (사진 위에 마우스를 올리면 멈춥니다)</p>
+      </div>
+      <div class="actwall" id="actWall">
+        <div class="actwall-row l"><div class="actwall-track" id="actRow0"></div></div>
+        <div class="actwall-row r"><div class="actwall-track" id="actRow1"></div></div>
+        <div class="actwall-row l"><div class="actwall-track" id="actRow2"></div></div>
+      </div>
     </div>
 
     <!-- 💬 청년 목소리에 이어 — 카카오 오픈채팅 참여 독려 -->
@@ -5754,6 +5843,86 @@ function closeVoice(){
   document.querySelectorAll('.va-card').forEach(c=>c.classList.remove('active'));
 }
 
+// ===== 📸 청년특별위원회 활동현황 — 3줄 교차 자동 슬라이드 + 라이트박스 =====
+// 사진 교체/추가: /activities 폴더의 act-01.jpg ~ act-21.jpg 를 바꾸거나 아래 ACT_DATA를 수정하세요.
+const ACT_DATA = [
+  {cat:'vote', file:'activities/act-01.jpg', title:'거리 홍보 — 청년결정정부', date:'2026.5', desc:'청년이 직접 나선 거리 홍보 — 「청년결정정부」를 알렸습니다.'},
+  {cat:'vote', file:'activities/act-02.jpg', title:'청년이 결정 — 거리 캠페인', date:'2026.5', desc:'늦은 밤까지 이어진 청년 거리 캠페인.'},
+  {cat:'vote', file:'activities/act-03.jpg', title:'투표하고 꽃길만 걷자', date:'2026.5', desc:'청년 투표 참여 독려 캠페인 🌸'},
+  {cat:'vote', file:'activities/act-04.jpg', title:'우리 동네 청년 — 현장 홍보', date:'2026.5', desc:'동네 곳곳을 누빈 청년 현장 홍보.'},
+  {cat:'vote', file:'activities/act-05.jpg', title:'청년 정책 5분컷 홍보', date:'2026.5', desc:'청년 정책을 한눈에 — 현장 홍보.'},
+  {cat:'vote', file:'activities/act-06.jpg', title:'청년이 결정 — 합동 홍보', date:'2026.5', desc:'청년들이 함께한 합동 홍보전.'},
+  {cat:'vote', file:'activities/act-07.jpg', title:'청년 합동 투표독려', date:'2026.5', desc:'청년들이 모여 투표 참여를 독려했습니다.'},
+  {cat:'vote', file:'activities/act-08.jpg', title:'투표하고 꽃길만 걷자!', date:'2026.5', desc:'청년특별위원회 대표 투표독려 캠페인.'},
+  {cat:'vote', file:'activities/act-09.jpg', title:'청년이 결정 — 야간 캠페인', date:'2026.5', desc:'늦은 밤 거리에서 이어진 캠페인.'},
+  {cat:'vote', file:'activities/act-10.jpg', title:'투표독려 캠페인', date:'2026.5', desc:'투표하고 꽃길만 걷자 — 청년 투표독려.'},
+  {cat:'committee', file:'activities/act-11.jpg', title:'청년특별위원회 단체', date:'2026.5', desc:'청년특별위원회 위원 단체 사진.'},
+  {cat:'committee', file:'activities/act-12.jpg', title:'전남광주대전환 선대위 출범식', date:'2026.5', desc:'시민주권선대위 청년특별위원회 출범 — 「압도적 성장」.'},
+  {cat:'committee', file:'activities/act-13.jpg', title:'청년 정책 간담회', date:'2026.5.10', desc:'청년 정책을 함께 논의한 간담회.'},
+  {cat:'committee', file:'activities/act-14.jpg', title:'청년 정책 간담회 — 플랫폼 시연', date:'2026.5.10', desc:'「청년결정정부」 플랫폼 시연·설명.'},
+  {cat:'committee', file:'activities/act-15.jpg', title:'청년결정정부 선포 출범식', date:'2026.5.16', desc:'민형배 후보 청년공약 1호 「청년결정정부」 선포.'},
+  {cat:'committee', file:'activities/act-16.jpg', title:'청년 정책 간담회', date:'2026.5.16', desc:'청년 위원들과의 정책 토론 현장.'},
+  {cat:'committee', file:'activities/act-17.jpg', title:'청년특별위원회 출범식', date:'2026.5.16', desc:'청년결정정부 선포 출범식 현장.'},
+  {cat:'committee', file:'activities/act-18.jpg', title:'청년결정정부 선포식', date:'2026.5.16', desc:'청년공약 1호 「청년결정정부」 선포.'},
+  {cat:'committee', file:'activities/act-19.jpg', title:'출범식 — 위원 위촉', date:'2026.5.16', desc:'청년특별위원회 위원 위촉식.'},
+  {cat:'committee', file:'activities/act-20.jpg', title:'출범식 현장', date:'2026.5.16', desc:'청년특별위원회 출범식 현장.'},
+  {cat:'committee', file:'activities/act-21.jpg', title:'출범식 단체', date:'2026.5.16', desc:'청년특별위원회 출범식 단체 사진.'},
+  {cat:'committee', file:'activities/act-22.jpg', title:'청년특별위원회 현장', date:'2026.5', desc:'청년특별위원회 현장 활동.'},
+  {cat:'committee', file:'activities/act-23.jpg', title:'청년결정정부 선포 출범식', date:'2026.5.16', desc:'「압도적 성장, 더불어 하나된」 선대위 출범식 무대.'},
+  {cat:'committee', file:'activities/act-24.jpg', title:'청년 정책 간담회', date:'2026.5', desc:'청년 정책을 함께 논의한 간담회 현장.'},
+  {cat:'committee', file:'activities/act-25.jpg', title:'청년 정책 간담회', date:'2026.5', desc:'청년 위원들과의 정책 토론.'},
+  {cat:'committee', file:'activities/act-26.jpg', title:'청년 정책 간담회', date:'2026.5', desc:'청년 정책 현장 간담회.'},
+  {cat:'committee', file:'activities/act-27.jpg', title:'청년 정책 간담회', date:'2026.5', desc:'청년 정책 논의 현장.'},
+  {cat:'committee', file:'activities/act-28.jpg', title:'청년 정책 간담회', date:'2026.5', desc:'청년 위원 정책 토론 현장.'},
+  {cat:'committee', file:'activities/act-29.jpg', title:'청년결정정부 선포 출범식', date:'2026.5.16', desc:'청년결정정부 선포 출범식 무대.'},
+  {cat:'committee', file:'activities/act-30.jpg', title:'청년결정정부 선포식', date:'2026.5.16', desc:'정책의 대상에서 정책의 주체로 — 청년결정정부 선포.'},
+  {cat:'committee', file:'activities/act-31.jpg', title:'출범식 단체', date:'2026.5.16', desc:'청년특별위원회 출범식 단체 사진.'},
+  {cat:'committee', file:'activities/act-32.jpg', title:'출범식 — 대표 발언', date:'2026.5.16', desc:'청년결정정부 선포 출범식 대표 발언.'},
+  {cat:'committee', file:'activities/act-33.jpg', title:'청년결정정부 선포 출범식', date:'2026.5.16', desc:'청년결정정부 선포 출범식 현장.'},
+  {cat:'committee', file:'activities/act-34.jpg', title:'출범식 — 위원 발언', date:'2026.5.16', desc:'청년특별위원회 위원 발언.'}
+];
+let lbList=[], lbIdx=0;
+function buildActWall(){
+  const rows=[document.getElementById('actRow0'),document.getElementById('actRow1'),document.getElementById('actRow2')];
+  if(!rows[0]) return;
+  const buckets=[[],[],[]];
+  ACT_DATA.forEach((a,i)=>buckets[i%3].push({a,i}));
+  const cell=o=>`<button type="button" class="actwall-card" onclick="openLightbox(${o.i})" aria-label="${o.a.title}">`
+    +`<span class="gal-thumb"><img src="${o.a.file}" alt="${o.a.title}" loading="lazy" onerror="this.classList.add('miss')"/>`
+    +`<span class="gal-ph"><b>🌸</b>사진 준비 중</span>`
+    +`<span class="actwall-cap"><b>${o.a.title}</b><i>${o.a.date}</i></span></span></button>`;
+  buckets.forEach((items,r)=>{ if(!items.length){rows[r].innerHTML='';return;} const html=items.map(cell).join(''); rows[r].innerHTML = html+html; });
+}
+function openLightbox(i){
+  lbList = ACT_DATA; lbIdx = i;
+  document.getElementById('actLightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+  showLb();
+}
+function showLb(){
+  const a = lbList[lbIdx]; if(!a) return;
+  const img = document.getElementById('actLbImg');
+  img.classList.remove('miss');
+  img.onerror = function(){ this.classList.add('miss'); };
+  img.src = a.file; img.alt = a.title;
+  document.getElementById('actLbTitle').textContent = a.title;
+  document.getElementById('actLbDesc').textContent = (a.date? a.date+' · ':'') + a.desc;
+}
+function lbNav(d){ if(!lbList.length) return; lbIdx=(lbIdx+d+lbList.length)%lbList.length; showLb(); }
+function closeLightbox(){
+  document.getElementById('actLightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', e => {
+  if(document.getElementById('actLightbox').classList.contains('open')){
+    if(e.key==='Escape') closeLightbox();
+    else if(e.key==='ArrowLeft') lbNav(-1);
+    else if(e.key==='ArrowRight') lbNav(1);
+  }
+});
+buildActWall();
+document.addEventListener('DOMContentLoaded', buildActWall);
+
 
 // ===== 🌸 민형배 후보 정책 Q&A — 언론기사 + 각종 행사 발언 모음ZIP =====
 const QA_CATS = [
@@ -6002,6 +6171,20 @@ document.addEventListener('keydown', e => { if(e.key==='Escape' && document.getE
       <div class="qa-list" id="qaList"></div>
     </div>
   </div>
+</div>
+
+<!-- 📸 활동현황 라이트박스 -->
+<div class="gal-lightbox" id="actLightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="gal-lb-close" onclick="closeLightbox()" aria-label="닫기">✕</button>
+  <button class="gal-lb-nav prev" onclick="lbNav(-1)" aria-label="이전 사진">‹</button>
+  <figure class="gal-lb-fig">
+    <span class="gal-lb-imgwrap">
+      <img id="actLbImg" alt=""/>
+      <span class="gal-ph"><b>🌸</b>사진 준비 중</span>
+    </span>
+    <figcaption class="gal-lb-cap"><b id="actLbTitle"></b><span id="actLbDesc"></span></figcaption>
+  </figure>
+  <button class="gal-lb-nav next" onclick="lbNav(1)" aria-label="다음 사진">›</button>
 </div>
 
 
