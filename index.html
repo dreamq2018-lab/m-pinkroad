@@ -6111,11 +6111,11 @@ function renderSpeeches(){
     return;
   }
   grid.innerHTML = pageList.map(s=>{
-    return `<a class="sp-card" href="minhb-speeches.pdf#page=${s.page+5}" target="_blank" rel="noopener" title="원문 PDF p.${s.page} 열기">
+    return `<button type="button" class="sp-card" onclick="openSpeechText(${s.n})" title="원문 보기" style="font-family:inherit;text-align:left;width:100%">
       <div class="sp-card-head"><span class="sp-num">${s.n}</span><span class="sp-type">${s.type}</span></div>
       <div class="sp-card-title">${s.title}</div>
-      <div class="sp-card-meta"><span><span class="sp-card-cat">${s.cat}</span>📅 ${s.date}</span><span class="sp-card-action">📄 p.${s.page} →</span></div>
-    </a>`;
+      <div class="sp-card-meta"><span><span class="sp-card-cat">${s.cat}</span>📅 ${s.date}</span><span class="sp-card-action">📖 원문 보기 →</span></div>
+    </button>`;
   }).join('');
 
   // 페이지네이션 UI
@@ -6144,6 +6144,41 @@ const _oldSetSpeechFilter = setSpeechFilter;
 setSpeechFilter = function(cat){ spCurrentPage = 1; _oldSetSpeechFilter(cat); };
 
 if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', renderSpeeches); } else { renderSpeeches(); }
+
+// 📖 발표문 원문 뷰어 (PDF 링크 대신 사이트 내에서 전문 표시) — speeches.json 지연 로드
+let SPEECH_TEXT=null, _spTextLoading=false;
+function _ensureSpeechReader(){
+  if(document.getElementById('spReader')) return;
+  const ov=document.createElement('div');
+  ov.id='spReader'; ov.setAttribute('role','dialog'); ov.setAttribute('aria-modal','true');
+  ov.style.cssText='position:fixed;inset:0;z-index:240;display:none;align-items:flex-start;justify-content:center;padding:30px 16px;background:rgba(20,15,30,.6);backdrop-filter:blur(6px);overflow-y:auto';
+  ov.addEventListener('click',e=>{ if(e.target===ov) closeSpeechText(); });
+  ov.innerHTML='<div style="background:#fff;border-radius:20px;max-width:860px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.3);overflow:hidden">'
+    +'<div style="padding:18px 22px;background:linear-gradient(135deg,#A21E55,#CC2F6A);color:#fff;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-shrink:0">'
+    +'<div style="min-width:0"><div id="spReaderType" style="font-size:12px;font-weight:800;opacity:.92"></div><h3 id="spReaderTitle" style="margin:3px 0 0;font-size:18px;font-weight:900;line-height:1.35"></h3><div id="spReaderMeta" style="font-size:12px;opacity:.92;margin-top:4px"></div></div>'
+    +'<button onclick="closeSpeechText()" aria-label="닫기" style="background:rgba(255,255,255,.2);border:none;width:34px;height:34px;border-radius:50%;color:#fff;font-size:17px;font-weight:900;cursor:pointer;flex-shrink:0">✕</button></div>'
+    +'<div id="spReaderBody" style="padding:22px 24px;overflow-y:auto;flex:1;white-space:pre-wrap;line-height:1.9;font-size:15px;color:#1A0C14;word-break:break-word"></div>'
+    +'<div style="padding:10px 22px;border-top:1px solid #FBE0EA;font-size:12px;color:#5a5a6e;flex-shrink:0">📚 출처: 민형배 후보 공약발표문·연설문 모음 (2026)</div>'
+    +'</div>';
+  document.body.appendChild(ov);
+}
+function openSpeechText(n){
+  _ensureSpeechReader();
+  const s=(typeof SPEECHES!=='undefined')?SPEECHES.find(x=>x.n===n):null;
+  document.getElementById('spReaderType').textContent=s?s.type:'';
+  document.getElementById('spReaderTitle').textContent=s?s.title:('발표문 '+n);
+  document.getElementById('spReaderMeta').textContent=s?('📅 '+s.date):'';
+  const body=document.getElementById('spReaderBody');
+  document.getElementById('spReader').style.display='flex'; document.body.style.overflow='hidden';
+  function show(){ const t=SPEECH_TEXT&&SPEECH_TEXT[n]; body.textContent=t?t:'원문을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.'; body.scrollTop=0; }
+  if(SPEECH_TEXT){ show(); return; }
+  body.textContent='원문을 불러오는 중… 🌸';
+  if(_spTextLoading){ const iv=setInterval(()=>{ if(SPEECH_TEXT){ clearInterval(iv); show(); } },200); return; }
+  _spTextLoading=true;
+  fetch('speeches.json',{cache:'force-cache'}).then(r=>r.json()).then(d=>{ SPEECH_TEXT=d; show(); }).catch(()=>{ body.textContent='원문을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.'; });
+}
+function closeSpeechText(){ const ov=document.getElementById('spReader'); if(ov) ov.style.display='none'; document.body.style.overflow=''; }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ const ov=document.getElementById('spReader'); if(ov&&ov.style.display!=='none') closeSpeechText(); } });
 
 
 function openSpeechLib(){
