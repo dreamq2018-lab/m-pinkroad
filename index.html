@@ -1217,6 +1217,14 @@
   .va-prop{background:var(--pink-50);border-left:4px solid var(--pink-deep);padding:12px 16px;border-radius:8px}
   .va-prop .pt{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:4px}
   .va-prop .pb{font-size:13px;color:var(--gray);line-height:1.6}
+  .va-prop.vb{cursor:pointer;transition:background .15s}
+  .va-prop.vb:hover{background:var(--pink-100)}
+  .va-prop .vb-more{float:right;font-size:11px;font-weight:800;color:var(--pink-deep)}
+  .va-prop.vbopen .vb-more{color:var(--blue-deep)}
+  .vb-tasks{margin-top:8px;padding-top:8px;border-top:1px dashed var(--pink-200)}
+  .vb-tasks ul{margin:0;padding:0}
+  .vb-tasks li{list-style:none;font-size:12.5px;color:var(--ink-2);line-height:1.6;padding:3px 0 3px 16px;position:relative}
+  .vb-tasks li::before{content:"\2022";position:absolute;left:4px;color:var(--pink-deep);font-weight:900}
   .va-prop.blue{background:var(--blue-50);border-left-color:var(--blue-deep)}
   .va-prop.blue .pt{color:var(--blue-deep)}
   .va-foot{margin-top:20px;padding:14px 16px;background:linear-gradient(135deg,var(--pink-50),var(--blue-50));border-radius:10px;font-size:13px;color:var(--ink-2);font-weight:700;line-height:1.6;text-align:center}
@@ -5806,19 +5814,19 @@ const VOICE_DATA = {
     body: `
       <div class="va-section">
         <h5>🌸 제안 개요</h5>
-        <p style="margin:0;color:var(--ink-2);line-height:1.85;font-weight:600">청년 당사자가 직접 제안한 정책에 타 지자체 우수사례를 더해, 정책마다 <strong>예산·재원·비용 추계</strong>를 갖춘 실행형 제안서로 정리한 <strong>8대 분과 최종본</strong>입니다.</p>
+        <p style="margin:0;color:var(--ink-2);line-height:1.85;font-weight:600"><strong style="color:var(--pink-deep)">여러분이 보내주신 청년의 목소리를 반영</strong>하여, 청년 당사자가 직접 제안한 정책에 타 지자체 우수사례를 더하고, 정책마다 <strong>예산·재원·비용 추계</strong>를 갖춘 실행형 제안서로 정리한 <strong>8대 분과 제안서</strong>입니다.</p>
       </div>
       <div class="va-section">
         <h5>📋 8대 분과 핵심 제안</h5>
         <div class="va-proposals">
-          <div class="va-prop"><div class="pt">① <strong>문화예술·관광</strong></div><div class="pb">청년 창작 거점(로컬 크리에이터 스테이션·ACC) + 청년 예술인 소득·권익(표준단가·고용보험) + 청년 주도 축제·워케이션 거점 + 청년 문화예산 직접 편성 참여.</div></div>
-          <div class="va-prop blue"><div class="pt">② <strong>체육·웰니스·의료</strong></div><div class="pb">5대 권역 스포츠케어센터 + 청년 체육비 지역화폐 캐시백(연 최대 30만원) + 마음건강 1:1 상담 바우처 + 전남 국립의대·동서부 상급병원 유치.</div></div>
-          <div class="va-prop"><div class="pt">③ <strong>AI·디지털혁신</strong></div><div class="pb">국가 AI 데이터센터 <strong>청년 전용 GPU 쿼터(목표 30%)</strong> + 산학 AI 부트캠프·실무 인턴십 + 생활AI OS '찍으면 정책' + 시·군 위성 코워킹 거점.</div></div>
-          <div class="va-prop blue"><div class="pt">④ <strong>농어촌·환경</strong></div><div class="pb">임대형 스마트팜·세대통합 승계 + 귀농·귀어 가공·라이브커머스 + 빈집 에코 마을호텔 + 광역 자원순환·재생에너지 청년 정착연금.</div></div>
-          <div class="va-prop"><div class="pt">⑤ <strong>경제·일자리·창업</strong></div><div class="pb">청년 창업 파이프라인(시드펀드·재도전) + <strong>청년드림은행·자산형성</strong> + 디딤패스·기업 승계 + 프리랜서 현장공간·행안부 청년마을.</div></div>
-          <div class="va-prop blue"><div class="pt">⑥ <strong>주거·교육</strong></div><div class="pb">모듈러 반값 청년주택(공급 2년 단축, 월 20~30만원) + 안심전세·웰컴 패키지 + 통합형 청년 정주단지 + 평생교육·리스킬링·무상교통.</div></div>
-          <div class="va-prop"><div class="pt">⑦ <strong>복지·가족·돌봄</strong></div><div class="pb"><strong>찾아가는 맞춤복지·자동지급</strong>('카드 한 장') + 지역아동센터·방과후 돌봄 + 1인가구·한부모·신혼 패키지 + 고립·은둔 청년 데이터 기반 선제 발굴.</div></div>
-          <div class="va-prop blue"><div class="pt">⑧ <strong>청년주권</strong></div><div class="pb">위원회 <strong>청년 30% 의무</strong>·발의·의결권 + 청년예산제·청년정책의회 상설화 + 청년사업 예산 직접 편성 모델 + 자금지원 보편화('가난 인증' 폐지).</div></div>
+          <div class="va-prop vb" onclick="toggleVB(1,this)"><div class="pt">① <strong>문화예술·관광</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb">청년 창작 거점(로컬 크리에이터 스테이션·ACC) + 청년 예술인 소득·권익(표준단가·고용보험) + 청년 주도 축제·워케이션 거점 + 청년 문화예산 직접 편성 참여.</div><div class="vb-tasks" hidden></div></div>
+          <div class="va-prop vb blue" onclick="toggleVB(2,this)"><div class="pt">② <strong>체육·웰니스·의료</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb">5대 권역 스포츠케어센터 + 청년 체육비 지역화폐 캐시백(연 최대 30만원) + 마음건강 1:1 상담 바우처 + 전남 국립의대·동서부 상급병원 유치.</div><div class="vb-tasks" hidden></div></div>
+          <div class="va-prop vb" onclick="toggleVB(3,this)"><div class="pt">③ <strong>AI·디지털혁신</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb">국가 AI 데이터센터 <strong>청년 전용 GPU 쿼터(목표 30%)</strong> + 산학 AI 부트캠프·실무 인턴십 + 생활AI OS '찍으면 정책' + 시·군 위성 코워킹 거점.</div><div class="vb-tasks" hidden></div></div>
+          <div class="va-prop vb blue" onclick="toggleVB(4,this)"><div class="pt">④ <strong>농어촌·환경</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb">임대형 스마트팜·세대통합 승계 + 귀농·귀어 가공·라이브커머스 + 빈집 에코 마을호텔 + 광역 자원순환·재생에너지 청년 정착연금.</div><div class="vb-tasks" hidden></div></div>
+          <div class="va-prop vb" onclick="toggleVB(5,this)"><div class="pt">⑤ <strong>경제·일자리·창업</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb">청년 창업 파이프라인(시드펀드·재도전) + <strong>청년드림은행·자산형성</strong> + 디딤패스·기업 승계 + 프리랜서 현장공간·행안부 청년마을.</div><div class="vb-tasks" hidden></div></div>
+          <div class="va-prop vb blue" onclick="toggleVB(6,this)"><div class="pt">⑥ <strong>주거·교육</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb">모듈러 반값 청년주택(공급 2년 단축, 월 20~30만원) + 안심전세·웰컴 패키지 + 통합형 청년 정주단지 + 평생교육·리스킬링·무상교통.</div><div class="vb-tasks" hidden></div></div>
+          <div class="va-prop vb" onclick="toggleVB(7,this)"><div class="pt">⑦ <strong>복지·가족·돌봄</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb"><strong>찾아가는 맞춤복지·자동지급</strong>('카드 한 장') + 지역아동센터·방과후 돌봄 + 1인가구·한부모·신혼 패키지 + 고립·은둔 청년 데이터 기반 선제 발굴.</div><div class="vb-tasks" hidden></div></div>
+          <div class="va-prop vb blue" onclick="toggleVB(8,this)"><div class="pt">⑧ <strong>청년주권</strong><span class="vb-more">＋ 세부 보기</span></div><div class="pb">위원회 <strong>청년 30% 의무</strong>·발의·의결권 + 청년예산제·청년정책의회 상설화 + 청년사업 예산 직접 편성 모델 + 자금지원 보편화('가난 인증' 폐지).</div><div class="vb-tasks" hidden></div></div>
         </div>
       </div>
       <div class="va-section">
@@ -5846,6 +5854,14 @@ function openVoice(id){
 function closeVoice(){
   document.getElementById('voiceDetail').hidden = true;
   document.querySelectorAll('.va-card').forEach(c=>c.classList.remove('active'));
+}
+function toggleVB(n,el){
+  if(typeof BRANCH_DATA==='undefined'||!BRANCH_DATA[n])return;
+  var box=el.querySelector('.vb-tasks'); if(!box)return;
+  var open=el.classList.toggle('vbopen');
+  var more=el.querySelector('.vb-more'); if(more)more.textContent=open?'− 닫기':'＋ 세부 보기';
+  if(open){ if(!box.dataset.filled){ box.innerHTML='<ul style=\"margin:0;padding:0\">'+BRANCH_DATA[n].tasks.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>'; box.dataset.filled='1'; } box.hidden=false; }
+  else { box.hidden=true; }
 }
 
 // ===== 📸 청년특별위원회 활동현황 — 3줄 교차 자동 슬라이드 + 라이트박스 =====
