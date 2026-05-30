@@ -5243,9 +5243,9 @@ async function fetchBudget(showToastMsg){
   try{
     const year=document.getElementById('yearMode')?.value||'2026';
     const ctrl=new AbortController();
-    const timer=setTimeout(()=>ctrl.abort(),5000); // ⏱️ 5초 타임아웃
+    const timer=setTimeout(()=>ctrl.abort(),20000); // ⏱️ 20초 타임아웃(콜드 스타트 대비)
     let r;
-    try{ r=await fetch(`${targetUrl}?year=${year}`,{signal:ctrl.signal,cache:'no-store'}); }
+    try{ r=await fetch(`${targetUrl}?year=${year}`,{signal:ctrl.signal,cache:'default'}); }
     finally{ clearTimeout(timer); }
     if(!r.ok)throw new Error('프록시 응답 오류 '+r.status);
     const data=await r.json();
@@ -5884,7 +5884,13 @@ const ACT_DATA = [
   {cat:'committee', file:'activities/act-31.jpg', title:'출범식 단체', date:'2026.5.16', desc:'청년특별위원회 출범식 단체 사진.'},
   {cat:'committee', file:'activities/act-32.jpg', title:'출범식 — 대표 발언', date:'2026.5.16', desc:'청년결정정부 선포 출범식 대표 발언.'},
   {cat:'committee', file:'activities/act-33.jpg', title:'청년결정정부 선포 출범식', date:'2026.5.16', desc:'청년결정정부 선포 출범식 현장.'},
-  {cat:'committee', file:'activities/act-34.jpg', title:'출범식 — 위원 발언', date:'2026.5.16', desc:'청년특별위원회 위원 발언.'}
+  {cat:'committee', file:'activities/act-34.jpg', title:'출범식 — 위원 발언', date:'2026.5.16', desc:'청년특별위원회 위원 발언.'},
+  {cat:'vote', file:'activities/act-35.jpg', title:'청년이 결정 — 현장 홍보', date:'2026.5', desc:'청년 정책·투표 참여 현장 홍보.'},
+  {cat:'vote', file:'activities/act-36.jpg', title:'사전투표 독려', date:'2026.5', desc:'청년 사전투표 참여 독려 캠페인.'},
+  {cat:'vote', file:'activities/act-37.jpg', title:'청년이 결정 — 거리 홍보', date:'2026.5', desc:'청년이 결정하는 정책 — 거리 홍보.'},
+  {cat:'vote', file:'activities/act-38.jpg', title:'청년 정책 홍보', date:'2026.5', desc:'청년 정책 현장 홍보 활동.'},
+  {cat:'vote', file:'activities/act-39.jpg', title:'사전투표 참여 독려', date:'2026.5', desc:'청년 사전투표 참여 독려.'},
+  {cat:'vote', file:'activities/act-40.jpg', title:'청년투표·청년정책 홍보', date:'2026.5', desc:'청년투표와 청년정책 현장 홍보.'}
 ];
 let lbList=[], lbIdx=0;
 function buildActWall(){
