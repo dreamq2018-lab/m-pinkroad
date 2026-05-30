@@ -80,7 +80,7 @@ async function callQWGJK(params){
 // 한 광역(wa_laf_cd)에 대해 청년 사업 전체 페이지 수집
 async function fetchYouthRows(apiKey, fyr, exe_ymd, wa){
   const all = [];
-  for(let pIndex = 1; pIndex <= 5; pIndex++){
+  for(let pIndex = 1; pIndex <= 2; pIndex++){
     const data = await callQWGJK({
       Key: apiKey, Type: 'json', pIndex, pSize: 1000,
       fyr, exe_ymd, wa_laf_cd: wa, dbiz_nm: '청년',
@@ -157,15 +157,19 @@ function aggregateByRegion(rows){
   return items;
 }
 
-// fyr에 대해 데이터가 존재하는 exe_ymd를 탐색 (today→과거로 최대 21일)
+// 워밍 캐시: 동일 컨테이너 재사용 시 집행일자 탐색 생략 (12시간)
+const _dateCache = {};
+// fyr에 대해 데이터가 존재하는 exe_ymd를 탐색 (today→과거로 최대 10일)
 async function findWorkingDate(apiKey, fyr, startDate){
+  const ck = fyr+'_'+ymd(startDate);
+  if(_dateCache[ck] && (Date.now()-_dateCache[ck].ts) < 12*3600*1000) return _dateCache[ck].exe;
   const probeWa = '4600000'; // 전남으로 탐색
-  for(let i=0; i<=21; i++){
+  for(let i=0; i<=10; i++){
     const d = new Date(startDate); d.setDate(d.getDate()-i);
     const exe = ymd(d);
     try{
       const data = await callQWGJK({ Key:apiKey, Type:'json', pIndex:1, pSize:1, fyr, exe_ymd:exe, wa_laf_cd:probeWa });
-      if(resultCode(data) === 'INFO-000' && extractRows(data).length > 0) return exe;
+      if(resultCode(data) === 'INFO-000' && extractRows(data).length > 0){ _dateCache[ck]={exe,ts:Date.now()}; return exe; }
     }catch(e){ /* 다음 후보 */ }
   }
   return null;
