@@ -1247,6 +1247,7 @@
   .actwall-row.l .actwall-track{animation:actScrollL 40s linear infinite}
   .actwall-row.r .actwall-track{animation:actScrollR 46s linear infinite}
   .actwall:hover .actwall-track{animation-play-state:paused}
+  .actwall.paused .actwall-track{animation-play-state:paused!important}
   @keyframes actScrollL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @keyframes actScrollR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
   .actwall-card{flex:0 0 auto;width:160px;padding:0;border:none;border-radius:12px;overflow:hidden;background:var(--pink-50);cursor:pointer;font-family:inherit;text-align:left;position:relative;z-index:1;transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s;box-shadow:var(--shadow-sm)}
@@ -5941,7 +5942,7 @@ function buildActWall(){
   const buckets=[[],[],[]];
   ACT_DATA.forEach((a,i)=>buckets[i%3].push({a,i}));
   const cell=o=>`<button type="button" class="actwall-card" onclick="openLightbox(${o.i})" aria-label="${o.a.title}">`
-    +`<span class="gal-thumb"><img src="${o.a.file}" alt="${o.a.title}" loading="lazy" onerror="this.classList.add('miss')"/>`
+    +`<span class="gal-thumb"><img src="${o.a.file.replace('activities/','activities/thumb/')}" alt="${o.a.title}" loading="lazy" decoding="async" width="240" height="320" onerror="this.classList.add('miss')"/>`
     +`<span class="gal-ph"><b>🌸</b>사진 준비 중</span>`
     +`<span class="actwall-cap"><i>${o.a.date}</i></span></span></button>`;
   buckets.forEach((items,r)=>{ if(!items.length){rows[r].innerHTML='';return;} const html=items.map(cell).join(''); rows[r].innerHTML = html+html; });
@@ -5975,6 +5976,14 @@ document.addEventListener('keydown', e => {
 });
 buildActWall();
 document.addEventListener('DOMContentLoaded', buildActWall);
+(function(){
+  var w=document.getElementById('actWall'); if(!w) return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){ w.classList.toggle('paused', !e.isIntersecting); });},{rootMargin:'150px'});
+    io.observe(w);
+  }
+  document.addEventListener('visibilitychange', function(){ w.classList.toggle('paused', document.hidden); });
+})();
 
 
 // ===== 🌸 민형배 후보 정책 Q&A — 언론기사 + 각종 행사 발언 모음ZIP =====
