@@ -1259,31 +1259,7 @@
   .actwall-cap i{font-size:10px;color:#f3dbe5;font-weight:700;font-style:normal}
   @media (max-width:680px){.actwall-card{width:130px}.actwall-cap b{font-size:10.5px}.actwall-head h3{font-size:18px}}
 
-  /* ════════ 🗺️ 권역별 활동 섹션 (페이지 폭 큰 사진) ════════ */
-  .region-sect{max-width:1080px;margin:40px auto 0}
-  .region-head{text-align:center;margin-bottom:22px}
-  .region-tag{display:inline-block;font-size:11px;font-weight:900;color:#fff;background:linear-gradient(135deg,#0d3a7a,#1d5fb6);padding:4px 12px;border-radius:999px;letter-spacing:.08em}
-  .region-dl{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:10px 18px;border-radius:999px;background:linear-gradient(135deg,#A21E55,#CC2F6A);color:#fff;font-size:13px;font-weight:800;text-decoration:none;box-shadow:var(--shadow-sm);transition:transform .15s,box-shadow .15s}
-  .region-dl:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-  .region-head h3{font-size:22px;font-weight:900;color:var(--blue-deep);margin:9px 0 6px}
-  .region-head h3 span{color:var(--pink-deep)}
-  .region-head p{font-size:13px;color:var(--gray);font-weight:600;max-width:660px;margin:0 auto;line-height:1.6}
-  .region-list{display:flex;flex-direction:column;gap:26px;margin-top:8px}
-  .region-card{background:#fff;border:1px solid var(--pink-100);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm)}
-  .region-cap{display:flex;align-items:center;gap:10px;padding:16px 20px 12px;flex-wrap:wrap}
-  .region-badge{font-size:12px;font-weight:900;color:#fff;background:var(--pink-deep);padding:4px 12px;border-radius:999px}
-  .region-cap h4{font-size:16.5px;font-weight:900;color:var(--ink);margin:0}
-  .region-photo{display:block;width:100%;border:0;padding:0;background:var(--pink-50);cursor:zoom-in}
-  .region-photo img{width:100%;height:auto;display:block}
-  .region-body{padding:14px 20px 20px}
-  .region-body ul{margin:0;padding:0;display:grid;gap:7px}
-  .region-body li{list-style:none;font-size:13.5px;color:var(--ink-2);line-height:1.6;padding-left:18px;position:relative}
-  .region-body li::before{content:"\2713";position:absolute;left:2px;color:var(--blue);font-weight:900}
-  @media (max-width:680px){.region-head h3{font-size:18px}.region-cap h4{font-size:14.5px}}
-
-  @media (prefers-reduced-motion:reduce){.actwall-row .actwall-track{animation:none}.actwall{-webkit-mask-image:none;mask-image:none}.actwall-row{overflow-x:auto}}
-
-  /* 📸 활동 갤러리 모달 (청년특별위원회 활동 + 투표독려) */
+/* 📸 활동 갤러리 모달 (청년특별위원회 활동 + 투표독려) */
   .gal-modal{position:fixed;inset:0;z-index:210;display:none;align-items:flex-start;justify-content:center;padding:30px 16px;background:rgba(20,15,30,.55);backdrop-filter:blur(6px);overflow-y:auto}
   .gal-modal.open{display:flex;animation:qaFade .25s}
   .gal-box{background:#fff;border-radius:24px;max-width:1000px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.3);overflow:hidden;animation:qaSlide .35s}
@@ -4754,19 +4730,6 @@ h1,h2,.section-head h2,.hero-kicker,.pu-hero h3,.up-title{text-wrap:balance}
     </div>
 
 
-    <!-- 🗺️ 권역별 정책청취 간담회·사전투표 독려 -->
-    <div class="region-sect">
-      <div class="region-head">
-        <span class="region-tag">REGIONS · 권역별 활동</span>
-        <h3>권역별 정책청취 간담회 · <span>사전투표 독려</span></h3>
-        <p>6·3 지방선거 기간, 청년특별위원회가 광주권·중부권·동부권에서 진행한 청년 정책청취 간담회와 사전투표 독려 현장입니다. 사진을 클릭하면 크게 볼 수 있어요.</p>
-        <a class="region-dl" href="청년특별위원회_활동보고.docx" download>📄 청년특별위원회 활동보고서 전문 내려받기 (.docx)</a>
-      </div>
-      <div class="region-list">
-<div class="region-card"><div class="region-cap"><span class="region-badge">광주권</span><h4>정책청취 간담회 · 사전투표 독려</h4></div><button type="button" class="region-photo" onclick="openImg('activities/region-gwangju.jpg','광주권 — 정책청취 간담회 · 사전투표 독려','후보 지원 및 청년 사전투표 독려 현장')" aria-label="광주권 활동사진 크게 보기"><img src="activities/region-gwangju.jpg" loading="lazy" decoding="async" alt="광주권 정책청취 간담회 · 사전투표 독려"/></button><div class="region-body"><ul><li>청년 의견청취 간담회 및 사전투표 독려운동 추진</li><li>임미란(다 선거구)·김광란(나 선거구) 광주광역시의원 후보 지원</li><li>청년 사전투표 독려 피켓 캠페인 전개</li></ul></div></div><div class="region-card"><div class="region-cap"><span class="region-badge">중부권</span><h4>정책청취 간담회 · 사전투표 독려</h4></div><button type="button" class="region-photo" onclick="openImg('activities/region-jungbu.jpg','중부권 — 정책청취 간담회 · 사전투표 독려','전통시장 등 생활권 현장 간담회·피켓 캠페인')" aria-label="중부권 활동사진 크게 보기"><img src="activities/region-jungbu.jpg" loading="lazy" decoding="async" alt="중부권 정책청취 간담회 · 사전투표 독려"/></button><div class="region-body"><ul><li>이태훈 총괄단장 주최 정책청취 간담회 개최</li><li>전통시장 등 생활권 현장 사전투표 독려 피켓 활동</li><li>참석: 총괄단장 이태훈·전남총괄단장 이행도, 시·군 단장 6인, 위원장 김보미 외 지역 청년 다수</li></ul></div></div><div class="region-card"><div class="region-cap"><span class="region-badge">동부권</span><h4>정책청취 간담회 · 집중유세 지원</h4></div><button type="button" class="region-photo" onclick="openImg('activities/region-dongbu.jpg','동부권 — 정책청취 간담회 · 집중유세 지원','순천 손훈모 후보 집중유세 지원·사전투표 독려')" aria-label="동부권 활동사진 크게 보기"><img src="activities/region-dongbu.jpg" loading="lazy" decoding="async" alt="동부권 정책청취 간담회 · 집중유세 지원"/></button><div class="region-body"><ul><li>조정민 총괄단장 주최 정책청취 간담회 개최</li><li>순천 당대표 집중유세 참석 + 손훈모 순천시장 후보 유세 홍보·사전투표 독려</li><li>참석: 총괄단장 조정민·위원 남진국·최도학, 위원장 김정욱·김보미 외</li></ul></div></div>
-      </div>
-    </div>
-
     <!-- 💬 청년 목소리에 이어 — 카카오 오픈채팅 참여 독려 -->
     <div class="archive-chat-cta">
       <p class="archive-chat-msg">
@@ -6003,12 +5966,6 @@ function lbNav(d){ if(!lbList.length) return; lbIdx=(lbIdx+d+lbList.length)%lbLi
 function closeLightbox(){
   document.getElementById('actLightbox').classList.remove('open');
   document.body.style.overflow='';
-}
-function openImg(src,title,desc){
-  lbList=[{file:src,title:title||'',date:'',desc:desc||''}]; lbIdx=0;
-  document.getElementById('actLightbox').classList.add('open');
-  document.body.style.overflow='hidden';
-  showLb();
 }
 document.addEventListener('keydown', e => {
   if(document.getElementById('actLightbox').classList.contains('open')){
