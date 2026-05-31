@@ -5942,7 +5942,7 @@ function buildActWall(){
   const buckets=[[],[],[]];
   ACT_DATA.forEach((a,i)=>buckets[i%3].push({a,i}));
   const cell=o=>`<button type="button" class="actwall-card" onclick="openLightbox(${o.i})" aria-label="${o.a.title}">`
-    +`<span class="gal-thumb"><img src="${o.a.file.replace('activities/','activities/thumb/')}" alt="${o.a.title}" loading="lazy" decoding="async" width="240" height="320" onerror="this.classList.add('miss')"/>`
+    +`<span class="gal-thumb"><img src="${o.a.file}" alt="${o.a.title}" loading="lazy" decoding="async" width="240" height="320" onerror="this.classList.add('miss')"/>`
     +`<span class="gal-ph"><b>🌸</b>사진 준비 중</span>`
     +`<span class="actwall-cap"><i>${o.a.date}</i></span></span></button>`;
   buckets.forEach((items,r)=>{ if(!items.length){rows[r].innerHTML='';return;} const html=items.map(cell).join(''); rows[r].innerHTML = html+html; });
